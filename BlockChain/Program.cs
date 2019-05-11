@@ -17,7 +17,7 @@ namespace BlockChain
             unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Angelo,ricevente:Giusy,ammontare:10}"));
             unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Giusy,ricevente:Angelo,ammontare:5}"));
             unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Carmen,ricevente:Giusy,ammontare:5}"));
-            unimolCoin.AggiungiBlocco(new Blocco(DateTime.UtcNow, null, "{mittente:Giusy,ricevente:Carmen,ammontare:10}"));
+            unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Giusy,ricevente:Carmen,ammontare:10}"));
 
             //deserializza serializza l'oggetto in formato JSON e lo stampa
             Console.WriteLine(JsonConvert.SerializeObject(unimolCoin, Formatting.Indented));
@@ -28,18 +28,18 @@ namespace BlockChain
 
             //controlla se la catena è valida sugli hash
             //  oracolo: false perché ho aggiornato l'ammontare del blocco 1 senza aggiornare l'hash della blockchain
-            Console.WriteLine($"\n\nAggiorno ammontare a 1000");
+            Console.WriteLine($"\nAggiorno ammontare a 1000");
             unimolCoin.Chain[1].DatiTransazione = "{sender:Giusy,receiver:Angelo,amount:1000}";
             Console.WriteLine($"La catena è valida: {unimolCoin.IsValido()}");
 
-            Console.WriteLine($"\n\nAggiornamento Hash");
+            Console.WriteLine($"\nAggiornamento Hash");
             unimolCoin.Chain[1].HashAttuale = unimolCoin.Chain[1].CalcolaHash();
 
             //  oracolo: true
-            Console.WriteLine($"La catena è valida: {unimolCoin.IsValido()}");
+            Console.WriteLine($"\nLa catena è valida: {unimolCoin.IsValido()}");
 
             //aggiornamento degli hash dei restanti blocchi della catena per eliminare problemi di incongruenza
-            Console.WriteLine($"Aggiorno intera catena");
+            Console.WriteLine($"\nAggiorno intera catena");
             unimolCoin.Chain[2].HashPrecedente = unimolCoin.Chain[1].HashAttuale;
             unimolCoin.Chain[2].HashAttuale = unimolCoin.Chain[2].CalcolaHash();
             unimolCoin.Chain[3].HashPrecedente = unimolCoin.Chain[2].HashAttuale;
@@ -51,7 +51,7 @@ namespace BlockChain
             Console.WriteLine($"La catena è valida: {unimolCoin.IsValido()}");
 
             //aspetta la pressione di un tasto per la terminazione del programma
-            Console.WriteLine("Esecuzione terminata.\nPremere un tasto per uscire...");
+            Console.WriteLine("\nEsecuzione terminata.\nPremere un tasto per uscire...");
         }
     }
 }
