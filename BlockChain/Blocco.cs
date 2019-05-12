@@ -1,7 +1,12 @@
 ﻿using System;
 //libreria per la crittografia
 using System.Security.Cryptography;
+//libreria per Ilist
+using System.Collections.Generic;
+//libreria gestione JSON
+using Newtonsoft.Json;
 using System.Text;
+
 
 namespace BlockChain
 {
@@ -20,18 +25,24 @@ namespace BlockChain
         public string HashAttuale { get; set; }
 
         //dati di transazione (mittente, destinatario, importo)
-        public string DatiTransazione { get; set; }
+        //una volta implementata la classe per gestire le transazioni non c'è più bisogno di questo parametro
+        //public string DatiTransazione { get; set; }
+        public IList<Transazione> Transazioni { get; set; }
 
         //assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
         private int Nonce { get; set; } = 0;
 
-        public Blocco(DateTime dataOra, string hashPrecedente, string transazione)
+        //non più utile perché le transazioni vengono gestite come lista e non più come stringa
+        //public Blocco(DateTime dataOra, string hashPrecedente, string transazione)
+        public Blocco(DateTime dataOra, string hashPrecedente, IList<Transazione> transazioni)
         {
             Indice = 0;
             DataOra = dataOra;
             HashPrecedente = hashPrecedente;
-            DatiTransazione = transazione;
-            HashAttuale = CalcolaHash();
+            //non più utile perché gestito dalla lista Transazioni
+            //DatiTransazione = transazione;
+            //HashAttuale = CalcolaHash();
+            Transazioni = transazioni;
         }
 
         public string CalcolaHash()
@@ -41,7 +52,8 @@ namespace BlockChain
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
 
             //TODO: DEBUG NON STAMPA "NONCE"
-            byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
+            //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
+            byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
             byte[] byteOutput = cifraturaSHA256.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);

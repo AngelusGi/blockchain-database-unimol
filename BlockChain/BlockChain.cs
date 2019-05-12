@@ -8,35 +8,51 @@ namespace BlockChain
     internal class BlockChain
     {
 
+        //gestisce le transazioni che devono ancora essere processate
+        IList<Transazione> TransazioniInAttesa = new List<Transazione>();
+
         //inizializza una lista concatenata di blocchi
         public IList<Blocco> Catena { set; get; }
 
         //sistema per aumentare la complessità all'aumentare della dimensione della catena (Proof of Work)
-        private int Difficolta { get; set; } = 2;
+        public int Difficolta { get; set; } = 2;
+
+        //con le transazioni si intruce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto
+        public int Ricompensa = 1;
 
         //costruttore della classe blockchain che si occupa di istanzare il
         //primo blocco della caena ed eventuali successivi
         public BlockChain()
         {
             InizializzaCatena();
-            AggiungiBlocco();
+            AggiungiBloccoIniziale();
         }
 
         public void InizializzaCatena()
-        {
+        { 
             //creo il primo blocco della catena
             Catena = new List<Blocco>();
         }
 
-        public Blocco AggiungiBLocco()
+        //con l'implementazione della classe transazione non è più necessario
+        //public Blocco AggiungiBlocco()
+        //{
+        //    //aggiungo un blocco passando al costruttore (data, il valore dell'hash precedente, transazione)
+        //    return new Blocco(DateTime.Now, null, "{}");
+        //}
+
+        public void AggiungiBloccoIniziale()
         {
-            //aggiungo un blocco passando al costruttore (data, il valore dell'hash precedente, transazione)
-            return new Blocco(DateTime.Now, null, "{}");
+            //Catena.Add(AggiungiBlocco());
+            Catena.Add(CreaBloccoIniziale());
         }
 
-        public void AggiungiBlocco()
+        public Blocco CreaBloccoIniziale()
         {
-            Catena.Add(AggiungiBLocco());
+            Blocco blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
+            blocco.Mina(Difficolta);
+            TransazioniInAttesa = new List<Transazione>();
+            return blocco;
         }
 
         public Blocco GetUltimoBlocco()
@@ -47,13 +63,13 @@ namespace BlockChain
         public void AggiungiBlocco(Blocco blocco)
         {
             //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
-            Blocco latestBlock = GetUltimoBlocco();
+            Blocco ultimoBlocco = GetUltimoBlocco();
 
             //aumenta l'indice del blocco +1 rispetto a precedente
-            blocco.Indice = latestBlock.Indice + 1;
+            blocco.Indice = ultimoBlocco.Indice + 1;
 
             // calcola il suo hash partendo da quello del precedente
-            blocco.HashPrecedente = latestBlock.HashAttuale;
+            blocco.HashPrecedente = ultimoBlocco.HashAttuale;
 
             //instruzione non necessaria quando si introduce il concetto di MINING
             //blocco.HashAttuale = blocco.CalcolaHash();
@@ -63,6 +79,7 @@ namespace BlockChain
 
             //aggiunge il blocco alla catena
             Catena.Add(blocco);
+
         }
 
         //verifica l'integrità della blockchain
@@ -91,6 +108,47 @@ namespace BlockChain
             //se tutti i blocchi sono coerenti tra valore presente e valore aspetta, ritorna true (catena valida)
             return true;
 
+        }
+
+        public void CreaTransazione(Transazione transazione)
+        {
+            TransazioniInAttesa.Add(transazione);
+        }
+
+        public void GesticiTransazioniInAttesa(string indirizzoMiner)
+        {
+            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashAttuale, TransazioniInAttesa);
+            AggiungiBlocco(blocco);
+
+            TransazioniInAttesa = new List<Transazione>();
+
+            CreaTransazione(new Transazione(null, indirizzoMiner, Ricompensa));
+        }
+
+        public int GetBilancio(string indirizzo)
+        {
+            int bilancio = 0;
+
+            for (int posBlocco = 0; posBlocco < Catena.Count; posBlocco++)
+            {
+                for (int posTransazione = 0; posTransazione < Catena[posBlocco].Transazioni.Count; posTransazione++)
+                {
+                    var transazione = Catena[posBlocco].Transazioni[posTransazione];
+
+                    if (transazione.IndirizzoSorgente == indirizzo)
+                    {
+                        bilancio -= transazione.Valore;
+                    }
+
+                    if (transazione.IndirizzoDestinazione == indirizzo)
+                    {
+                        bilancio += transazione.Valore;
+                    }
+
+                }
+            }
+
+            return bilancio;
         }
     }
 }
