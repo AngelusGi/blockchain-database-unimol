@@ -5,10 +5,14 @@ using System.Collections.Generic;
 
 namespace BlockChain
 {
-    class BlockChain
+    internal class BlockChain
     {
+
         //inizializza una lista concatenata di blocchi
-        public IList<Blocco> Chain { set; get; }
+        public IList<Blocco> Catena { set; get; }
+
+        //sistema per aumentare la complessità all'aumentare della dimensione della catena (Proof of Work)
+        private int Difficolta { get; set; } = 2;
 
         //costruttore della classe blockchain che si occupa di istanzare il
         //primo blocco della caena ed eventuali successivi
@@ -18,11 +22,10 @@ namespace BlockChain
             AggiungiBlocco();
         }
 
-
         public void InizializzaCatena()
         {
             //creo il primo blocco della catena
-            Chain = new List<Blocco>();
+            Catena = new List<Blocco>();
         }
 
         public Blocco AggiungiBLocco()
@@ -33,12 +36,12 @@ namespace BlockChain
 
         public void AggiungiBlocco()
         {
-            Chain.Add(AggiungiBLocco());
+            Catena.Add(AggiungiBLocco());
         }
 
         public Blocco GetUltimoBlocco()
         {
-            return Chain[Chain.Count - 1];
+            return Catena[Catena.Count - 1];
         }
 
         public void AggiungiBlocco(Blocco blocco)
@@ -51,10 +54,15 @@ namespace BlockChain
 
             // calcola il suo hash partendo da quello del precedente
             blocco.HashPrecedente = latestBlock.HashAttuale;
-            blocco.HashAttuale = blocco.CalcolaHash();
+
+            //instruzione non necessaria quando si introduce il concetto di MINING
+            //blocco.HashAttuale = blocco.CalcolaHash();
+
+            //dopo aver inserito difficoltà posso integrare operazioni di mining
+            blocco.Mina(Difficolta);
 
             //aggiunge il blocco alla catena
-            Chain.Add(blocco);
+            Catena.Add(blocco);
         }
 
         //verifica l'integrità della blockchain
@@ -62,10 +70,10 @@ namespace BlockChain
         {
 
             //finché ci sono blocchi
-            for (int i = 1; i < Chain.Count; i++)
+            for (int pos = 1; pos < Catena.Count; pos++)
             {
-                Blocco bloccoCorrente = Chain[i];
-                Blocco bloccoPrecedente = Chain[i - 1];
+                Blocco bloccoCorrente = Catena[pos];
+                Blocco bloccoPrecedente = Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
                 if (bloccoCorrente.HashAttuale != bloccoCorrente.CalcolaHash())
@@ -82,6 +90,7 @@ namespace BlockChain
 
             //se tutti i blocchi sono coerenti tra valore presente e valore aspetta, ritorna true (catena valida)
             return true;
+
         }
     }
 }
