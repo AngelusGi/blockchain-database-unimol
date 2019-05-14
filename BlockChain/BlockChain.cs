@@ -69,10 +69,10 @@ namespace BlockChain
             blocco.Indice = ultimoBlocco.Indice + 1;
 
             // calcola il suo hash partendo da quello del precedente
-            blocco.HashPrecedente = ultimoBlocco.HashAttuale;
+            blocco.HashPrecedente = ultimoBlocco.HashBloccoCorrente;
 
             //instruzione non necessaria quando si introduce il concetto di MINING
-            //blocco.HashAttuale = blocco.CalcolaHash();
+            //blocco.HashBloccoCorrente = blocco.CalcolaHash();
 
             //dopo aver inserito difficoltà posso integrare operazioni di mining
             blocco.Mina(Difficolta);
@@ -93,13 +93,13 @@ namespace BlockChain
                 Blocco bloccoPrecedente = Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashAttuale != bloccoCorrente.CalcolaHash())
+                if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
                 {
                     return false;
                 }
 
                 //ricalcola l'hash del blocco precedente, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashAttuale)
+                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashBloccoCorrente)
                 {
                     return false;
                 }
@@ -117,7 +117,7 @@ namespace BlockChain
 
         public void GesticiTransazioniInAttesa(string indirizzoMiner)
         {
-            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashAttuale, TransazioniInAttesa);
+            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
             AggiungiBlocco(blocco);
 
             TransazioniInAttesa = new List<Transazione>();

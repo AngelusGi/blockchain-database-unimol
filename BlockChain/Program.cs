@@ -42,19 +42,19 @@ namespace BlockChain
 
             //        //aggiornamento hash del blocco modificato
             //        Console.WriteLine($"\nAggiornamento Hash");
-            //        unimolCoin.Catena[1].HashAttuale = unimolCoin.Catena[1].CalcolaHash();
+            //        unimolCoin.Catena[1].HashBloccoCorrente = unimolCoin.Catena[1].CalcolaHash();
 
             //        //  oracolo: true
             //        Console.WriteLine($"\nLa catena è valida: {unimolCoin.IsValido()}");
 
             //        //aggiornamento degli hash dei restanti blocchi della catena per eliminare problemi di incongruenza
             //        Console.WriteLine($"\nAggiorno intera catena");
-            //        unimolCoin.Catena[2].HashPrecedente = unimolCoin.Catena[1].HashAttuale;
-            //        unimolCoin.Catena[2].HashAttuale = unimolCoin.Catena[2].CalcolaHash();
-            //        unimolCoin.Catena[3].HashPrecedente = unimolCoin.Catena[2].HashAttuale;
-            //        unimolCoin.Catena[3].HashAttuale = unimolCoin.Catena[3].CalcolaHash();
-            //        unimolCoin.Catena[4].HashPrecedente = unimolCoin.Catena[3].HashAttuale;
-            //        unimolCoin.Catena[4].HashAttuale = unimolCoin.Catena[4].CalcolaHash();
+            //        unimolCoin.Catena[2].HashPrecedente = unimolCoin.Catena[1].HashBloccoCorrente;
+            //        unimolCoin.Catena[2].HashBloccoCorrente = unimolCoin.Catena[2].CalcolaHash();
+            //        unimolCoin.Catena[3].HashPrecedente = unimolCoin.Catena[2].HashBloccoCorrente;
+            //        unimolCoin.Catena[3].HashBloccoCorrente = unimolCoin.Catena[3].CalcolaHash();
+            //        unimolCoin.Catena[4].HashPrecedente = unimolCoin.Catena[3].HashBloccoCorrente;
+            //        unimolCoin.Catena[4].HashBloccoCorrente = unimolCoin.Catena[4].CalcolaHash();
 
             //        //  oracolo: true
             //        Console.WriteLine($"La catena è valida: {unimolCoin.IsValido()}");

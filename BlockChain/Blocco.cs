@@ -22,7 +22,7 @@ namespace BlockChain
         public string HashPrecedente { get; set; }
 
         //chiave di cifratura del blocco precedente
-        public string HashAttuale { get; set; }
+        public string HashBloccoCorrente { get; set; }
 
         //dati di transazione (mittente, destinatario, importo)
         //una volta implementata la classe per gestire le transazioni non c'è più bisogno di questo parametro
@@ -41,7 +41,7 @@ namespace BlockChain
             HashPrecedente = hashPrecedente;
             //non più utile perché gestito dalla lista Transazioni
             //DatiTransazione = transazione;
-            //HashAttuale = CalcolaHash();
+            //HashBloccoCorrente = CalcolaHash();
             Transazioni = transazioni;
         }
 
@@ -63,10 +63,10 @@ namespace BlockChain
         {
 
             string zeroIniziali = new string('0', difficolta);
-            while (this.HashAttuale == null || this.HashAttuale.Substring(0, difficolta) != zeroIniziali)
+            while (this.HashBloccoCorrente == null || this.HashBloccoCorrente.Substring(0, difficolta) != zeroIniziali)
             {
                 this.Nonce++;
-                this.HashAttuale = CalcolaHash();
+                this.HashBloccoCorrente = CalcolaHash();
             }
         }
 
