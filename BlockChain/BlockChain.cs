@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace BlockChain
 {
-    internal class BlockChain
+    class BlockChain
     {
 
         //gestisce le transazioni che devono ancora essere processate
-        IList<Transazione> TransazioniInAttesa = new List<Transazione>();
+        private IList<Transazione> TransazioniInAttesa = new List<Transazione>();
 
         //inizializza una lista concatenata di blocchi
         public IList<Blocco> Catena { set; get; }
@@ -29,7 +29,7 @@ namespace BlockChain
         }
 
         public void InizializzaCatena()
-        { 
+        {
             //creo il primo blocco della catena
             Catena = new List<Blocco>();
         }
@@ -133,7 +133,7 @@ namespace BlockChain
             {
                 for (int posTransazione = 0; posTransazione < Catena[posBlocco].Transazioni.Count; posTransazione++)
                 {
-                    var transazione = Catena[posBlocco].Transazioni[posTransazione];
+                    Transazione transazione = Catena[posBlocco].Transazioni[posTransazione];
 
                     if (transazione.IndirizzoSorgente == indirizzo)
                     {

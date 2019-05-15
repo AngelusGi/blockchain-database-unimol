@@ -1,10 +1,10 @@
-﻿//libreria per la gestione dei json
+﻿using System;
+//libreria per la gestione dei json
 using Newtonsoft.Json;
-using System;
 
 namespace BlockChain
 {
-    internal class Program
+    class Program
     {
         private static void Main()
         {
@@ -60,7 +60,7 @@ namespace BlockChain
             //        Console.WriteLine($"La catena è valida: {unimolCoin.IsValido()}");
 
 
-        //implementazione con gestione transazioni
+            //implementazione con gestione transazioni
             unimolCoin.CreaTransazione(new Transazione("Angelo", "Giusy", 10));
             unimolCoin.GesticiTransazioniInAttesa("Carmen");
 

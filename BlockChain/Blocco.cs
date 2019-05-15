@@ -1,16 +1,17 @@
 ﻿using System;
-//libreria per la crittografia
-using System.Security.Cryptography;
 //libreria per Ilist
 using System.Collections.Generic;
+//libreria per la crittografia
+using System.Security.Cryptography;
+//libreria per la formattazione del testo
+using System.Text;
 //libreria gestione JSON
 using Newtonsoft.Json;
-using System.Text;
 
 
 namespace BlockChain
 {
-    internal class Blocco
+    class Blocco
     {
         //indice del blocco
         public int Indice { get; set; }
@@ -63,10 +64,10 @@ namespace BlockChain
         {
 
             string zeroIniziali = new string('0', difficolta);
-            while (this.HashBloccoCorrente == null || this.HashBloccoCorrente.Substring(0, difficolta) != zeroIniziali)
+            while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficolta) != zeroIniziali)
             {
-                this.Nonce++;
-                this.HashBloccoCorrente = CalcolaHash();
+                Nonce++;
+                HashBloccoCorrente = CalcolaHash();
             }
         }
 
