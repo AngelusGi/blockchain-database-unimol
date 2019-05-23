@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockChainFull", "BlockChain\BlockChainFull.csproj", "{2824BF84-3832-44B1-A101-08ACC39CDB85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockChainValidaBlocchi", "..\..\..\..\Desktop\blockchain-database-unimol-verifica-validita\BlockChain\BlockChainValidaBlocchi.csproj", "{853856FF-D9E0-40A7-8195-66F00674529C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockChainVerificaValidita", "BlockChainVerificaValidita\BlockChainVerificaValidita.csproj", "{277B0437-0320-4543-9F2C-F308994D4C79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2824BF84-3832-44B1-A101-08ACC39CDB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2824BF84-3832-44B1-A101-08ACC39CDB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2824BF84-3832-44B1-A101-08ACC39CDB85}.Release|Any CPU.Build.0 = Release|Any CPU
-		{853856FF-D9E0-40A7-8195-66F00674529C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{853856FF-D9E0-40A7-8195-66F00674529C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{853856FF-D9E0-40A7-8195-66F00674529C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{853856FF-D9E0-40A7-8195-66F00674529C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277B0437-0320-4543-9F2C-F308994D4C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277B0437-0320-4543-9F2C-F308994D4C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277B0437-0320-4543-9F2C-F308994D4C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277B0437-0320-4543-9F2C-F308994D4C79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
