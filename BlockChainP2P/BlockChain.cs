@@ -106,7 +106,7 @@ namespace BlockChain
             TransazioniInAttesa.Add(transazione);
         }
 
-        public void GesticiTransazioniInAttesa(string indirizzoMiner)
+        public void MinaTransazioni(string indirizzoMiner)
         {
             Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
             AggiungiBlocco(blocco);
