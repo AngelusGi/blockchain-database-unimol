@@ -8,11 +8,14 @@ namespace BlockChain
 {
     class Blocco
     {
+
+        #region Membri
+
         //indice del blocco
         public int Indice { get; set; }
 
         //data e ora fino a ms
-        public DateTime DataOra { get; set; }
+        public DateTime DataOra { get; private set; }
 
         //chiave di cifratura del blocco precedente
         public string HashPrecedente { get; set; }
@@ -26,6 +29,12 @@ namespace BlockChain
         //assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
         private int Nonce { get; set; } = 0;
 
+        #endregion
+
+
+        #region Costruttore
+
+        
         public Blocco(DateTime dataOra, string hashPrecedente, string transazione)
         {
             Indice = 0;
@@ -34,6 +43,10 @@ namespace BlockChain
             DatiTransazione = transazione;
             HashAttuale = CalcolaHash();
         }
+
+
+        #endregion
+
 
         public string CalcolaHash()
         {

@@ -7,12 +7,18 @@ namespace BlockChain
 {
     class BlockChain
     {
+        #region Membri
 
         //inizializza una lista concatenata di blocchi
         public IList<Blocco> Catena { set; get; }
 
         //sistema per aumentare la complessità all'aumentare della dimensione della catena (Proof of Work)
-        private int Difficolta { get; set; } = 2;
+        private int Difficoltà { get; set; } = 2;
+        
+        #endregion
+
+
+        #region Costruttore
 
         //costruttore della classe blockchain che si occupa di istanzare il
         //primo blocco della caena ed eventuali successivi
@@ -21,6 +27,9 @@ namespace BlockChain
             InizializzaCatena();
             AggiungiBlocco();
         }
+
+        #endregion
+
 
         public void InizializzaCatena()
         {
@@ -59,7 +68,7 @@ namespace BlockChain
             //blocco.HashAttuale = blocco.CalcolaHash();
 
             //dopo aver inserito difficoltà posso integrare operazioni di mining
-            blocco.Mina(Difficolta);
+            blocco.Mina(Difficoltà);
 
             //aggiunge il blocco alla catena
             Catena.Add(blocco);

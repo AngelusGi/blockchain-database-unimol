@@ -3,9 +3,14 @@ namespace BlockChain
 {
     class Transazione
     {
-        public string IndirizzoSorgente { get; set; }
-        public string IndirizzoDestinazione { get; set; }
-        public int Valore { get; set; }
+        #region Membri
+
+        public string IndirizzoSorgente { get; private set; }
+        public string IndirizzoDestinazione { get; private set; }
+        public int Valore { get; private set; }
+        
+        #endregion
+
 
         public Transazione(string sorgente, string destinazione, int valore)
         {

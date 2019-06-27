@@ -6,7 +6,7 @@ using WebSocketSharp;
 
 namespace BlockChain
 {
-    class P2P_Client 
+    class P2PClient 
     {
         /***
          *todo
@@ -34,6 +34,8 @@ namespace BlockChain
                         {
 
                             List<Transazione> nuoveTransazioni = new List<Transazione>();
+
+                            //TO DO, DA RISOLVERE
 
                             nuoveTransazioni.AddRange(nuovaCatena.MinaTransazioni);
                             nuoveTransazioni.AddRange(Program.UniMolCoin.MinaTransazioni);

@@ -7,6 +7,7 @@ namespace BlockChain
 {
     class BlockChain
     {
+        #region Membri
 
         //gestisce le transazioni che devono ancora essere processate
         private IList<Transazione> TransazioniInAttesa = new List<Transazione>();
@@ -20,6 +21,10 @@ namespace BlockChain
         //con le transazioni si intruce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto
         public int Ricompensa = 1;
 
+        #endregion
+
+        #region Costruttore
+
         //costruttore della classe blockchain che si occupa di istanzare il
         //primo blocco della caena ed eventuali successivi
         public BlockChain()
@@ -27,6 +32,9 @@ namespace BlockChain
             InizializzaCatena();
             AggiungiBloccoIniziale();
         }
+
+        #endregion
+
 
         public void InizializzaCatena()
         {

@@ -8,8 +8,8 @@ namespace BlockChain
     {
 
         public static int Porta = 0;
-        public static P2P_Server Server = null;
-        public static P2P_Client Client = new P2P_Client();
+        public static P2PServer Server = null;
+        public static P2PClient Client = new P2PClient();
         public static BlockChain UniMolCoin = new BlockChain();
         public static string Nome = null;
 
@@ -32,7 +32,7 @@ namespace BlockChain
 
             if (Porta > 0)
             {
-                Server = new P2P_Server();
+                Server = new P2PServer();
                 Server.Start();
             }
             if (Nome != null)

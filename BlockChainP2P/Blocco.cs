@@ -13,6 +13,10 @@ namespace BlockChain
 {
     class Blocco
     {
+
+        #region Membri
+
+        
         //indice del blocco
         public int Indice { get; set; }
 
@@ -30,6 +34,11 @@ namespace BlockChain
         //assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
         private int Nonce { get; set; } = 0;
 
+        #endregion
+
+
+        #region Costruttore
+
         public Blocco(DateTime dataOra, string hashPrecedente, IList<Transazione> transazioni)
         {
             Indice = 0;
@@ -38,12 +47,15 @@ namespace BlockChain
             Transazioni = transazioni;
         }
 
+        #endregion
+
         public string CalcolaHash()
         {
-            SHA256 cifraturaSHA256 = SHA256.Create();
+            SHA512 cifraturaSHA = new SHA512Managed();
+            //SHA256 cifraturaSHA = SHA256.Create();
 
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
-            byte[] byteOutput = cifraturaSHA256.ComputeHash(byteInput);
+            byte[] byteOutput = cifraturaSHA.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
