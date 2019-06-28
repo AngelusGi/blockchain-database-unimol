@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BlockChain
 {
-    class BlockChain
+    internal class BlockChain
     {
         #region Membri
 
@@ -22,6 +22,7 @@ namespace BlockChain
         public int Ricompensa = 1;
 
         #endregion
+
 
         #region Costruttore
 
@@ -128,16 +129,18 @@ namespace BlockChain
         {
             int bilancio = 0;
 
-            foreach (var blocco in Catena)
+            foreach (Blocco blocco in Catena)
             {
-                foreach (var transazione in blocco.Transazioni)
+                foreach (Transazione transazione in blocco.Transazioni)
                 {
-                    if (transazione.IndirizzoSorgente == indirizzo)
+                    //decrementa saldo del mittente
+                    if (transazione.IndirizzoMittente == indirizzo)
                     {
                         bilancio -= transazione.Valore;
                     }
 
-                    if (transazione.IndirizzoDestinazione == indirizzo)
+                    //aumenta saldo del destinatario
+                    if (transazione.IndirizzoDestinatario == indirizzo)
                     {
                         bilancio += transazione.Valore;
                     }

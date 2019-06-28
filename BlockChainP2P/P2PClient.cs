@@ -1,27 +1,26 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
 using WebSocketSharp;
 
 namespace BlockChain
 {
-    class P2PClient 
+    internal class P2PClient
     {
         /***
          * TODO
          * implementare connessione alla web socket da parte del client per la gestione delle transazioni e per il mining
          * **/
 
-        IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
+        private readonly IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
 
         public void Connetti(string url)
         {
             if (!_webSocketDictionary.ContainsKey(url))
             {
-                WebSocket WebSocket = new WebSocket(url);
+                WebSocket webSocket = new WebSocket(url);
 
-                WebSocket.OnMessage += (mittente, evento) =>
+                webSocket.OnMessage += (mittente, evento) =>
                 {
                     if (evento.Data.Contains("Ciao Client"))
                     {
@@ -35,10 +34,12 @@ namespace BlockChain
 
                             List<Transazione> nuoveTransazioni = new List<Transazione>();
 
-                            //TO DO, DA RISOLVERE
+                            // TODO, DA RISOLVERE
 
                             nuoveTransazioni.AddRange(nuovaCatena.MinaTransazioni);
                             nuoveTransazioni.AddRange(Program.UniMolCoin.MinaTransazioni);
+
+                            nuoveTransazioni = nuovaCatena.MinaTransazioni();
 
                             nuovaCatena.MinaTransazioni() = nuoveTransazioni;
                             Program.UniMolCoin = nuovaCatena;
@@ -46,18 +47,18 @@ namespace BlockChain
                     }
                 };
 
-                WebSocket.Connect();
+                webSocket.Connect();
 
-                WebSocket.Send($"Dalla porta {Program.Porta}: Ciao Server");
-                WebSocket.Send(JsonConvert.SerializeObject(Program.UniMolCoin));
+                webSocket.Send($"Dalla porta {Program.Porta}: Ciao Server");
+                webSocket.Send(JsonConvert.SerializeObject(Program.UniMolCoin));
 
-                _webSocketDictionary.Add(url, WebSocket);
+                _webSocketDictionary.Add(url, webSocket);
             }
         }
 
         public void Send(string url, string data)
         {
-            foreach (var item in _webSocketDictionary)
+            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
             {
                 if (item.Key == url)
                 {
@@ -68,7 +69,7 @@ namespace BlockChain
 
         public void Broadcast(string data)
         {
-            foreach (var item in _webSocketDictionary)
+            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
             {
                 item.Value.Send(data);
             }
@@ -77,7 +78,7 @@ namespace BlockChain
         public IList<string> GetServers()
         {
             IList<string> servers = new List<string>();
-            foreach (var item in _webSocketDictionary)
+            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
             {
                 servers.Add(item.Key);
             }
@@ -86,7 +87,7 @@ namespace BlockChain
 
         public void Close()
         {
-            foreach (var item in _webSocketDictionary)
+            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
             {
                 item.Value.Close();
             }

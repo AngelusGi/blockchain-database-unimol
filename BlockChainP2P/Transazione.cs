@@ -5,18 +5,18 @@ namespace BlockChain
     {
         #region Membri
 
-        public string IndirizzoSorgente { get; set; }
-        public string IndirizzoDestinazione { get; set; }
-        public int Valore { get; set; }
+        public string IndirizzoMittente { get; private set; }
+        public string IndirizzoDestinatario { get; private set; }
+        public int Valore { get; private set; }
 
         #endregion
 
 
-        public Transazione(string sorgente, string destinazione, int valore)
+        public Transazione(string mittente, string destinatario, int valore)
         {
 
-            IndirizzoSorgente = sorgente;
-            IndirizzoDestinazione = destinazione;
+            IndirizzoMittente = mittente;
+            IndirizzoDestinatario = destinatario;
             Valore = valore;
 
         }
