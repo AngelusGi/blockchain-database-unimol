@@ -27,7 +27,7 @@ namespace BlockChain
         public string DatiTransazione { get; set; }
 
         //assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
-        private int Nonce { get; set; } = 0;
+        private int Nonce { get; set; }
 
         #endregion
 
@@ -50,22 +50,22 @@ namespace BlockChain
 
         public string CalcolaHash()
         {
-            SHA256 cifraturaSHA256 = SHA256.Create();
+            SHA256 cifraturaSha256 = SHA256.Create();
 
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
 
             //TODO: DEBUG NON STAMPA "NONCE"
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
-            byte[] byteOutput = cifraturaSHA256.ComputeHash(byteInput);
+            byte[] byteOutput = cifraturaSha256.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
 
-        public void Mina(int difficolta)
+        public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficolta);
-            while (HashAttuale == null || HashAttuale.Substring(0, difficolta) != zeroIniziali)
+            string zeroIniziali = new string('0', difficoltà);
+            while (HashAttuale == null || HashAttuale.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;
                 HashAttuale = CalcolaHash();

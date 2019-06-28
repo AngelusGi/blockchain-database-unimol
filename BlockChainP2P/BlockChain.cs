@@ -10,15 +10,15 @@ namespace BlockChain
         #region Membri
 
         //gestisce le transazioni che devono ancora essere processate
-        private IList<Transazione> TransazioniInAttesa = new List<Transazione>();
+        private IList<Transazione> _transazioniInAttesa = new List<Transazione>();
 
         //inizializza una lista concatenata di blocchi
         public IList<Blocco> Catena { set; get; }
 
         //sistema per aumentare la complessità all'aumentare della dimensione della catena (Proof of Work)
-        public int Difficolta { get; set; } = 2;
+        public int Difficoltà { get; set; } = 2;
 
-        //con le transazioni si intruce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto
+        //con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto
         public int Ricompensa = 1;
 
         #endregion
@@ -26,7 +26,7 @@ namespace BlockChain
         #region Costruttore
 
         //costruttore della classe blockchain che si occupa di istanzare il
-        //primo blocco della caena ed eventuali successivi
+        //primo blocco della catena ed eventuali successivi
         public BlockChain()
         {
             InizializzaCatena();
@@ -51,9 +51,9 @@ namespace BlockChain
 
         public Blocco CreaBloccoIniziale()
         {
-            Blocco blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
-            blocco.Mina(Difficolta);
-            TransazioniInAttesa = new List<Transazione>();
+            Blocco blocco = new Blocco(DateTime.Now, null, _transazioniInAttesa);
+            blocco.Mina(Difficoltà);
+            _transazioniInAttesa = new List<Transazione>();
             return blocco;
         }
 
@@ -74,7 +74,7 @@ namespace BlockChain
             blocco.HashPrecedente = ultimoBlocco.HashBloccoCorrente;
 
             //dopo aver inserito difficoltà posso integrare operazioni di mining
-            blocco.Mina(Difficolta);
+            blocco.Mina(Difficoltà);
 
             //aggiunge il blocco alla catena
             Catena.Add(blocco);
@@ -111,15 +111,15 @@ namespace BlockChain
 
         public void CreaTransazione(Transazione transazione)
         {
-            TransazioniInAttesa.Add(transazione);
+            _transazioniInAttesa.Add(transazione);
         }
 
         public void MinaTransazioni(string indirizzoMiner)
         {
-            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
+            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, _transazioniInAttesa);
             AggiungiBlocco(blocco);
 
-            TransazioniInAttesa = new List<Transazione>();
+            _transazioniInAttesa = new List<Transazione>();
 
             CreaTransazione(new Transazione(null, indirizzoMiner, Ricompensa));
         }

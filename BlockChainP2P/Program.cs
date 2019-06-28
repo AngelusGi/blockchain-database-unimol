@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace BlockChain
 {
-    class Program
+    internal class Program
     {
 
         public static int Porta = 0;
@@ -13,22 +13,27 @@ namespace BlockChain
         public static BlockChain UniMolCoin = new BlockChain();
         public static string Nome = null;
 
-        private const int ESCI = 4;
-        private const int URL_SERVER = 1;
-        private const int TRANSAZIONE = 2;
-        private const int BLOCKCHAIN = 3;
-        private const int ANNULLA = 0;
+        private const int Esci = 4;
+        private const int UrlServer = 1;
+        private const int Transazione = 2;
+        private const int Blockchain = 3;
+        private const int Annulla = 0;
 
 
-        private static void Main(String[] args)
+        private static void Main(string[] args)
         {
 
             UniMolCoin.InizializzaCatena();
 
             if (args.Length >= 1)
+            {
                 Porta = int.Parse(args[0]);
+            }
+
             if (args.Length >= 2)
+            {
                 Nome = args[1];
+            }
 
             if (Porta > 0)
             {
@@ -40,44 +45,44 @@ namespace BlockChain
                 Console.WriteLine($"Utente corrente: {Nome}");
             }
 
-            int Selezione = ANNULLA;
-            while (Selezione != ESCI)
+            int selezione = Annulla;
+            while (selezione != Esci)
             {
-                switch (Selezione)
+                switch (selezione)
                 {
-                    case URL_SERVER:
+                    case UrlServer:
                         Console.WriteLine("Per favore, inserisci l'URL del server (0 per annullare)");
-                        string serverURL = Console.ReadLine();
-                        if (serverURL == "0")
+                        string serverUrl = Console.ReadLine();
+                        if (serverUrl == "0")
                         {
                             break;
                         }
-                            
-                        Client.Connetti($"{serverURL}/Blockchain");
+
+                        Client.Connetti($"{serverUrl}/Blockchain");
                         break;
 
-                    case TRANSAZIONE:
+                    case Transazione:
                         Console.WriteLine("Per favore, inserisci il nome del destinatario (0 per annullare)");
                         string ricevente = Console.ReadLine();
                         if (ricevente == "0")
                         {
                             break;
                         }
-                            
+
                         Console.WriteLine("Per favore, inserisci l'importo (0 per annullare)");
                         string importo = Console.ReadLine();
                         if (importo == "0")
                         {
                             break;
                         }
-                            
+
                         UniMolCoin.CreaTransazione(new Transazione(Nome, ricevente, int.Parse(importo)));
                         UniMolCoin.MinaTransazioni(Nome);
                         Client.Broadcast(JsonConvert.SerializeObject(UniMolCoin));
 
 
                         break;
-                    case BLOCKCHAIN:
+                    case Blockchain:
                         Console.WriteLine("Blockchain");
                         Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
                         break;
@@ -91,8 +96,9 @@ namespace BlockChain
                 Console.WriteLine("4. Esci");
                 Console.WriteLine("=========================");
                 Console.WriteLine("Inserisci una scelta:");
-                string Azione = Console.ReadLine();
-                Selezione = int.Parse(Azione);
+
+                string azione = Console.ReadLine();
+                selezione = int.Parse(azione);
             }
 
             if (Client != null)
@@ -108,6 +114,7 @@ namespace BlockChain
             }
 
 
+            #region VecchiaImplementazione
 
             //DateTime tempoInizio = DateTime.Now;
 
@@ -143,6 +150,8 @@ namespace BlockChain
 
             ////aspetta la pressione di un tasto per la terminazione del programma
             //Console.WriteLine("\nEsecuzione terminata.\nPremere un tasto per uscire...");
+
+            #endregion
 
         }
     }

@@ -11,28 +11,27 @@ using Newtonsoft.Json;
 
 namespace BlockChain
 {
-    class Blocco
+    internal class Blocco
     {
 
         #region Membri
 
-        
-        //indice del blocco
+        ///ID del blocco
         public int Indice { get; set; }
 
-        //data e ora fino a ms
+        ///data e ora di riferimento del blocco con precisione fino a ms
         public DateTime DataOra { get; set; }
 
-        //chiave di cifratura del blocco precedente
+        ///chiave di cifratura del blocco precedente
         public string HashPrecedente { get; set; }
 
-        //chiave di cifratura del blocco precedente
+        ///chiave di cifratura del blocco precedente
         public string HashBloccoCorrente { get; set; }
-        
+
         public IList<Transazione> Transazioni { get; set; }
 
-        //assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
-        private int Nonce { get; set; } = 0;
+        ///assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
+        private int Nonce { get; set; }
 
         #endregion
 
@@ -51,20 +50,20 @@ namespace BlockChain
 
         public string CalcolaHash()
         {
-            SHA512 cifraturaSHA = new SHA512Managed();
-            //SHA256 cifraturaSHA = SHA256.Create();
+            SHA512 cifraturaSha = new SHA512Managed();
+            //SHA256 cifraturaSha = SHA256.Create();
 
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
-            byte[] byteOutput = cifraturaSHA.ComputeHash(byteInput);
+            byte[] byteOutput = cifraturaSha.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
 
-        public void Mina(int difficolta)
+        public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficolta);
-            while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficolta) != zeroIniziali)
+            string zeroIniziali = new string('0', difficoltà);
+            while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;
                 HashBloccoCorrente = CalcolaHash();

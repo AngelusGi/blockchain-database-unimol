@@ -11,7 +11,7 @@ namespace BlockChain
         #region Membri
 
         //gestisce le transazioni che devono ancora essere processate
-        private IList<Transazione> TransazioniInAttesa = new List<Transazione>();
+        private IList<Transazione> _transazioniInAttesa = new List<Transazione>();
 
         //inizializza una lista concatenata di blocchi
         public IList<Blocco> Catena { set; get; }
@@ -60,9 +60,9 @@ namespace BlockChain
 
         public Blocco CreaBloccoIniziale()
         {
-            Blocco blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
+            Blocco blocco = new Blocco(DateTime.Now, null, _transazioniInAttesa);
             blocco.Mina(Difficolta);
-            TransazioniInAttesa = new List<Transazione>();
+            _transazioniInAttesa = new List<Transazione>();
             return blocco;
         }
 
@@ -123,15 +123,15 @@ namespace BlockChain
 
         public void CreaTransazione(Transazione transazione)
         {
-            TransazioniInAttesa.Add(transazione);
+            _transazioniInAttesa.Add(transazione);
         }
 
         public void GesticiTransazioniInAttesa(string indirizzoMiner)
         {
-            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
+            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, _transazioniInAttesa);
             AggiungiBlocco(blocco);
 
-            TransazioniInAttesa = new List<Transazione>();
+            _transazioniInAttesa = new List<Transazione>();
 
             CreaTransazione(new Transazione(null, indirizzoMiner, Ricompensa));
         }

@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace BlockChain
 {
-    class Blocco
+    internal class Blocco
     {
 
         #region Membri
@@ -34,7 +34,7 @@ namespace BlockChain
         public IList<Transazione> Transazioni { get; set; }
 
         //assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
-        private int Nonce { get; set; } = 0;
+        private int Nonce { get; set; }
 
         #endregion
 
@@ -60,8 +60,8 @@ namespace BlockChain
 
         public string CalcolaHash()
         {
-            //SHA256 cifraturaSHA = SHA256.Create();
-            SHA512 cifraturaSHA = new SHA512Managed();
+            //SHA256 cifraturaSha = SHA256.Create();
+            SHA512 cifraturaSha = new SHA512Managed();
 
 
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
@@ -69,16 +69,16 @@ namespace BlockChain
             //TODO: DEBUG NON STAMPA "NONCE"
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
-            byte[] byteOutput = cifraturaSHA.ComputeHash(byteInput);
+            byte[] byteOutput = cifraturaSha.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
 
-        public void Mina(int difficolta)
+        public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficolta);
-            while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficolta) != zeroIniziali)
+            string zeroIniziali = new string('0', difficoltà);
+            while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;
                 HashBloccoCorrente = CalcolaHash();

@@ -13,6 +13,8 @@ namespace BlockChain
             //instanzia un oggetto che rappresenta il mining della moneta
             BlockChain unimolCoin = new BlockChain();
 
+            #region VecchiaImplementazione_ControlloValidità
+
             ////implementazione base con gestione validità
             //        //aggiunge 4 blocchi alla blochchain con un numero di monete variabile
             //        unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Angelo,ricevente:Giusy,ammontare:10}"));
@@ -59,15 +61,14 @@ namespace BlockChain
             //        //  oracolo: true
             //        Console.WriteLine($"La catena è valida: {unimolCoin.IsValido()}");
 
+            #endregion
 
             //implementazione con gestione transazioni
             unimolCoin.CreaTransazione(new Transazione("Angelo", "Giusy", 10));
             unimolCoin.GesticiTransazioniInAttesa("Carmen");
-
             unimolCoin.CreaTransazione(new Transazione("Giusy", "Angelo", 5));
             unimolCoin.CreaTransazione(new Transazione("Giusy", "Angelo", 5));
             unimolCoin.GesticiTransazioniInAttesa("Carmen");
-
 
             DateTime tempoFine = DateTime.Now;
 
@@ -83,7 +84,7 @@ namespace BlockChain
             Console.WriteLine("----------------------------");
 
             Console.WriteLine("\nUniMolCoin:");
-            Console.WriteLine($"unimolCoin");
+            Console.WriteLine($"UniMolCoin");
             Console.WriteLine(JsonConvert.SerializeObject(unimolCoin, Formatting.Indented));
 
             //aspetta la pressione di un tasto per la terminazione del programma
