@@ -54,7 +54,6 @@ namespace BlockChain
 
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
 
-            //TODO: DEBUG NON STAMPA "NONCE"
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
             byte[] byteOutput = cifraturaSha256.ComputeHash(byteInput);
 

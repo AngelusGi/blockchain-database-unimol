@@ -8,7 +8,6 @@ namespace BlockChain
     internal class P2PClient
     {
         /***
-         * TODO
          * implementare connessione alla web socket da parte del client per la gestione delle transazioni e per il mining
          * **/
 
@@ -20,6 +19,7 @@ namespace BlockChain
             {
                 WebSocket webSocket = new WebSocket(url);
 
+                //espressione lambda
                 webSocket.OnMessage += (mittente, evento) =>
                 {
                     if (evento.Data.Contains("Ciao Client"))
@@ -34,14 +34,11 @@ namespace BlockChain
 
                             List<Transazione> nuoveTransazioni = new List<Transazione>();
 
-                            // TODO, DA RISOLVERE
+                            nuoveTransazioni.AddRange(nuovaCatena.TransazioniInAttesa);
+                            nuoveTransazioni.AddRange(Program.UniMolCoin.TransazioniInAttesa);
 
-                            nuoveTransazioni.AddRange(nuovaCatena.MinaTransazioni);
-                            nuoveTransazioni.AddRange(Program.UniMolCoin.MinaTransazioni);
+                            nuovaCatena.TransazioniInAttesa = nuoveTransazioni;
 
-                            nuoveTransazioni = nuovaCatena.MinaTransazioni();
-
-                            nuovaCatena.MinaTransazioni() = nuoveTransazioni;
                             Program.UniMolCoin = nuovaCatena;
                         }
                     }
