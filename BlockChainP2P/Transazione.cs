@@ -1,10 +1,10 @@
 ﻿
 namespace BlockChain
 {
-    class Transazione
+    internal class Transazione
     {
         #region Membri
-        
+
         public string IndirizzoSorgente { get; set; }
         public string IndirizzoDestinazione { get; set; }
         public int Valore { get; set; }

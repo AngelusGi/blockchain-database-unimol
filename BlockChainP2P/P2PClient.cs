@@ -9,15 +9,15 @@ namespace BlockChain
     class P2PClient 
     {
         /***
-         *todo
+         * TODO
          * implementare connessione alla web socket da parte del client per la gestione delle transazioni e per il mining
          * **/
 
-        IDictionary<string, WebSocket> WebSocketDictionary = new Dictionary<string, WebSocket>();
+        IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
 
         public void Connetti(string url)
         {
-            if (!WebSocketDictionary.ContainsKey(url))
+            if (!_webSocketDictionary.ContainsKey(url))
             {
                 WebSocket WebSocket = new WebSocket(url);
 
@@ -51,13 +51,13 @@ namespace BlockChain
                 WebSocket.Send($"Dalla porta {Program.Porta}: Ciao Server");
                 WebSocket.Send(JsonConvert.SerializeObject(Program.UniMolCoin));
 
-                WebSocketDictionary.Add(url, WebSocket);
+                _webSocketDictionary.Add(url, WebSocket);
             }
         }
 
         public void Send(string url, string data)
         {
-            foreach (var item in WebSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 if (item.Key == url)
                 {
@@ -68,7 +68,7 @@ namespace BlockChain
 
         public void Broadcast(string data)
         {
-            foreach (var item in WebSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 item.Value.Send(data);
             }
@@ -77,7 +77,7 @@ namespace BlockChain
         public IList<string> GetServers()
         {
             IList<string> servers = new List<string>();
-            foreach (var item in WebSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 servers.Add(item.Key);
             }
@@ -86,7 +86,7 @@ namespace BlockChain
 
         public void Close()
         {
-            foreach (var item in WebSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 item.Value.Close();
             }

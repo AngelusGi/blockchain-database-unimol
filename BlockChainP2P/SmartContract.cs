@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BlockChain
+﻿namespace BlockChain
 {
-    class SmartContract
+    internal class SmartContract
     {
 
         /***
