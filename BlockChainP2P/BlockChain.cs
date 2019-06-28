@@ -128,12 +128,10 @@ namespace BlockChain
         {
             int bilancio = 0;
 
-            for (int posBlocco = 0; posBlocco < Catena.Count; posBlocco++)
+            foreach (var blocco in Catena)
             {
-                for (int posTransazione = 0; posTransazione < Catena[posBlocco].Transazioni.Count; posTransazione++)
+                foreach (var transazione in blocco.Transazioni)
                 {
-                    Transazione transazione = Catena[posBlocco].Transazioni[posTransazione];
-
                     if (transazione.IndirizzoSorgente == indirizzo)
                     {
                         bilancio -= transazione.Valore;
@@ -143,7 +141,6 @@ namespace BlockChain
                     {
                         bilancio += transazione.Valore;
                     }
-
                 }
             }
 
