@@ -4,12 +4,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlockChainMenu
+namespace BlockChainP2P
 {
 
     /// <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
-
-    internal class BlockChain
+    
+        internal class BlockChain
     {
 
         #region Membri
@@ -77,7 +77,7 @@ namespace BlockChainMenu
 
         public Blocco GetUltimoBlocco()
         {
-            return Catena[Catena.Count - 1];
+            return Catena[ Catena.Count - 1 ];
         }
 
         #region Documentazione
@@ -86,19 +86,19 @@ namespace BlockChainMenu
         #endregion
         public void AggiungiBlocco(Blocco blocco)
         {
-            // prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
+            //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
             Blocco ultimoBlocco = GetUltimoBlocco();
 
-            // aumenta l'indice del blocco +1 rispetto a precedente
+            //aumenta l'indice del blocco +1 rispetto a precedente
             blocco.Indice = ultimoBlocco.Indice + 1;
 
             // calcola il suo hash partendo da quello del precedente
             blocco.HashPrecedente = ultimoBlocco.HashBloccoCorrente;
 
-            // dopo aver inserito difficoltà posso effettuare il mining
+            //dopo aver inserito difficoltà posso effettuare il mining
             blocco.Mina(Difficoltà);
 
-            // aggiunge il blocco alla catena
+            //aggiunge il blocco alla catena
             Catena.Add(blocco);
 
         }
@@ -207,7 +207,7 @@ namespace BlockChainMenu
 
         #region Documentazione
         /// <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
-        /// <param name="miner">Prende un oggetto di tipo utente (miner)</param>
+        /// <param name="indirizzoMiner">Prende l'indirizzo del miner della transazione</param>
         /// <returns>Restituisce il nuovo saldo</returns>
         #endregion
         public void MinaTransazioni(Utente miner)

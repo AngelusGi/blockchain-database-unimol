@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using WebSocketSharp;
 
-namespace BlockChain
+namespace BlockChainP2P
 {
 
     /// <summary>Gestisce la parte client della socket</summary>

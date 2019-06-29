@@ -9,7 +9,7 @@ using System.Text;
 using Newtonsoft.Json;
 
 
-namespace BlockChain
+namespace BlockChainMenu
 {
     /// <summary>Classe che si occupa di gestire il singolo blocco della catena</summary>
     internal class Blocco

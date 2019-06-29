@@ -1,5 +1,5 @@
 ﻿
-namespace BlockChain
+namespace BlockChainBlocchi
 {
     class Transazione
     {

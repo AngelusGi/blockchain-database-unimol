@@ -1,5 +1,5 @@
 ﻿
-namespace BlockChainMenu
+namespace BlockChainP2P
 {
 
     /// <summary>Gestione della transazione associata ad un blocco della catena</summary>
@@ -28,6 +28,15 @@ namespace BlockChainMenu
 
         public Transazione(Utente mittente, Utente destinatario, int valore)
         {
+            //if (mittente != null)
+            //{
+            //    IndirizzoMittente = mittente.Nome;
+            //}
+            //else
+            //{
+            //    IndirizzoMittente = null;
+            //}
+            //questo blocco di codice equivale all'espressione seguente
 
             IndirizzoMittente = mittente?.Nome;
 
@@ -35,5 +44,6 @@ namespace BlockChainMenu
             Valore = valore;
 
         }
+
     }
 }

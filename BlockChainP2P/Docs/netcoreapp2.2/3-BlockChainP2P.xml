@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>3-BlockChainP2P</name>
+    </assembly>
+    <members>
+        <member name="T:BlockChain.Blocco">
+            <summary>Classe che si occupa di gestire il singolo blocco della catena</summary>
+        </member>
+        <member name="P:BlockChain.Blocco.Indice">
+            <summary>
+              <para>ID del blocco della catena</para>
+            </summary>
+        </member>
+        <member name="P:BlockChain.Blocco.DataOra">
+            <summary>
+              <para>
+             Gets or sets the data ora di creazione del blocco con precisione fino a ms</para>
+            </summary>
+            <value>The data ora.</value>
+        </member>
+        <member name="P:BlockChain.Blocco.HashPrecedente">
+            <summary>Chiave di cifratura del blocco precedente. Gets or sets the hash precedente.</summary>
+            <value>The hash precedente.</value>
+        </member>
+        <member name="P:BlockChain.Blocco.HashBloccoCorrente">
+            <summary>
+              <para>
+            chiave di cifratura del blocco precedente. Gets or sets the hash blocco corrente.
+            </para>
+            </summary>
+            <value>The hash blocco corrente.</value>
+        </member>
+        <member name="P:BlockChain.Blocco.Nonce">
+            <summary>
+            Assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography <a href="https://it.wikipedia.org/wiki/Nonce">https://it.wikipedia.org/wiki/Nonce</a> . Gets or sets the nonce.
+            </summary>
+            <value>The nonce.</value>
+        </member>
+        <member name="M:BlockChain.Blocco.CalcolaHash">
+            <summary>Calcola l'hash del blocco basandosi su SHA512</summary>
+            <returns>Impronta digitale del blocco</returns>
+        </member>
+        <member name="T:BlockChain.BlockChain">
+            <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
+        </member>
+        <member name="F:BlockChain.BlockChain.TransazioniInAttesa">
+            <summary>gestisce le transazioni che devono ancora essere processate (minate)</summary>
+        </member>
+        <member name="P:BlockChain.BlockChain.Difficoltà">
+            <summary>Sistema per aumentare la complessità dei calcoli necessari per validare la blockchain all'aumentare della dimensione (Proof of Work)</summary>
+            <value>The difficoltà.</value>
+        </member>
+        <member name="F:BlockChain.BlockChain.Ricompensa">
+            <summary>Con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto</summary>
+        </member>
+        <member name="M:BlockChain.BlockChain.CreaBloccoIniziale">
+            <summary>Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco</summary>
+            <returns>Il primo blocco della blockchain</returns>
+        </member>
+        <member name="M:BlockChain.BlockChain.AggiungiBlocco(BlockChain.Blocco)">
+            <summary>Si aggancia all'ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando.</summary>
+            <param name="blocco">Blocco della catena generato dal costruttore</param>
+        </member>
+        <member name="M:BlockChain.BlockChain.IsValido">
+            <summary>
+            Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
+            Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
+            </summary>
+            <returns>Restituisce lo stato di validità di un blocco</returns>
+        </member>
+        <member name="M:BlockChain.BlockChain.MinaTransazioni(System.String)">
+            <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
+            <param name="indirizzoMiner">Prende l'indirizzo del miner della transazione</param>
+            <returns>Restituisce il nuovo saldo</returns>
+        </member>
+        <member name="M:BlockChain.BlockChain.AggiornaBilancio(System.String)">
+            <summary>Il primo if decrementa saldo del mittente, il secondo aumenta saldo del destinatario</summary>
+            <param name="indirizzo">Prende l'indirizzo di destinazione della transazione</param>
+            <returns>Restituisce il nuovo saldo</returns>
+        </member>
+        <member name="T:BlockChain.P2PClient">
+            <summary>Gestisce la parte client della socket</summary>
+        </member>
+        <member name="T:BlockChain.P2PServer">
+            <summary>Gestisce la parte server della Socket</summary>
+            <seealso cref="T:WebSocketSharp.Server.WebSocketBehavior" />
+        </member>
+        <member name="T:BlockChain.Transazione">
+            <summary>Gestione della transazione associata ad un blocco della catena</summary>
+        </member>
+        <member name="P:BlockChain.Transazione.IndirizzoMittente">
+            <summary>Indirizzo di chi effettua (<em>fa partire</em>) la transazione</summary>
+            <value>The indirizzo mittente.</value>
+        </member>
+        <member name="P:BlockChain.Transazione.IndirizzoDestinatario">
+            <summary>
+              <para>Indirizzo del destinatario della transazione</para>
+            </summary>
+            <value>The indirizzo destinatario.</value>
+        </member>
+        <member name="P:BlockChain.Transazione.Valore">
+            <summary>Valore della transazione.</summary>
+            <value>The valore.</value>
+        </member>
+    </members>
+</doc>

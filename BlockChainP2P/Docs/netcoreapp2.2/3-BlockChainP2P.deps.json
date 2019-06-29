@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "3-BlockChainP2P/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "WebSocketSharp.CustomHeaders.Standard": "1.0.2"
+        },
+        "runtime": {
+          "3-BlockChainP2P.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "WebSocketSharp.CustomHeaders.Standard/1.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/websocket-sharp-customheaders.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "3-BlockChainP2P/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "WebSocketSharp.CustomHeaders.Standard/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+vdkF0EvrXq5xkZO/IEn4P3aSfTpAGn34TBHi2D7HzQCNpQoX4ukzM105DhYDteU+xmgoXNm0ilatLYZj4rLHA==",
+      "path": "websocketsharp.customheaders.standard/1.0.2",
+      "hashPath": "websocketsharp.customheaders.standard.1.0.2.nupkg.sha512"
+    }
+  }
+}

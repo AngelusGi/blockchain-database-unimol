@@ -3,7 +3,7 @@
 //libreria per la gestione delle liste
 using System.Collections.Generic;
 
-namespace BlockChain
+namespace BlockChainBlocchi
 {
     class BlockChain
     {

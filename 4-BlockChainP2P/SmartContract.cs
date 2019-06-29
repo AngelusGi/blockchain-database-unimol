@@ -1,4 +1,4 @@
-﻿namespace BlockChainMenu
+﻿namespace BlockChainP2P
 {
     internal class SmartContract
     {

@@ -4,14 +4,14 @@ using WebSocketSharp;
 using WebSocketSharp.Server;
 
 
-namespace BlockChain
+namespace BlockChainP2P
 {
 
     /// <summary>Gestisce la parte server della Socket</summary>
     /// <seealso cref="WebSocketSharp.Server.WebSocketBehavior" />
     internal class P2PServer : WebSocketBehavior
     {
-        
+
         private bool _bloccoSincronizzato = false;
         private WebSocketServer _webSocketServer = null;
 
