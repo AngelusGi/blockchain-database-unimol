@@ -5,25 +5,27 @@ using System.Collections.Generic;
 
 namespace BlockChain
 {
+
+    /// <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
     internal class BlockChain
     {
 
-        /// <summary>
-        /// Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain
-        /// </summary>
-        
         #region Membri
 
-        //gestisce le transazioni che devono ancora essere processate
+
+        /// <summary>gestisce le transazioni che devono ancora essere processate (minate)</summary>
         public IList<Transazione> TransazioniInAttesa = new List<Transazione>();
 
         //inizializza una lista concatenata di blocchi
         public IList<Blocco> Catena { set; get; }
 
-        //sistema per aumentare la complessità all'aumentare della dimensione della catena (Proof of Work)
+
+        /// <summary>Sistema per aumentare la complessità dei calcoli necessari per validare la blockchain all'aumentare della dimensione (Proof of Work)</summary>
+        /// <value>The difficoltà.</value>
         public int Difficoltà { get; set; } = 2;
 
-        //con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto
+
+        /// <summary>Con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto</summary>
         public int Ricompensa = 1;
 
         #endregion
@@ -55,9 +57,7 @@ namespace BlockChain
             Catena.Add(CreaBloccoIniziale());
         }
 
-        /// <summary>
-        /// Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco
-        /// </summary>
+        /// <summary>Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco</summary>
         /// <returns>Il primo blocco della blockchain</returns>
         public Blocco CreaBloccoIniziale()
         {
@@ -72,9 +72,8 @@ namespace BlockChain
             return Catena[Catena.Count - 1];
         }
 
-        ///<summary>
-        /// Si aggancia all'ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando.
-        /// </summary>
+        /// <summary>Si aggancia all'ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando.</summary>
+        /// <param name="blocco">Blocco della catena generato dal costruttore</param>
         public void AggiungiBlocco(Blocco blocco)
         {
             //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
@@ -94,7 +93,7 @@ namespace BlockChain
 
         }
 
-        ///<summary>
+        /// <summary>
         /// Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
         /// Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
         /// </summary>
@@ -131,9 +130,7 @@ namespace BlockChain
             TransazioniInAttesa.Add(transazione);
         }
 
-        ///<summary>
-        /// Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate
-        /// </summary>
+        /// <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
         /// <param name="indirizzoMiner">Prende l'indirizzo del miner della transazione</param>
         /// <returns>Restituisce il nuovo saldo</returns>
         public void MinaTransazioni(string indirizzoMiner)
@@ -146,9 +143,7 @@ namespace BlockChain
             CreaTransazione(new Transazione(null, indirizzoMiner, Ricompensa));
         }
 
-        ///<summary>
-        /// Il primo if decrementa saldo del mittente, il secondo aumenta saldo del destinatario
-        /// </summary>
+        /// <summary>Il primo if decrementa saldo del mittente, il secondo aumenta saldo del destinatario</summary>
         /// <param name="indirizzo">Prende l'indirizzo di destinazione della transazione</param>
         /// <returns>Restituisce il nuovo saldo</returns>
         public int GetBilancio(string indirizzo)

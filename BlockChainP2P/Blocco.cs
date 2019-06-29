@@ -11,29 +11,46 @@ using Newtonsoft.Json;
 
 namespace BlockChain
 {
-    /// <summary>
-    /// Classe che si occupa di gestire il singolo blocco della catena
-    /// </summary>
+    /// <summary>Classe che si occupa di gestire il singolo blocco della catena</summary>
     internal class Blocco
     {
 
         #region Membri
 
-        ///ID del blocco
+        /// <summary>
+        ///   <para>ID del blocco della catena</para>
+        /// </summary>
         public int Indice { get; set; }
 
-        ///data e ora di riferimento del blocco con precisione fino a ms
+
+        /// <summary>
+        ///   <para>
+        ///  Gets or sets the data ora di creazione del blocco con precisione fino a ms</para>
+        /// </summary>
+        /// <value>The data ora.</value>
         public DateTime DataOra { get; set; }
 
-        ///chiave di cifratura del blocco precedente
+
+        /// <summary>Chiave di cifratura del blocco precedente. Gets or sets the hash precedente.</summary>
+        /// <value>The hash precedente.</value>
         public string HashPrecedente { get; set; }
 
-        ///chiave di cifratura del blocco precedente
+
+        /// <summary>
+        ///   <para>
+        /// chiave di cifratura del blocco precedente. Gets or sets the hash blocco corrente.
+        /// </para>
+        /// </summary>
+        /// <value>The hash blocco corrente.</value>
         public string HashBloccoCorrente { get; set; }
 
         public IList<Transazione> Transazioni { get; set; }
 
-        ///assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography https://it.wikipedia.org/wiki/Nonce
+
+        /// <summary>
+        /// Assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography <a href="https://it.wikipedia.org/wiki/Nonce">https://it.wikipedia.org/wiki/Nonce</a> . Gets or sets the nonce.
+        /// </summary>
+        /// <value>The nonce.</value>
         private int Nonce { get; set; }
 
         #endregion
@@ -51,9 +68,7 @@ namespace BlockChain
 
         #endregion
 
-        ///<summary>
-        /// Calcola l'hash del blocco basandosi su SHA512
-        /// </summary>
+        /// <summary>Calcola l'hash del blocco basandosi su SHA512</summary>
         /// <returns>Impronta digitale del blocco</returns>
         public string CalcolaHash()
         {

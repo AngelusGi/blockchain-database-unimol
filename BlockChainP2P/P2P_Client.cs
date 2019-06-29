@@ -5,11 +5,10 @@ using WebSocketSharp;
 
 namespace BlockChain
 {
+
+    /// <summary>Gestisce la parte client della socket</summary>
     internal class P2PClient
     {
-        /// <summary>
-        /// Gestisce la parte client della socket
-        /// </summary>
 
         private readonly IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
 

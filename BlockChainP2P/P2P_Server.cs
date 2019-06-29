@@ -6,13 +6,12 @@ using WebSocketSharp.Server;
 
 namespace BlockChain
 {
+
+    /// <summary>Gestisce la parte server della Socket</summary>
+    /// <seealso cref="WebSocketSharp.Server.WebSocketBehavior" />
     internal class P2PServer : WebSocketBehavior
     {
-        /// <summary>
-        /// Gestisce la parte server della Socket
-        /// </summary>
-
-
+        
         private bool _bloccoSincronizzato = false;
         private WebSocketServer _webSocketServer = null;
 
