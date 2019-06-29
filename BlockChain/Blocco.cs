@@ -61,13 +61,13 @@ namespace BlockChain
         public string CalcolaHash()
         {
             //SHA256 cifraturaSha = SHA256.Create();
-            SHA512 cifraturaSha = new SHA512Managed();
+            SHA512 cifraturaSha = SHA512.Create();
 
 
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
-
-            //TODO: DEBUG NON STAMPA "NONCE"
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
+
+
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
             byte[] byteOutput = cifraturaSha.ComputeHash(byteInput);
 

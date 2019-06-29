@@ -3,6 +3,9 @@ namespace BlockChain
 {
     internal class Transazione
     {
+        /// <summary>
+        /// Gestione della transazione associata ad un blocco della catena
+        /// </summary>
         #region Membri
 
         public string IndirizzoMittente { get; private set; }

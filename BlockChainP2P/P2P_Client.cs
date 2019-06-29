@@ -7,9 +7,9 @@ namespace BlockChain
 {
     internal class P2PClient
     {
-        /***
-         * implementare connessione alla web socket da parte del client per la gestione delle transazioni e per il mining
-         * **/
+        /// <summary>
+        /// Gestisce la parte client della socket
+        /// </summary>
 
         private readonly IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
 
@@ -19,7 +19,9 @@ namespace BlockChain
             {
                 WebSocket webSocket = new WebSocket(url);
 
-                //espressione lambda
+                //espressione lambda =>
+                //aggiunge mittente ed evento al messaggio trasmesso dalla socket. L'if verifica che si tratti della fase di instaurazione
+                //della connessione o se si tratta di un blocco
                 webSocket.OnMessage += (mittente, evento) =>
                 {
                     if (evento.Data.Contains("Ciao Client"))

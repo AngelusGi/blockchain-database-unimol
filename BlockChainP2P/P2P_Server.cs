@@ -8,9 +8,9 @@ namespace BlockChain
 {
     internal class P2PServer : WebSocketBehavior
     {
-        /***
-         * implementare web socket per la gestione dei client connessi
-         */
+        /// <summary>
+        /// Gestisce la parte server della Socket
+        /// </summary>
 
 
         private bool _bloccoSincronizzato = false;

@@ -7,6 +7,11 @@ namespace BlockChain
 {
     internal class BlockChain
     {
+
+        /// <summary>
+        /// Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain
+        /// </summary>
+        
         #region Membri
 
         //gestisce le transazioni che devono ancora essere processate
@@ -26,7 +31,7 @@ namespace BlockChain
 
         #region Costruttore
 
-        //costruttore della classe blockchain che si occupa di istanzare il
+        //costruttore della classe blockchain che si occupa di istanziare il
         //primo blocco della catena ed eventuali successivi
         public BlockChain()
         {
@@ -50,6 +55,10 @@ namespace BlockChain
             Catena.Add(CreaBloccoIniziale());
         }
 
+        /// <summary>
+        /// Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco
+        /// </summary>
+        /// <returns>Il primo blocco della blockchain</returns>
         public Blocco CreaBloccoIniziale()
         {
             Blocco blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
@@ -63,6 +72,9 @@ namespace BlockChain
             return Catena[Catena.Count - 1];
         }
 
+        ///<summary>
+        /// Si aggancia all'ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando.
+        /// </summary>
         public void AggiungiBlocco(Blocco blocco)
         {
             //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
@@ -74,7 +86,7 @@ namespace BlockChain
             // calcola il suo hash partendo da quello del precedente
             blocco.HashPrecedente = ultimoBlocco.HashBloccoCorrente;
 
-            //dopo aver inserito difficoltà posso integrare operazioni di mining
+            //dopo aver inserito difficoltà posso effettuare il mining
             blocco.Mina(Difficoltà);
 
             //aggiunge il blocco alla catena
@@ -82,7 +94,11 @@ namespace BlockChain
 
         }
 
-        //verifica l'integrità della blockchain
+        ///<summary>
+        /// Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
+        /// Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
+        /// </summary>
+        /// <returns>Restituisce lo stato di validità di un blocco</returns>
         public bool IsValido()
         {
 
@@ -115,6 +131,11 @@ namespace BlockChain
             TransazioniInAttesa.Add(transazione);
         }
 
+        ///<summary>
+        /// Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate
+        /// </summary>
+        /// <param name="indirizzoMiner">Prende l'indirizzo del miner della transazione</param>
+        /// <returns>Restituisce il nuovo saldo</returns>
         public void MinaTransazioni(string indirizzoMiner)
         {
             Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
@@ -125,6 +146,11 @@ namespace BlockChain
             CreaTransazione(new Transazione(null, indirizzoMiner, Ricompensa));
         }
 
+        ///<summary>
+        /// Il primo if decrementa saldo del mittente, il secondo aumenta saldo del destinatario
+        /// </summary>
+        /// <param name="indirizzo">Prende l'indirizzo di destinazione della transazione</param>
+        /// <returns>Restituisce il nuovo saldo</returns>
         public int GetBilancio(string indirizzo)
         {
             int bilancio = 0;
@@ -133,13 +159,12 @@ namespace BlockChain
             {
                 foreach (Transazione transazione in blocco.Transazioni)
                 {
-                    //decrementa saldo del mittente
+
                     if (transazione.IndirizzoMittente == indirizzo)
                     {
                         bilancio -= transazione.Valore;
                     }
 
-                    //aumenta saldo del destinatario
                     if (transazione.IndirizzoDestinatario == indirizzo)
                     {
                         bilancio += transazione.Valore;

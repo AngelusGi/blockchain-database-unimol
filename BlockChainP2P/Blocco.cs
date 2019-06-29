@@ -11,6 +11,9 @@ using Newtonsoft.Json;
 
 namespace BlockChain
 {
+    /// <summary>
+    /// Classe che si occupa di gestire il singolo blocco della catena
+    /// </summary>
     internal class Blocco
     {
 
@@ -48,10 +51,13 @@ namespace BlockChain
 
         #endregion
 
+        ///<summary>
+        /// Calcola l'hash del blocco basandosi su SHA512
+        /// </summary>
+        /// <returns>Impronta digitale del blocco</returns>
         public string CalcolaHash()
         {
-            SHA512 cifraturaSha = new SHA512Managed();
-            //SHA256 cifraturaSha = SHA256.Create();
+            SHA512 cifraturaSha = SHA512.Create();
 
             byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
             byte[] byteOutput = cifraturaSha.ComputeHash(byteInput);
