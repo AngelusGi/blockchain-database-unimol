@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 
 namespace BlockChainMenu
 {
+
+    /// <summary>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON</summary>
     internal static class SmartContract
     {
 
@@ -64,6 +66,9 @@ namespace BlockChainMenu
 
         private static readonly string _jsonPath = "..\\..\\..\\Resources\\SmartContract.json";
 
+        /// <summary>
+        /// Inizializza l'oggetto SmartContract a partire dal file JSON locale
+        /// </summary>
         public static void Inizializza()
         {
 
@@ -72,6 +77,9 @@ namespace BlockChainMenu
 
         }
 
+        /// <summary>
+        /// Mostra i dati presenti all'interno del contratto: titolo, versione, data di ultima modifica e clausole
+        /// </summary>
         public static void MostraContratto()
         {
             Console.WriteLine(_contratto.title);
@@ -84,11 +92,21 @@ namespace BlockChainMenu
                               $"\n\t{_contratto.properties.clause.BalanceCheck}");
         }
 
+        /// <summary>
+        /// Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.
+        /// </summary>
+        /// <param name="nomeMittente">Nome di colui che vuole fare la transazione.</param>
+        /// <param name="importoTransazione">Importo della transazione.</param>
+        /// <returns>Il saldo è sufficiente (true/false)</returns>
         public static bool ValidaTransazione(string nomeMittente, int importoTransazione)
         {
             return _uniMolCoin.RicercaUtente(nomeMittente).Saldo >= importoTransazione;
         }
 
+        /// <summary>
+        /// Verifica lo stato di validità dei blocchi presenti all'interno della blockchain.
+        /// </summary>
+        /// <returns>La blockchain è valida (true/false)</returns>
         public static bool ValidaBlockchain()
         {
             //finché ci sono blocchi
@@ -115,6 +133,11 @@ namespace BlockChainMenu
 
         }
 
+        /// <summary>
+        /// Assegna un ID univoco all'utente
+        /// </summary>
+        /// <param name="utente">Utente da autenticare.</param>
+        /// <returns>ID univoco dell'utente (SHA)</returns>
         public static string AutenticaUtente(Utente utente)
         {
 

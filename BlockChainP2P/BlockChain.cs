@@ -12,8 +12,8 @@ namespace BlockChainMenu
     internal class BlockChain
     {
 
-        #region Membri
-
+        #region Membri        
+        /// <summary> Lista di utenti partecipanti alla blockchain.</summary>
         public IList<Utente> Utenti { get; set; }
 
         /// <summary>gestisce le transazioni che devono ancora essere processate (minate)</summary>
@@ -58,7 +58,6 @@ namespace BlockChainMenu
 
         public void AggiungiBloccoIniziale()
         {
-            //Catena.Add(AggiungiBlocco());
             Catena.Add(CreaBloccoIniziale());
         }
 
@@ -112,11 +111,14 @@ namespace BlockChainMenu
         #endregion
         public bool IsValido()
         {
-
             return SmartContract.ValidaBlockchain();
         }
 
-
+        /// <summary>
+        /// Ricerca un utente all'interno della lista degli utenti.
+        /// </summary>
+        /// <param name="nome">Nome utente.</param>
+        /// <returns>Oggetto di tipo utente</returns>
         public Utente RicercaUtente(string nome)
         {
             #region spiegazioneCodice
@@ -134,6 +136,11 @@ namespace BlockChainMenu
             return Utenti.FirstOrDefault(utente => utente.Nome == nome);
         }
 
+        /// <summary>
+        /// Verifica l'esistenza dell'utente all'interno della lista degli utenti.
+        /// </summary>
+        /// <param name="nome">Nome utente.</param>
+        /// <returns>Utente esiste (true/false)</returns>
         public bool VerificaUtente(string nome)
         {
             #region spiegazioneCodice
@@ -151,6 +158,10 @@ namespace BlockChainMenu
             return Utenti.Any(utente => utente.Nome == nome);
         }
 
+        /// <summary>
+        /// Ricerca l'ultima transazione.
+        /// </summary>
+        /// <returns>Oggetto di tipo transazione</returns>
         private Transazione GetUltimaTransazione()
         {
             if (GetUltimoBlocco().Transazioni.Count > 0)
@@ -171,16 +182,23 @@ namespace BlockChainMenu
         {
             Transazione ultimaTransazione = GetUltimaTransazione();
 
-            Utente utenteCercato = RicercaUtente(ultimaTransazione.IndirizzoMittente);
-            if ((ultimaTransazione.IndirizzoMittente != null) && (ultimaTransazione.IndirizzoMittente == utenteCercato.Nome))
+            if ((ultimaTransazione != null) && (ultimaTransazione.IndirizzoMittente != null))
             {
-                utenteCercato.Saldo -= ultimaTransazione.Valore;
+                Utente mittente = RicercaUtente(ultimaTransazione.IndirizzoMittente);
+                if ((ultimaTransazione.IndirizzoMittente != null) && (ultimaTransazione.IndirizzoMittente == mittente.Nome))
+                {
+                    mittente.Saldo -= ultimaTransazione.Valore;
+                }
             }
 
-            utenteCercato = RicercaUtente(ultimaTransazione.IndirizzoDestinatario);
-            if (ultimaTransazione.IndirizzoDestinatario == utenteCercato.Nome)
+
+            if (ultimaTransazione != null)
             {
-                utenteCercato.Saldo += ultimaTransazione.Valore;
+                Utente utenteCercato = RicercaUtente(ultimaTransazione.IndirizzoDestinatario);
+                if (ultimaTransazione.IndirizzoDestinatario == utenteCercato.Nome)
+                {
+                    utenteCercato.Saldo += ultimaTransazione.Valore;
+                }
             }
         }
 
