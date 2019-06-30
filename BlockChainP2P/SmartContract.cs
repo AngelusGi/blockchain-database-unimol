@@ -57,12 +57,26 @@ namespace BlockChainMenu
 
 
         /// <summary>
-        /// Inizializza l'oggetto SmartContract a partire dal file JSON locale
+        /// Inizializza l'oggetto SmartContract a partire dal file JSON locale in base alla piattaforma d'esecuzione
         /// </summary>
         public static void Inizializza()
         {
+
+            string jsonPath;
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ? "./Resources/SmartContract.json" : "../../../Resources/SmartContract.json";
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                jsonPath = "../../../Resources/SmartContract.json";
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                jsonPath = "./Resources/SmartContract.json";
+            }
+            else
+            {
+                jsonPath = "./Resources/BlockChainP2P/SmartContract.json";
+            }
+            
 
             StreamReader lettoreFileJson = new StreamReader(jsonPath);
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
