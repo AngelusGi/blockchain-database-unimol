@@ -209,6 +209,10 @@ namespace BlockChainMenu
                         SmartContract.MostraContratto();
                         break;
 
+                    case Esci:
+                        Console.WriteLine("Arrivederci!");
+                        break;
+
                     default:
                         Console.WriteLine("Operazione non riconosciuta, riprova!");
                         break;
