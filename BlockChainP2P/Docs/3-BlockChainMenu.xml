@@ -44,6 +44,9 @@
         <member name="T:BlockChainMenu.BlockChain">
             <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
         </member>
+        <member name="P:BlockChainMenu.BlockChain.Utenti">
+            <summary> Lista di utenti partecipanti alla blockchain.</summary>
+        </member>
         <member name="F:BlockChainMenu.BlockChain.TransazioniInAttesa">
             <summary>gestisce le transazioni che devono ancora essere processate (minate)</summary>
         </member>
@@ -69,6 +72,26 @@
             </summary>
             <returns>Restituisce lo stato di validità di un blocco</returns>
         </member>
+        <member name="M:BlockChainMenu.BlockChain.RicercaUtente(System.String)">
+            <summary>
+            Ricerca un utente all'interno della lista degli utenti.
+            </summary>
+            <param name="nome">Nome utente.</param>
+            <returns>Oggetto di tipo utente</returns>
+        </member>
+        <member name="M:BlockChainMenu.BlockChain.VerificaUtente(System.String)">
+            <summary>
+            Verifica l'esistenza dell'utente all'interno della lista degli utenti.
+            </summary>
+            <param name="nome">Nome utente.</param>
+            <returns>Utente esiste (true/false)</returns>
+        </member>
+        <member name="M:BlockChainMenu.BlockChain.GetUltimaTransazione">
+            <summary>
+            Ricerca l'ultima transazione.
+            </summary>
+            <returns>Oggetto di tipo transazione</returns>
+        </member>
         <member name="M:BlockChainMenu.BlockChain.AggiornaSaldoUtenti">
             <summary>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain</summary>
         </member>
@@ -80,22 +103,56 @@
             <summary>Restituisce il numero totale di coin in circolazione</summary>
             <returns>Num monete</returns>
         </member>
+        <member name="T:BlockChainMenu.SmartContract">
+            <summary>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON</summary>
+        </member>
+        <member name="M:BlockChainMenu.SmartContract.Inizializza">
+            <summary>
+            Inizializza l'oggetto SmartContract a partire dal file JSON locale
+            </summary>
+        </member>
+        <member name="M:BlockChainMenu.SmartContract.MostraContratto">
+            <summary>
+            Mostra i dati presenti all'interno del contratto: titolo, versione, data di ultima modifica e clausole
+            </summary>
+        </member>
+        <member name="M:BlockChainMenu.SmartContract.ValidaTransazione(System.String,System.Int32)">
+            <summary>
+            Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.
+            </summary>
+            <param name="nomeMittente">Nome di colui che vuole fare la transazione.</param>
+            <param name="importoTransazione">Importo della transazione.</param>
+            <returns>Il saldo è sufficiente (true/false)</returns>
+        </member>
+        <member name="M:BlockChainMenu.SmartContract.ValidaBlockchain">
+            <summary>
+            Verifica lo stato di validità dei blocchi presenti all'interno della blockchain.
+            </summary>
+            <returns>La blockchain è valida (true/false)</returns>
+        </member>
+        <member name="M:BlockChainMenu.SmartContract.AutenticaUtente(BlockChainMenu.Utente)">
+            <summary>
+            Assegna un ID univoco all'utente
+            </summary>
+            <param name="utente">Utente da autenticare.</param>
+            <returns>ID univoco dell'utente (SHA)</returns>
+        </member>
         <member name="T:BlockChainMenu.Transazione">
             <summary>Gestione della transazione associata ad un blocco della catena</summary>
         </member>
         <member name="P:BlockChainMenu.Transazione.IndirizzoMittente">
             <summary>Indirizzo di chi effettua (<em>fa partire</em>) la transazione</summary>
-            <value>The indirizzo mittente.</value>
+            <value>Indirizzo mittente.</value>
         </member>
         <member name="P:BlockChainMenu.Transazione.IndirizzoDestinatario">
             <summary>
               <para>Indirizzo del destinatario della transazione</para>
             </summary>
-            <value>The indirizzo destinatario.</value>
+            <value>Indirizzo destinatario.</value>
         </member>
         <member name="P:BlockChainMenu.Transazione.Valore">
             <summary>Valore della transazione.</summary>
-            <value>The valore.</value>
+            <value>Valore.</value>
         </member>
     </members>
 </doc>
