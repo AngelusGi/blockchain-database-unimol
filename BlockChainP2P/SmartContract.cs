@@ -62,7 +62,7 @@ namespace BlockChainMenu
         public static void Inizializza()
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ? "./Resources/SmartContract.json" : "..\\..\\..\\Resources\\SmartContract.json";
+            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ? "./Resources/SmartContract.json" : "../../../Resources/SmartContract.json";
 
             StreamReader lettoreFileJson = new StreamReader(jsonPath);
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
