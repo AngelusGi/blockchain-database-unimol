@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using System.Text;
 using Newtonsoft.Json;
 
 namespace BlockChainMenu
@@ -17,47 +15,38 @@ namespace BlockChainMenu
 
         private class ContrattoJson
         {
-            public string schema { get; set; }
-            public string title { get; set; }
-            public string type { get; set; }
-            public Properties properties { get; set; }
+            public string Title { get; set; }
+            public string Type { get; set; }
+            public Properties Properties { get; set; }
         }
 
         public class Properties
         {
-            public Validationdata validationData { get; set; }
-            public Clause clause { get; set; }
-            public Versions versions { get; set; }
+            public ValidationData ValidationData { get; set; }
+            public Clause Clause { get; set; }
+            public Revision Revision { get; set; }
         }
 
-        public class Validationdata
+        public class ValidationData
         {
-            public string type { get; set; }
-            public string description { get; set; }
-            public string datetime { get; set; }
+            public string Description { get; set; }
+            public string Datetime { get; set; }
         }
 
         public class Clause
         {
-            public string type { get; set; }
-            public string description { get; set; }
+            public string Description { get; set; }
             public string IdContract { get; set; }
             public string TransactionContract { get; set; }
             public string DoubleSpendingContract { get; set; }
             public string BalanceCheck { get; set; }
         }
 
-        public class Versions
+        public class Revision
         {
-            public string type { get; set; }
-            public string description { get; set; }
-            public string numVersion { get; set; }
-            public Items items { get; set; }
-        }
-
-        public class Items
-        {
-            public string type { get; set; }
+            public string Description { get; set; }
+            public string NumVersion { get; set; }
+            
         }
 
         #endregion
@@ -85,14 +74,14 @@ namespace BlockChainMenu
         /// </summary>
         public static void MostraContratto()
         {
-            Console.WriteLine(_contratto.title);
-            Console.WriteLine($"Versione: {_contratto.properties.versions.numVersion}");
-            Console.WriteLine($"Ultima modifica: {_contratto.properties.validationData.datetime}");
-            Console.WriteLine($"Clausole:" +
-                              $"\n\t{_contratto.properties.clause.IdContract}" +
-                              $"\n\t{_contratto.properties.clause.DoubleSpendingContract}" +
-                              $"\n\t{_contratto.properties.clause.TransactionContract}" +
-                              $"\n\t{_contratto.properties.clause.BalanceCheck}");
+            Console.WriteLine($"\t{_contratto.Title.ToUpperInvariant()}");
+            Console.WriteLine($"\t{_contratto.Properties.Revision.Description}: {_contratto.Properties.Revision.NumVersion}");
+            Console.WriteLine($"\t{_contratto.Properties.ValidationData.Description}: {_contratto.Properties.ValidationData.Datetime}");
+            Console.WriteLine($"\t{_contratto.Properties.Clause.Description}:" +
+                              $"\n\t\t{_contratto.Properties.Clause.IdContract}" +
+                              $"\n\t\t{_contratto.Properties.Clause.DoubleSpendingContract}" +
+                              $"\n\t\t{_contratto.Properties.Clause.TransactionContract}" +
+                              $"\n\t\t{_contratto.Properties.Clause.BalanceCheck}");
         }
 
         /// <summary>
@@ -146,7 +135,7 @@ namespace BlockChainMenu
 
             foreach (var utente in utenti)
             {
-                utente.IdUnivoco = utente.GetHashCode().ToString();
+                utente.IdUnivoco = utente.GetHashCode();
             }
 
         }

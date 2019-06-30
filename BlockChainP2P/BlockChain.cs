@@ -1,8 +1,7 @@
 ﻿using System;
-
-//libreria per la gestione delle liste
 using System.Collections.Generic;
 using System.Linq;
+//libreria per la gestione delle liste
 
 namespace BlockChainMenu
 {
@@ -136,12 +135,29 @@ namespace BlockChainMenu
             return Utenti.FirstOrDefault(utente => utente.Nome == nome);
         }
 
+        public Utente RicercaUtente(int? idUtente)
+        {
+            #region spiegazioneCodice
+            //foreach (var utente in Utenti)
+            //{
+            //    if (utente.Nome == nome)
+            //    {
+            //        return utente;
+            //    }
+            //}
+            //return null;
+            //questo blocco di codice equivale all'espressione seguente
+            #endregion
+
+            return Utenti.FirstOrDefault(utente => utente.IdUnivoco == idUtente);
+        }
+
         /// <summary>
         /// Verifica l'esistenza dell'utente all'interno della lista degli utenti.
         /// </summary>
-        /// <param name="nome">Nome utente.</param>
+        /// <param name="idUtente">ID univoco dell'utente da verificare.</param>
         /// <returns>Utente esiste (true/false)</returns>
-        public bool VerificaUtente(string nome)
+        public bool VerificaUtente(int idUtente)
         {
             #region spiegazioneCodice
             //foreach (var utente in Utenti)
@@ -155,7 +171,7 @@ namespace BlockChainMenu
             //questo blocco di codice equivale all'espressione seguente
             #endregion
 
-            return Utenti.Any(utente => utente.Nome == nome);
+            return Utenti.Any(utente => utente.IdUnivoco == idUtente);
         }
 
         /// <summary>
@@ -168,10 +184,8 @@ namespace BlockChainMenu
             {
                 return GetUltimoBlocco().Transazioni[GetUltimoBlocco().Transazioni.Count - 1];
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
 
         }
 
@@ -182,10 +196,10 @@ namespace BlockChainMenu
         {
             Transazione ultimaTransazione = GetUltimaTransazione();
 
-            if ((ultimaTransazione != null) && (ultimaTransazione.IndirizzoMittente != null))
+            if ((ultimaTransazione != null) && (ultimaTransazione.IdMittente != null))
             {
-                Utente mittente = RicercaUtente(ultimaTransazione.IndirizzoMittente);
-                if ((ultimaTransazione.IndirizzoMittente != null) && (ultimaTransazione.IndirizzoMittente == mittente.Nome))
+                Utente mittente = RicercaUtente(ultimaTransazione.IdMittente);
+                if ((ultimaTransazione.IdMittente != null) && (ultimaTransazione.IdMittente == mittente.IdUnivoco))
                 {
                     mittente.Saldo -= ultimaTransazione.Valore;
                 }
@@ -194,8 +208,8 @@ namespace BlockChainMenu
 
             if (ultimaTransazione != null)
             {
-                Utente utenteCercato = RicercaUtente(ultimaTransazione.IndirizzoDestinatario);
-                if (ultimaTransazione.IndirizzoDestinatario == utenteCercato.Nome)
+                Utente utenteCercato = RicercaUtente(ultimaTransazione.IdDestinatario);
+                if (ultimaTransazione.IdDestinatario == utenteCercato.IdUnivoco)
                 {
                     utenteCercato.Saldo += ultimaTransazione.Valore;
                 }

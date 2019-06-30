@@ -4,26 +4,29 @@
 
   "type": "object",
 
-    "properties": {
+  "properties": {
+    // Data dell'ultimo aggiornamento del contratto.
     "validationData": {
       "type": "string",
-      "description": "Data dell'ultimo aggiornamento del contratto.",
+      "description": "Ultimo aggiornamento",
       "datetime": "2019/06/30 12:10:34"
     },
 
-      "clause": {
-        "type": "string",
-        "description": "Array di stringhe che contiene i principi del contratto.",
-        "IdContract": "Un utente non puo' avere piu' di un ID univoco.",
-        "TransactionContract": "Non e' possibile alterare il contenuto di una transazione.",
-        "DoubleSpendingContract": "Non e' possibile spendere piu' volte la stessa moneta.",
-        "BalanceCheck": "Non e' possibile spendere piu' di quanto disponibile nel proprio saldo."
-
-      },
-
-    "versions": {
+    // Stringhe che contiene i principi del contratto.",
+    "clause": {
       "type": "string",
-      "description": "Numero di versione del contratto.",
+      "description": "Clausole",
+      "IdContract": "Un utente non puo' avere piu' di un ID univoco.",
+      "TransactionContract": "Non e' possibile alterare il contenuto di una transazione.",
+      "DoubleSpendingContract": "Non e' possibile spendere piu' volte la stessa moneta.",
+      "BalanceCheck": "Non e' possibile spendere piu' di quanto disponibile nel proprio saldo."
+
+    },
+
+    // Numero di versione del contratto.
+    "revision": {
+      "type": "string",
+      "description": "Versione",
       "numVersion": "1.0.0"
     }
   }

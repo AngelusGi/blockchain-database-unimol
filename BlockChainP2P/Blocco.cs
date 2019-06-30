@@ -1,5 +1,5 @@
 ﻿using System;
-//libreria per Ilist
+//libreria per Ilist e liste
 using System.Collections.Generic;
 //libreria per la crittografia
 using System.Security.Cryptography;
@@ -80,6 +80,11 @@ namespace BlockChainMenu
             return Convert.ToBase64String(byteOutput);
         }
 
+
+        /// <summary>
+        /// Calcola l'hash per veificare la validità di un blocco
+        /// </summary>
+        /// <param name="difficoltà">Difficoltà dei calcoli necessari per validare la blockchain.</param>
         public void Mina(int difficoltà)
         {
 

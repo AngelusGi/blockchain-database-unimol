@@ -4,7 +4,7 @@
     {
         public string Nome { get; private set; }
         public int Saldo { get; set; }
-        public string IdUnivoco { get; set; }
+        public int IdUnivoco { get; set; }
 
         public Utente(string nome)
         {

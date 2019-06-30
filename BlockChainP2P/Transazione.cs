@@ -10,13 +10,14 @@ namespace BlockChainMenu
 
         /// <summary>Indirizzo di chi effettua (<em>fa partire</em>) la transazione</summary>
         /// <value>Indirizzo mittente.</value>
-        public string IndirizzoMittente { get; private set; }
+        //la dicitura int? indica che potrebbe essere null
+        public int? IdMittente { get; private set; }
 
         /// <summary>
         ///   <para>Indirizzo del destinatario della transazione</para>
         /// </summary>
         /// <value>Indirizzo destinatario.</value>
-        public string IndirizzoDestinatario { get; private set; }
+        public int IdDestinatario { get; private set; }
 
 
         /// <summary>Valore della transazione.</summary>
@@ -29,8 +30,9 @@ namespace BlockChainMenu
         public Transazione(Utente mittente, Utente destinatario, int valore)
         {
             //se indirizzo mittente non è null, allora assegna il nome del mittente
-            IndirizzoMittente = mittente?.Nome;
-            IndirizzoDestinatario = destinatario.Nome;
+            IdMittente = (mittente == null) ? (int?) null : mittente.IdUnivoco;
+
+            IdDestinatario = destinatario.IdUnivoco;
             Valore = valore;
 
         }
