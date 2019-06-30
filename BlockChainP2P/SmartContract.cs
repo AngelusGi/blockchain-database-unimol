@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using Newtonsoft.Json;
@@ -60,19 +62,20 @@ namespace BlockChainMenu
 
         #endregion
 
-        private static readonly BlockChain _uniMolCoin = Menu.UniMolCoin;
+        private static readonly BlockChain UniMolCoin = Menu.UniMolCoin;
 
         private static ContrattoJson _contratto;
 
-        private static readonly string _jsonPath = "..\\..\\..\\Resources\\SmartContract.json";
 
         /// <summary>
         /// Inizializza l'oggetto SmartContract a partire dal file JSON locale
         /// </summary>
         public static void Inizializza()
         {
+            //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
+            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "..\\..\\..\\Resources\\SmartContract.json" : "./Resources/SmartContract.json";
 
-            StreamReader lettoreFileJson = new StreamReader(_jsonPath);
+            StreamReader lettoreFileJson = new StreamReader(jsonPath);
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
         }
@@ -93,14 +96,14 @@ namespace BlockChainMenu
         }
 
         /// <summary>
-        /// Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.
+        /// Valida la transazione verificando se il saldo dell'utenti è necessario a coprire l'importo che si vole spendere.
         /// </summary>
         /// <param name="nomeMittente">Nome di colui che vuole fare la transazione.</param>
         /// <param name="importoTransazione">Importo della transazione.</param>
         /// <returns>Il saldo è sufficiente (true/false)</returns>
         public static bool ValidaTransazione(string nomeMittente, int importoTransazione)
         {
-            return _uniMolCoin.RicercaUtente(nomeMittente).Saldo >= importoTransazione;
+            return UniMolCoin.RicercaUtente(nomeMittente).Saldo >= importoTransazione;
         }
 
         /// <summary>
@@ -110,10 +113,10 @@ namespace BlockChainMenu
         public static bool ValidaBlockchain()
         {
             //finché ci sono blocchi
-            for (int pos = 1; pos < _uniMolCoin.Catena.Count; pos++)
+            for (int pos = 1; pos < UniMolCoin.Catena.Count; pos++)
             {
-                Blocco bloccoCorrente = _uniMolCoin.Catena[pos];
-                Blocco bloccoPrecedente = _uniMolCoin.Catena[pos - 1];
+                Blocco bloccoCorrente = UniMolCoin.Catena[pos];
+                Blocco bloccoPrecedente = UniMolCoin.Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
                 if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
@@ -134,19 +137,17 @@ namespace BlockChainMenu
         }
 
         /// <summary>
-        /// Assegna un ID univoco all'utente
+        /// Assegna un ID univoco all'utenti
         /// </summary>
-        /// <param name="utente">Utente da autenticare.</param>
-        /// <returns>ID univoco dell'utente (SHA)</returns>
-        public static string AutenticaUtente(Utente utente)
+        /// <param name="utenti">Utente da autenticare.</param>
+        /// <returns>ID univoco dell'utenti (SHA)</returns>
+        public static void AutenticaUtente(IList<Utente> utenti)
         {
 
-            SHA512 idSha = SHA512.Create();
-
-            byte[] byteInput = Encoding.ASCII.GetBytes($"{utente}");
-            byte[] byteOutput = idSha.ComputeHash(byteInput);
-
-            return Convert.ToBase64String(byteOutput);
+            foreach (var utente in utenti)
+            {
+                utente.IdUnivoco = utente.GetHashCode().ToString();
+            }
 
         }
 
