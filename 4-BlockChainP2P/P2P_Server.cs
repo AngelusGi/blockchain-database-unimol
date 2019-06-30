@@ -11,16 +11,25 @@ namespace BlockChainP2P
     /// <seealso cref="WebSocketSharp.Server.WebSocketBehavior" />
     internal class P2PServer : WebSocketBehavior
     {
-
+        private const int MinPorta = 1024;
+        private const int MaxPorta = 49151;
         private bool _bloccoSincronizzato = false;
         private WebSocketServer _webSocketServer = null;
 
         public void Start()
         {
-            _webSocketServer = new WebSocketServer($"ws://127.0.0.1:{Program.Porta}");
+            int portaServer = SelezionaPorta();
+
+            _webSocketServer = new WebSocketServer($"ws://127.0.0.1:{portaServer}");
             _webSocketServer.AddWebSocketService<P2PServer>("/Blockchain");
             _webSocketServer.Start();
-            Console.WriteLine($"Server inizializzato a ws://127.0.0.1:{Program.Porta}");
+            Console.WriteLine($"Server inizializzato a ws://127.0.0.1:{portaServer}");
+        }
+
+        private int SelezionaPorta()
+        {
+            Random portaRandom = new Random();
+            return portaRandom.Next(MinPorta, MaxPorta);
         }
 
         protected override void OnMessage(MessageEventArgs evento)
@@ -28,20 +37,20 @@ namespace BlockChainP2P
             if (evento.Data.Contains("Ciao Server"))
             {
                 Console.WriteLine(evento.Data);
-                Send($"Da porta {Program.Porta}: Ciao Client");
+                Send($"Da porta {P2PClient.Porta}: Ciao Client");
             }
             else
             {
                 BlockChain nuovaCatena = JsonConvert.DeserializeObject<BlockChain>(evento.Data);
 
-                if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Program.UniMolCoin.Catena.Count)
+                if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Menu.UniMolCoin.Catena.Count)
                 {
-                    Program.UniMolCoin.Catena = nuovaCatena.Catena;
+                    Menu.UniMolCoin.Catena = nuovaCatena.Catena;
                 }
 
                 if (!_bloccoSincronizzato)
                 {
-                    Send(JsonConvert.SerializeObject(Program.UniMolCoin));
+                    Send(JsonConvert.SerializeObject(Menu.UniMolCoin));
                     _bloccoSincronizzato = true;
                 }
             }

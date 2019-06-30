@@ -8,8 +8,7 @@ namespace BlockChainP2P
 {
 
     /// <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
-    
-        internal class BlockChain
+    internal class BlockChain
     {
 
         #region Membri
@@ -77,7 +76,7 @@ namespace BlockChainP2P
 
         public Blocco GetUltimoBlocco()
         {
-            return Catena[ Catena.Count - 1 ];
+            return Catena[Catena.Count - 1];
         }
 
         #region Documentazione
@@ -181,7 +180,7 @@ namespace BlockChainP2P
             {
                 foreach (Transazione transazione in blocco.Transazioni)
                 {
-                    foreach (var utente in Utenti)
+                    foreach (Utente utente in Utenti)
                     {
                         if (transazione.IndirizzoMittente == utente.Nome)
                         {
@@ -238,7 +237,7 @@ namespace BlockChainP2P
             {
                 foreach (Transazione transazione in blocco.Transazioni)
                 {
-                    foreach (var utente in Utenti)
+                    foreach (Utente utente in Utenti)
                     {
                         if (transazione.IndirizzoMittente == utente.Nome)
                         {

@@ -11,9 +11,15 @@ namespace BlockChainP2P
     {
 
         private readonly IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
+        public static int Porta { get; private set; }
+        private const int MinPorta = 1024;
+        private const int MaxPorta = 49151;
 
         public void Connetti(string url)
         {
+
+            Porta = SelezionaPorta();
+
             if (!_webSocketDictionary.ContainsKey(url))
             {
                 WebSocket webSocket = new WebSocket(url);
@@ -30,28 +36,34 @@ namespace BlockChainP2P
                     else
                     {
                         BlockChain nuovaCatena = JsonConvert.DeserializeObject<BlockChain>(evento.Data);
-                        if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Program.UniMolCoin.Catena.Count)
+                        if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Menu.UniMolCoin.Catena.Count)
                         {
 
                             List<Transazione> nuoveTransazioni = new List<Transazione>();
 
                             nuoveTransazioni.AddRange(nuovaCatena.TransazioniInAttesa);
-                            nuoveTransazioni.AddRange(Program.UniMolCoin.TransazioniInAttesa);
+                            nuoveTransazioni.AddRange(Menu.UniMolCoin.TransazioniInAttesa);
 
                             nuovaCatena.TransazioniInAttesa = nuoveTransazioni;
 
-                            Program.UniMolCoin = nuovaCatena;
+                            Menu.UniMolCoin = nuovaCatena;
                         }
                     }
                 };
 
                 webSocket.Connect();
 
-                webSocket.Send($"Dalla porta {Program.Porta}: Ciao Server");
-                webSocket.Send(JsonConvert.SerializeObject(Program.UniMolCoin));
+                webSocket.Send($"Dalla porta {Porta}: Ciao Server");
+                webSocket.Send(JsonConvert.SerializeObject(Menu.UniMolCoin));
 
                 _webSocketDictionary.Add(url, webSocket);
             }
+        }
+
+        private int SelezionaPorta()
+        {
+            Random portaRandom = new Random();
+            return portaRandom.Next(MinPorta, MaxPorta);
         }
 
         public void Send(string url, string data)

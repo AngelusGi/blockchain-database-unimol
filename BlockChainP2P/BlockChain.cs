@@ -208,7 +208,6 @@ namespace BlockChainMenu
         #region Documentazione
         /// <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
         /// <param name="miner">Prende un oggetto di tipo utente (miner)</param>
-        /// <returns>Restituisce il nuovo saldo</returns>
         #endregion
         public void MinaTransazioni(Utente miner)
         {

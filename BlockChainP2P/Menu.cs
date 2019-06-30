@@ -7,11 +7,12 @@ namespace BlockChainMenu
     internal class Menu
     {
 
-        public static BlockChain UniMolCoin;
+        public static BlockChain UniMolCoin { get; private set; }
 
         private const int Esci = 4;
         private const int AggiungiTransazione = 1;
         private const int MostraBlockchain = 2;
+        private const int MostraSmartContract = 3;
         private const int Annulla = 0;
 
         private string _risposta;
@@ -68,8 +69,10 @@ namespace BlockChainMenu
 
         private void AvviaMenu()
         {
-
+            
             Benvenuto();
+
+            SmartContract.Inizializza();
 
             do
             {
@@ -103,13 +106,6 @@ namespace BlockChainMenu
 
 
 
-            //if (Porta > 0)
-            //{
-            //    Server = new P2PServer();
-            //    Server.Start();
-            //}
-
-
             int selezione = Annulla;
 
             while (!Esci.Equals(selezione))
@@ -117,10 +113,10 @@ namespace BlockChainMenu
 
                 Console.WriteLine("\n\t*** MENU UNIMOL COIN ***");
                 Console.WriteLine("=========================");
-                //Console.WriteLine(". Connessione al server.");
                 Console.WriteLine($"{AggiungiTransazione}. Aggiungere una transazione.");
-                Console.WriteLine($"{MostraBlockchain}. Mostra la BlockChain");
-                Console.WriteLine($"{Esci}. Esci");
+                Console.WriteLine($"{MostraBlockchain}. Mostra la BlockChain.");
+                Console.WriteLine($"{MostraSmartContract}. Mostra lo SmartContract di UniMol Coin.");
+                Console.WriteLine($"{Esci}. Esci.");
                 Console.WriteLine("=========================");
                 Console.Write("\tInserisci una scelta: ");
 
@@ -135,21 +131,10 @@ namespace BlockChainMenu
                 {
                     Console.WriteLine("Operazione non riconosciuta, riprova!");
                     Console.WriteLine(exception.Message);
-                    throw;
                 }
 
                 switch (selezione)
                 {
-                    //case UrlServer:
-                    //    Console.WriteLine("Per favore, inserisci l'URL del server (0 per annullare)");
-                    //    string serverUrl = Console.ReadLine();
-                    //    if (serverUrl == "0")
-                    //    {
-                    //        break;
-                    //    }
-
-                    //    Client.Connetti($"{serverUrl}/Blockchain");
-                    //    break;
 
                     case AggiungiTransazione:
 
@@ -171,16 +156,15 @@ namespace BlockChainMenu
                             break;
                         }
 
-                        NormalizzaNome(ref mittente);
+                        NormalizzaNome(ref destinatario);
 
                         Console.WriteLine($"Per favore, inserisci l'importo ( {Annulla} per annullare)");
                         string importo = Console.ReadLine();
+
                         if (importo == Annulla.ToString())
                         {
                             break;
                         }
-
-
 
                         if ((UniMolCoin.VerificaUtente(mittente)) && (UniMolCoin.VerificaUtente(destinatario)))
                         {
@@ -188,12 +172,9 @@ namespace BlockChainMenu
                             UniMolCoin.CreaTransazione(new Transazione(UniMolCoin.RicercaUtente(mittente), UniMolCoin.RicercaUtente(destinatario), Convert.ToInt32(importo)));
 
                             Random randomMiner = new Random();
-                            int numUtenteEstratto = randomMiner.Next(0, UniMolCoin.Utenti.Count);
-                            Console.WriteLine(numUtenteEstratto);
 
                             //il miner sarà estratto casualmente tra la lista degli utenti
-                            //UniMolCoin.MinaTransazioni( UniMolCoin.Utenti[ randomMiner.Next(0, UniMolCoin.Utenti.Count) ] );
-                            UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[numUtenteEstratto]);
+                            UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[randomMiner.Next(0, UniMolCoin.Utenti.Count)]);
 
                             Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin));
                         }
@@ -201,8 +182,6 @@ namespace BlockChainMenu
                         {
                             Console.WriteLine("Verificare i valori inseriti di mittente e destinatario.");
                         }
-
-                        //Client.Broadcast(JsonConvert.SerializeObject(UniMolCoin));
 
                         break;
 
@@ -213,6 +192,10 @@ namespace BlockChainMenu
                         Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
                         break;
 
+                    case MostraSmartContract:
+                        SmartContract.MostraContratto();
+                        break;
+
                     default:
                         Console.WriteLine("Operazione non riconosciuta, riprova!");
                         break;
@@ -220,19 +203,6 @@ namespace BlockChainMenu
                 }
 
             }
-
-            //if (Client != null)
-            //{
-            //    try
-            //    {
-            //        Client.Close();
-            //    }
-            //    finally
-            //    {
-            //        Client = null;
-            //    }
-            //}
-
 
             #region VecchiaImplementazione
 
