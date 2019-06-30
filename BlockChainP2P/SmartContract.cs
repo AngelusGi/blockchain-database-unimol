@@ -74,7 +74,7 @@ namespace BlockChainMenu
             }
             else
             {
-                jsonPath = "./Resources/BlockChainP2P/SmartContract.json";
+                jsonPath = "./BlockChainP2P/Resources/SmartContract.json";
             }
             
 
