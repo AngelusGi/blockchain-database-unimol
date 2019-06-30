@@ -69,7 +69,7 @@ namespace BlockChainMenu
 
         private void AvviaMenu()
         {
-            
+
             Benvenuto();
 
             SmartContract.Inizializza();
@@ -169,14 +169,27 @@ namespace BlockChainMenu
                         if ((UniMolCoin.VerificaUtente(mittente)) && (UniMolCoin.VerificaUtente(destinatario)))
                         {
 
-                            UniMolCoin.CreaTransazione(new Transazione(UniMolCoin.RicercaUtente(mittente), UniMolCoin.RicercaUtente(destinatario), Convert.ToInt32(importo)));
+                            if (SmartContract.ValidaTransazione(mittente, Convert.ToInt32(importo)))
+                            {
 
-                            Random randomMiner = new Random();
+                                UniMolCoin.CreaTransazione(new Transazione(UniMolCoin.RicercaUtente(mittente),
+                                    UniMolCoin.RicercaUtente(destinatario), Convert.ToInt32(importo)));
 
-                            //il miner sarà estratto casualmente tra la lista degli utenti
-                            UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[randomMiner.Next(0, UniMolCoin.Utenti.Count)]);
+                                Random randomMiner = new Random();
 
-                            Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin));
+                                //il miner sarà estratto casualmente tra la lista degli utenti
+                                UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[randomMiner.Next(0, UniMolCoin.Utenti.Count)]);
+
+                                Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin));
+
+                                UniMolCoin.AggiornaBilancio();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Transazione non valida, importo più alto della capacità di spesa del mittente.");
+                                break;
+                            }
+
                         }
                         else
                         {

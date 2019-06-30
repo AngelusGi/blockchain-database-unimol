@@ -113,28 +113,7 @@ namespace BlockChainMenu
         public bool IsValido()
         {
 
-            //finché ci sono blocchi
-            for (int pos = 1; pos < Catena.Count; pos++)
-            {
-                Blocco bloccoCorrente = Catena[pos];
-                Blocco bloccoPrecedente = Catena[pos - 1];
-
-                //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
-                {
-                    return false;
-                }
-
-                //ricalcola l'hash del blocco precedente, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashBloccoCorrente)
-                {
-                    return false;
-                }
-            }
-
-            //se tutti i blocchi sono coerenti tra valore presente e valore aspetta, ritorna true (catena valida)
-            return true;
-
+            return SmartContract.ValidaBlockchain();
         }
 
 
@@ -172,30 +151,36 @@ namespace BlockChainMenu
             return Utenti.Any(utente => utente.Nome == nome);
         }
 
+        private Transazione GetUltimaTransazione()
+        {
+            if (GetUltimoBlocco().Transazioni.Count > 0)
+            {
+                return GetUltimoBlocco().Transazioni[GetUltimoBlocco().Transazioni.Count - 1];
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
         #region Documentazione
         /// <summary>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain</summary>
         #endregion 
         private void AggiornaSaldoUtenti()
         {
-            foreach (Blocco blocco in Catena)
+            Transazione ultimaTransazione = GetUltimaTransazione();
+
+            Utente utenteCercato = RicercaUtente(ultimaTransazione.IndirizzoMittente);
+            if ((ultimaTransazione.IndirizzoMittente != null) && (ultimaTransazione.IndirizzoMittente == utenteCercato.Nome))
             {
-                foreach (Transazione transazione in blocco.Transazioni)
-                {
-                    foreach (var utente in Utenti)
-                    {
-                        if (transazione.IndirizzoMittente == utente.Nome)
-                        {
-                            utente.Saldo -= transazione.Valore;
-                        }
+                utenteCercato.Saldo -= ultimaTransazione.Valore;
+            }
 
-                        if (transazione.IndirizzoDestinatario == utente.Nome)
-                        {
-                            utente.Saldo += transazione.Valore;
-                        }
-                    }
-
-
-                }
+            utenteCercato = RicercaUtente(ultimaTransazione.IndirizzoDestinatario);
+            if (ultimaTransazione.IndirizzoDestinatario == utenteCercato.Nome)
+            {
+                utenteCercato.Saldo += ultimaTransazione.Valore;
             }
         }
 
@@ -233,25 +218,9 @@ namespace BlockChainMenu
 
             int bilancio = 0;
 
-            foreach (Blocco blocco in Catena)
+            foreach (Utente utente in Utenti)
             {
-                foreach (Transazione transazione in blocco.Transazioni)
-                {
-                    foreach (var utente in Utenti)
-                    {
-                        if (transazione.IndirizzoMittente == utente.Nome)
-                        {
-                            bilancio -= transazione.Valore;
-                        }
-
-                        if (transazione.IndirizzoDestinatario == utente.Nome)
-                        {
-                            bilancio += transazione.Valore;
-                        }
-                    }
-
-
-                }
+                bilancio += utente.Saldo;
             }
 
             return bilancio;

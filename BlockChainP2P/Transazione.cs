@@ -28,9 +28,8 @@ namespace BlockChainMenu
 
         public Transazione(Utente mittente, Utente destinatario, int valore)
         {
-
+            //se indirizzo mittente non è null, allora assegna il nome del mittente
             IndirizzoMittente = mittente?.Nome;
-
             IndirizzoDestinatario = destinatario.Nome;
             Valore = valore;
 

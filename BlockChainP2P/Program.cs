@@ -4,9 +4,7 @@
     {
         public static void Main()
         {
-
             new Menu();
-
         }
     }
 }

@@ -84,8 +84,34 @@ namespace BlockChainMenu
                               $"\n\t{_contratto.properties.clause.BalanceCheck}");
         }
 
-        public static void ValidaTransazione()
+        public static bool ValidaTransazione(string nomeMittente, int importoTransazione)
         {
+            return _uniMolCoin.RicercaUtente(nomeMittente).Saldo >= importoTransazione;
+        }
+
+        public static bool ValidaBlockchain()
+        {
+            //finché ci sono blocchi
+            for (int pos = 1; pos < _uniMolCoin.Catena.Count; pos++)
+            {
+                Blocco bloccoCorrente = _uniMolCoin.Catena[pos];
+                Blocco bloccoPrecedente = _uniMolCoin.Catena[pos - 1];
+
+                //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
+                if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
+                {
+                    return false;
+                }
+
+                //ricalcola l'hash del blocco precedente, se è diverso da quello memorizzato ritorna false (catena non valida)
+                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashBloccoCorrente)
+                {
+                    return false;
+                }
+            }
+
+            //se tutti i blocchi sono coerenti tra valore presente e valore aspetta, ritorna true (catena valida)
+            return true;
 
         }
 
