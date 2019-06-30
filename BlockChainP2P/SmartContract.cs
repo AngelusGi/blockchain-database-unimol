@@ -72,7 +72,7 @@ namespace BlockChainMenu
         public static void Inizializza()
         {
 
-            using StreamReader lettoreFileJson = new StreamReader(_jsonPath);
+            StreamReader lettoreFileJson = new StreamReader(_jsonPath);
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
         }
