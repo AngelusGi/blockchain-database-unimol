@@ -50,9 +50,9 @@ namespace BlockChainMenu
             Console.WriteLine($"*** PROF. {unimol[0]}***");
             Console.WriteLine("*** CDL IN INFORMATICA - UNIVERSITÀ DEGLI STUDI DEL MOLISE ***");
             Console.WriteLine("*** CANDIDATI:" +
-                              $"\t{unimol[1]}" +
-                              $"\t{unimol[2]}" +
-                              $"\t{unimol[3]}");
+                              $"\n\t{unimol[1]}" +
+                              $"\n\t{unimol[2]}" +
+                              $"\n\t{unimol[3]}");
 
             ColoreNormale();
         }
@@ -347,7 +347,14 @@ namespace BlockChainMenu
 
         private void ColoreNormale()
         {
-            Console.ForegroundColor = ConsoleColor.White;
+            if (Console.BackgroundColor == ConsoleColor.Black)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+            }
         }
 
         #endregion
