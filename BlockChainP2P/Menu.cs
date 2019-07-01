@@ -305,7 +305,7 @@ namespace BlockChainMenu
 
         private void AvviaMenu()
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 ColoreAvvisi();
                 Console.WriteLine("CapsLock attivato: {0}\nNumLock attivato: {1}\n", Console.CapsLock, Console.NumberLock);
