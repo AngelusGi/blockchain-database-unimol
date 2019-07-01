@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 
 namespace BlockChainMenu
@@ -285,9 +286,12 @@ namespace BlockChainMenu
 
         private void AvviaMenu()
         {
-
-            ColoreAvvisi();
-            Console.WriteLine("CapsLock attivato: {0}\nNumLock attivato: {1}\n", Console.CapsLock, Console.NumberLock);
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                ColoreAvvisi();
+                Console.WriteLine("CapsLock attivato: {0}\nNumLock attivato: {1}\n", Console.CapsLock, Console.NumberLock);
+            }
+            
 
             Benvenuto();
 
