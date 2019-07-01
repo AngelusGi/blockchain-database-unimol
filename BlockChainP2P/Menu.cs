@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Xml;
 using Newtonsoft.Json;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace BlockChainMenu
 {
@@ -85,13 +87,25 @@ namespace BlockChainMenu
                     nome = CreaUtenteTest(ref _numUtentiTest);
                 }
 
-                Console.WriteLine($"Utente registrato: {nome}");
+                Utente utenteDaRegistrare = new Utente(nome);
 
-                UniMolCoin.Utenti.Add(new Utente(nome));
-
+                if (SmartContract.VerificaOmonimie(utenteDaRegistrare))
+                {
+                    Console.WriteLine($"Utente registrato: {nome}");
+                    UniMolCoin.Utenti.Add(utenteDaRegistrare);
+                }
+                else
+                {
+                    ColoreAvvisi();
+                    Console.WriteLine("\t*** Errore utente già presente. ***");
+                    ColoreNormale();
+                }
+                
                 ColoreRecap();
                 Console.Write("\tVuoi inserire un altro utente? Digita 0 per terminare o qualunque altro tasto per continuare: ");
+
                 ColoreNormale();
+
                 _risposta = Console.ReadLine();
                 Console.WriteLine();
 
@@ -100,10 +114,15 @@ namespace BlockChainMenu
 
             while (UniMolCoin.Utenti.Count < 3)
             {
-                UniMolCoin.Utenti.Add(new Utente(CreaUtenteTest(ref _numUtentiTest)));
+                Utente utenteTest = new Utente(CreaUtenteTest(ref _numUtentiTest));
+                if (SmartContract.VerificaOmonimie(utenteTest))
+                {
+                    UniMolCoin.Utenti.Add(utenteTest);
+                }
+                
             }
 
-            SmartContract.AutenticaUtente(UniMolCoin.Utenti);
+            
 
             ColoreRecap();
             Console.WriteLine("\n\t*** Riepilogo utenti creati ***");

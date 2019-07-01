@@ -137,11 +137,18 @@
             </summary>
             <returns>La blockchain è valida (true/false)</returns>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.AutenticaUtente(System.Collections.Generic.IList{BlockChainMenu.Utente})">
+        <member name="M:BlockChainMenu.SmartContract.VerificaOmonimie(BlockChainMenu.Utente)">
+            <summary>
+            Verifica se l'utente che si vuole inserire esiste già all'interno degli utenti inseriti nella blockain
+            </summary>
+            <param name="utente"></param>
+            <returns>UtenteNonPresente (true/false)</returns>
+        </member>
+        <member name="M:BlockChainMenu.SmartContract.AutenticaUtente(BlockChainMenu.Utente)">
             <summary>
             Assegna un ID univoco agli utenti della lista (hash code)
             </summary>
-            <param name="utenti">Lista di utenti da autenticare.</param>
+            <param name="utente">Singolo utente da autenticare.</param>
         </member>
         <member name="T:BlockChainMenu.Transazione">
             <summary>Gestione della transazione associata ad un blocco della catena</summary>

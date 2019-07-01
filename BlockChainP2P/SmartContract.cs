@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -139,17 +140,51 @@ namespace BlockChainMenu
 
         }
 
+
+        /// <summary>
+        /// Verifica se l'utente che si vuole inserire esiste già all'interno degli utenti inseriti nella blockain
+        /// </summary>
+        /// <param name="utente"></param>
+        /// <returns>UtenteNonPresente (true/false)</returns>
+        public static bool VerificaOmonimie(Utente utente)
+        {
+
+            bool utenteNonPresente = true;
+
+            foreach (Utente utenteCorrente in UniMolCoin.Utenti)
+            {
+                //se l'utente da inserire non è già presente o per hash o per nome, allora posso autenticarlo e ritorno true
+                if (utenteCorrente.Nome == utente.Nome)
+                {
+                    utenteNonPresente = false;
+                    break;
+                }
+
+            }
+
+            if (utenteNonPresente)
+            {
+                //nel caso in cui non esista già l'utente (nome o hash associato) allora lo autentico
+                AutenticaUtente(utente);
+                return utenteNonPresente;
+            }
+            else
+            {
+                return utenteNonPresente;
+            }
+
+        }
+
+
         /// <summary>
         /// Assegna un ID univoco agli utenti della lista (hash code)
         /// </summary>
-        /// <param name="utenti">Lista di utenti da autenticare.</param>
-        public static void AutenticaUtente(IList<Utente> utenti)
+        /// <param name="utente">Singolo utente da autenticare.</param>
+        private static void AutenticaUtente(Utente utente)
         {
-
-            foreach (var utente in utenti)
-            {
-                utente.IdUnivoco = utente.GetHashCode();
-            }
+            
+            utente.IdUnivoco = utente.GetHashCode();
+            
 
         }
 
