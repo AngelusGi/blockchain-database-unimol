@@ -4,26 +4,26 @@
         <name>3-BlockChainMenu</name>
     </assembly>
     <members>
-        <member name="T:BlockChainMenu.Blocco">
+        <member name="T:_3_BlockChainMenu.Blocco">
             <summary>Classe che si occupa di gestire il singolo blocco della catena</summary>
         </member>
-        <member name="P:BlockChainMenu.Blocco.Indice">
+        <member name="P:_3_BlockChainMenu.Blocco.Indice">
             <summary>
               <para>ID del blocco della catena</para>
             </summary>
         </member>
-        <member name="P:BlockChainMenu.Blocco.DataOra">
+        <member name="P:_3_BlockChainMenu.Blocco.DataOra">
             <summary>
               <para>
              Gets or sets the data ora di creazione del blocco con precisione fino a ms</para>
             </summary>
             <value>The data ora.</value>
         </member>
-        <member name="P:BlockChainMenu.Blocco.HashPrecedente">
+        <member name="P:_3_BlockChainMenu.Blocco.HashPrecedente">
             <summary>Chiave di cifratura del blocco precedente. Gets or sets the hash precedente.</summary>
             <value>The hash precedente.</value>
         </member>
-        <member name="P:BlockChainMenu.Blocco.HashBloccoCorrente">
+        <member name="P:_3_BlockChainMenu.Blocco.HashBloccoCorrente">
             <summary>
               <para>
             chiave di cifratura del blocco precedente. Gets or sets the hash blocco corrente.
@@ -31,125 +31,145 @@
             </summary>
             <value>The hash blocco corrente.</value>
         </member>
-        <member name="P:BlockChainMenu.Blocco.Nonce">
+        <member name="P:_3_BlockChainMenu.Blocco.Nonce">
             <summary>
             Assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography <a href="https://it.wikipedia.org/wiki/Nonce">https://it.wikipedia.org/wiki/Nonce</a> . Gets or sets the nonce.
             </summary>
             <value>The nonce.</value>
         </member>
-        <member name="M:BlockChainMenu.Blocco.CalcolaHash">
+        <member name="M:_3_BlockChainMenu.Blocco.CalcolaHash">
             <summary>Calcola l'hash del blocco basandosi su SHA512</summary>
             <returns>Impronta digitale del blocco</returns>
         </member>
-        <member name="M:BlockChainMenu.Blocco.Mina(System.Int32)">
+        <member name="M:_3_BlockChainMenu.Blocco.Mina(System.Int32)">
             <summary>
             Calcola l'hash per veificare la validità di un blocco
             </summary>
             <param name="difficoltà">Difficoltà dei calcoli necessari per validare la blockchain.</param>
         </member>
-        <member name="T:BlockChainMenu.BlockChain">
+        <member name="T:_3_BlockChainMenu.BlockChain">
             <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
         </member>
-        <member name="P:BlockChainMenu.BlockChain.Utenti">
+        <member name="P:_3_BlockChainMenu.BlockChain.Utenti">
             <summary> Lista di utenti partecipanti alla blockchain.</summary>
         </member>
-        <member name="F:BlockChainMenu.BlockChain.TransazioniInAttesa">
+        <member name="F:_3_BlockChainMenu.BlockChain.TransazioniInAttesa">
             <summary>gestisce le transazioni che devono ancora essere processate (minate)</summary>
         </member>
-        <member name="P:BlockChainMenu.BlockChain.Difficoltà">
+        <member name="P:_3_BlockChainMenu.BlockChain.Difficoltà">
             <summary>Sistema per aumentare la complessità dei calcoli necessari per validare la blockchain all'aumentare della dimensione (Proof of Work)</summary>
             <value>The difficoltà.</value>
         </member>
-        <member name="F:BlockChainMenu.BlockChain.Ricompensa">
+        <member name="F:_3_BlockChainMenu.BlockChain.Ricompensa">
             <summary>Con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto</summary>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.CreaBloccoIniziale">
+        <member name="M:_3_BlockChainMenu.BlockChain.CreaBloccoIniziale">
             <summary>Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco</summary>
             <returns>Il primo blocco della blockchain</returns>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.AggiungiBlocco(BlockChainMenu.Blocco)">
+        <member name="M:_3_BlockChainMenu.BlockChain.AggiungiBlocco(_3_BlockChainMenu.Blocco)">
             <summary>Si aggancia all'ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando.</summary>
             <param name="blocco">Blocco della catena generato dal costruttore</param>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.IsValido">
+        <member name="M:_3_BlockChainMenu.BlockChain.IsValido">
             <summary>
             Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
             Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
             </summary>
             <returns>Restituisce lo stato di validità di un blocco</returns>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.RicercaUtente(System.String)">
+        <member name="M:_3_BlockChainMenu.BlockChain.RicercaUtente(System.String)">
             <summary>
             Ricerca un utente all'interno della lista degli utenti.
             </summary>
             <param name="nome">Nome utente.</param>
             <returns>Oggetto di tipo utente</returns>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.RicercaUtente(System.Nullable{System.Int32})">
+        <member name="M:_3_BlockChainMenu.BlockChain.RicercaUtente(System.Nullable{System.Int32})">
             <summary>
             Ricerca un utente.
             </summary>
             <param name="idUtente">ID univoco dell'utente.</param>
             <returns>Oggetto di tipo utentea</returns>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.VerificaUtente(System.Int32)">
+        <member name="M:_3_BlockChainMenu.BlockChain.VerificaUtente(System.Int32)">
             <summary>
             Verifica l'esistenza dell'utente all'interno della lista degli utenti.
             </summary>
             <param name="idUtente">ID univoco dell'utente da verificare.</param>
             <returns>Utente esiste (true/false)</returns>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.AggiornaSaldoUtenti">
+        <member name="M:_3_BlockChainMenu.BlockChain.AggiornaSaldoUtenti">
             <summary>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain</summary>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.MinaTransazioni(BlockChainMenu.Utente)">
+        <member name="M:_3_BlockChainMenu.BlockChain.MinaTransazioni(_3_BlockChainMenu.Utente)">
             <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
             <param name="miner">Prende un oggetto di tipo utente (miner)</param>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.AggiornaBilancio">
+        <member name="M:_3_BlockChainMenu.BlockChain.AggiornaBilancio">
             <summary>Restituisce il numero totale di coin in circolazione</summary>
             <returns>Num monete</returns>
         </member>
-        <member name="T:BlockChainMenu.SmartContract">
+        <member name="T:_3_BlockChainMenu.Moneta">
+            <summary>
+            Classe per gestire la moneta
+            </summary>
+        </member>
+        <member name="P:_3_BlockChainMenu.Moneta.IdMoneta">
+            <summary>
+            Codice identificativo della moneta.
+            </summary>
+            <value>
+            Codice hash della moneta (int)
+            </value>
+        </member>
+        <member name="M:_3_BlockChainMenu.Moneta.TrasferisciMoneta(System.Int32)">
+            <summary>
+            Trasferisce la moneta dal proprietario al destinatario della transazione.
+            </summary>
+            <param name="idNuovoProprietario">Identificativo dell'utente a cui deve essere inviata.</param>
+            <returns>Trasferimento effettuato con successo (bool)</returns>
+        </member>
+        <member name="T:_3_BlockChainMenu.SmartContract">
             <summary>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON</summary>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.Inizializza">
+        <member name="M:_3_BlockChainMenu.SmartContract.Inizializza">
             <summary>
             Inizializza l'oggetto SmartContract a partire dal file JSON locale in base alla piattaforma d'esecuzione
             </summary>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.MostraContratto">
+        <member name="M:_3_BlockChainMenu.SmartContract.MostraContratto">
             <summary>
             Mostra i dati presenti all'interno del contratto: titolo, versione, data di ultima modifica e clausole
             </summary>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.VerificaSaldo(System.String,System.String,System.Int32)">
+        <member name="M:_3_BlockChainMenu.SmartContract.VerificaSaldo(System.String,System.String,System.Int32)">
             <summary>Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.</summary>
             <param name="nomeMittente">Nome di colui che vuole fare la transazione.</param>
             <param name="nomeDestinatario">Nome del beneficiario della transazione</param>
             <param name="importoTransazione">Importo della transazione.</param>
             <returns>Il saldo è sufficiente (true/false)</returns>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.ValidaBlockchain">
+        <member name="M:_3_BlockChainMenu.SmartContract.ValidaBlockchain">
             <summary>
             Verifica lo stato di validità dei blocchi presenti all'interno della blockchain.
             </summary>
             <returns>La blockchain è valida (true/false)</returns>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.VerificaOmonimie(BlockChainMenu.Utente)">
+        <member name="M:_3_BlockChainMenu.SmartContract.VerificaOmonimie(_3_BlockChainMenu.Utente)">
             <summary>
             Verifica se l'utente che si vuole inserire esiste già all'interno degli utenti inseriti nella blockain
             </summary>
             <param name="utente"></param>
             <returns>UtenteNonPresente (true/false)</returns>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.AutenticaUtente(BlockChainMenu.Utente)">
+        <member name="M:_3_BlockChainMenu.SmartContract.AutenticaUtente(_3_BlockChainMenu.Utente)">
             <summary>
             Assegna un ID univoco agli utenti della lista (hash code)
             </summary>
             <param name="utente">Singolo utente da autenticare.</param>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.VerificaMonete(BlockChainMenu.Utente,BlockChainMenu.Utente)">
+        <member name="M:_3_BlockChainMenu.SmartContract.VerificaMonete(_3_BlockChainMenu.Utente,_3_BlockChainMenu.Utente)">
             <summary>
             Verificano che non vi siano nè nel portafogli del mittente, nè nel destinario monete con lo stesso ID,
             al fine di evitare il double spending.
@@ -158,7 +178,7 @@
             <param name="ricevente">Beneficiario della transazione</param>
             <returns> False se non è presente un caso di doubleSpending, in caso contrario true </returns>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.TrasferisciMoneta(System.Int32,BlockChainMenu.Utente,BlockChainMenu.Utente)">
+        <member name="M:_3_BlockChainMenu.SmartContract.TrasferisciMoneta(System.Int32,_3_BlockChainMenu.Utente,_3_BlockChainMenu.Utente)">
             <summary>
             Trasferisce l'importo che si vuole spendere dal mittente al beneficiario.
             </summary>
@@ -166,51 +186,51 @@
             <param name="mittente">Committente della transazione</param>
             <param name="ricevente">Beneficiario della transazione</param>
         </member>
-        <member name="T:BlockChainMenu.Transazione">
+        <member name="T:_3_BlockChainMenu.Transazione">
             <summary>Gestione della transazione associata ad un blocco della catena</summary>
         </member>
-        <member name="P:BlockChainMenu.Transazione.IdMittente">
+        <member name="P:_3_BlockChainMenu.Transazione.IdMittente">
             <summary>Indirizzo di chi effettua (<em>fa partire</em>) la transazione</summary>
             <value>Indirizzo mittente.</value>
         </member>
-        <member name="P:BlockChainMenu.Transazione.IdDestinatario">
+        <member name="P:_3_BlockChainMenu.Transazione.IdDestinatario">
             <summary>
               <para>Indirizzo del destinatario della transazione</para>
             </summary>
             <value>Indirizzo destinatario.</value>
         </member>
-        <member name="P:BlockChainMenu.Transazione.Valore">
+        <member name="P:_3_BlockChainMenu.Transazione.Valore">
             <summary>Valore della transazione.</summary>
             <value>Valore.</value>
         </member>
-        <member name="T:BlockChainMenu.Utente">
+        <member name="T:_3_BlockChainMenu.Utente">
             <summary>
             Classe che gestisce gli utenti della blockchain
             </summary>
         </member>
-        <member name="P:BlockChainMenu.Utente.Nome">
+        <member name="P:_3_BlockChainMenu.Utente.Nome">
             <value>
             Nome dell'utente.
             </value>
         </member>
-        <member name="P:BlockChainMenu.Utente.Saldo">
+        <member name="P:_3_BlockChainMenu.Utente.Saldo">
             <value>
             Saldo del portafogli dell'utente.
             </value>
         </member>
-        <member name="P:BlockChainMenu.Utente.IdUnivoco">
+        <member name="P:_3_BlockChainMenu.Utente.IdUnivoco">
             <value>
             Numero identificativo univoco dell'utente.
             </value>
         </member>
-        <member name="M:BlockChainMenu.Utente.#ctor(System.String)">
+        <member name="M:_3_BlockChainMenu.Utente.#ctor(System.String)">
             <summary>
             Costruttore classe utente. In fase di inizializzazione IdUnivoco è imposto a null.
             Il saldo iniziale per ogni utente è pari a 10 monete.
             </summary>
             <param name="nome">Nome dell'utente</param>
         </member>
-        <member name="M:BlockChainMenu.Utente.CreaPortafogli">
+        <member name="M:_3_BlockChainMenu.Utente.CreaPortafogli">
             <summary>
             Crea un portafogli iniziale pari a 10 monete.
             </summary>

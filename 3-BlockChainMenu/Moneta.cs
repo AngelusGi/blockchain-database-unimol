@@ -1,5 +1,8 @@
 ﻿namespace _3_BlockChainMenu
 {
+    /// <summary>
+    /// Classe per gestire la moneta
+    /// </summary>
     internal class Moneta
     {
         public static readonly int Valore = 1;
@@ -8,6 +11,12 @@
 
         public int IdAttualeProprietario { get; private set; }
 
+        /// <summary>
+        /// Codice identificativo della moneta.
+        /// </summary>
+        /// <value>
+        /// Codice hash della moneta (int)
+        /// </value>
         public int IdMoneta { get; private set; }
 
         public Moneta(int idAttualeProprietario)
@@ -16,6 +25,12 @@
             IdMoneta = GetHashCode();
         }
 
+
+        /// <summary>
+        /// Trasferisce la moneta dal proprietario al destinatario della transazione.
+        /// </summary>
+        /// <param name="idNuovoProprietario">Identificativo dell'utente a cui deve essere inviata.</param>
+        /// <returns>Trasferimento effettuato con successo (bool)</returns>
         public bool TrasferisciMoneta(int idNuovoProprietario)
         {
 
