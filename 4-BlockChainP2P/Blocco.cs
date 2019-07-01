@@ -1,15 +1,15 @@
 ﻿using System;
-//libreria per Ilist
 using System.Collections.Generic;
-//libreria per la crittografia
 using System.Security.Cryptography;
-//libreria per la formattazione del testo
 using System.Text;
-//libreria gestione JSON
 using Newtonsoft.Json;
+//libreria per Ilist e liste
+//libreria per la crittografia
+//libreria per la formattazione del testo
+//libreria gestione JSON
 
 
-namespace BlockChainP2P
+namespace _4_BlockChainP2P
 {
     /// <summary>Classe che si occupa di gestire il singolo blocco della catena</summary>
     internal class Blocco
@@ -80,6 +80,11 @@ namespace BlockChainP2P
             return Convert.ToBase64String(byteOutput);
         }
 
+
+        /// <summary>
+        /// Calcola l'hash per veificare la validità di un blocco
+        /// </summary>
+        /// <param name="difficoltà">Difficoltà dei calcoli necessari per validare la blockchain.</param>
         public void Mina(int difficoltà)
         {
 

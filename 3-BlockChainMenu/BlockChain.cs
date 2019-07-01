@@ -160,7 +160,7 @@ namespace _3_BlockChainMenu
         /// <summary>
         /// Verifica l'esistenza dell'utente all'interno della lista degli utenti.
         /// </summary>
-        /// <param name="idUtente">ID univoco dell'utente da verificare.</param>
+        /// <param name="nome">Nome dell'utente da verificare.</param>
         /// <returns>Utente esiste (true/false)</returns>
         public bool VerificaUtente(string nome)
         {

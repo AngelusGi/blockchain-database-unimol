@@ -1,18 +1,18 @@
 ﻿using System;
-
-//libreria per la gestione delle liste
 using System.Collections.Generic;
 using System.Linq;
+//libreria per la gestione delle liste
 
-namespace BlockChainP2P
+namespace _4_BlockChainP2P
 {
 
     /// <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
+
     internal class BlockChain
     {
 
-        #region Membri
-
+        #region Membri        
+        /// <summary> Lista di utenti partecipanti alla blockchain.</summary>
         public IList<Utente> Utenti { get; set; }
 
         /// <summary>gestisce le transazioni che devono ancora essere processate (minate)</summary>
@@ -57,7 +57,6 @@ namespace BlockChainP2P
 
         public void AggiungiBloccoIniziale()
         {
-            //Catena.Add(AggiungiBlocco());
             Catena.Add(CreaBloccoIniziale());
         }
 
@@ -85,19 +84,19 @@ namespace BlockChainP2P
         #endregion
         public void AggiungiBlocco(Blocco blocco)
         {
-            //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
+            // prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
             Blocco ultimoBlocco = GetUltimoBlocco();
 
-            //aumenta l'indice del blocco +1 rispetto a precedente
+            // aumenta l'indice del blocco +1 rispetto a precedente
             blocco.Indice = ultimoBlocco.Indice + 1;
 
             // calcola il suo hash partendo da quello del precedente
             blocco.HashPrecedente = ultimoBlocco.HashBloccoCorrente;
 
-            //dopo aver inserito difficoltà posso effettuare il mining
+            // dopo aver inserito difficoltà posso effettuare il mining
             blocco.Mina(Difficoltà);
 
-            //aggiunge il blocco alla catena
+            // aggiunge il blocco alla catena
             Catena.Add(blocco);
 
         }
@@ -111,32 +110,14 @@ namespace BlockChainP2P
         #endregion
         public bool IsValido()
         {
-
-            //finché ci sono blocchi
-            for (int pos = 1; pos < Catena.Count; pos++)
-            {
-                Blocco bloccoCorrente = Catena[pos];
-                Blocco bloccoPrecedente = Catena[pos - 1];
-
-                //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
-                {
-                    return false;
-                }
-
-                //ricalcola l'hash del blocco precedente, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashBloccoCorrente)
-                {
-                    return false;
-                }
-            }
-
-            //se tutti i blocchi sono coerenti tra valore presente e valore aspetta, ritorna true (catena valida)
-            return true;
-
+            return SmartContract.ValidaBlockchain();
         }
 
-
+        /// <summary>
+        /// Ricerca un utente all'interno della lista degli utenti.
+        /// </summary>
+        /// <param name="nome">Nome utente.</param>
+        /// <returns>Oggetto di tipo utente</returns>
         public Utente RicercaUtente(string nome)
         {
             #region spiegazioneCodice
@@ -154,6 +135,33 @@ namespace BlockChainP2P
             return Utenti.FirstOrDefault(utente => utente.Nome == nome);
         }
 
+        /// <summary>
+        /// Ricerca un utente.
+        /// </summary>
+        /// <param name="idUtente">ID univoco dell'utente.</param>
+        /// <returns>Oggetto di tipo utentea</returns>
+        public Utente RicercaUtente(int? idUtente)
+        {
+            #region spiegazioneCodice
+            //foreach (var utente in Utenti)
+            //{
+            //    if (utente.Nome == nome)
+            //    {
+            //        return utente;
+            //    }
+            //}
+            //return null;
+            //questo blocco di codice equivale all'espressione seguente
+            #endregion
+
+            return Utenti.FirstOrDefault(utente => utente.IdUnivoco == idUtente);
+        }
+
+        /// <summary>
+        /// Verifica l'esistenza dell'utente all'interno della lista degli utenti.
+        /// </summary>
+        /// <param name="nome">Nome dell'utente da verificare.</param>
+        /// <returns>Utente esiste (true/false)</returns>
         public bool VerificaUtente(string nome)
         {
             #region spiegazioneCodice
@@ -174,28 +182,52 @@ namespace BlockChainP2P
         #region Documentazione
         /// <summary>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain</summary>
         #endregion 
-        private void AggiornaSaldoUtenti()
+        public void AggiornaSaldoUtenti()
         {
+            //Transazione ultimaTransazione = GetUltimaTransazione();
+
+            ////equivale a scrivere if ((ultimaTransazione != null) && (ultimaTransazione.IdMittente != null))
+            //if (ultimaTransazione?.IdMittente != null)
+            //{
+            //    Utente mittente = RicercaUtente(ultimaTransazione.IdMittente);
+            //    if ((ultimaTransazione.IdMittente != null) && (ultimaTransazione.IdMittente == mittente.IdUnivoco))
+            //    {
+            //        mittente.Saldo -= ultimaTransazione.Valore;
+            //    }
+            //}
+
+
+            //if (ultimaTransazione != null)
+            //{
+            //    Utente utenteCercato = RicercaUtente(ultimaTransazione.IdDestinatario);
+            //    if (ultimaTransazione.IdDestinatario == utenteCercato.IdUnivoco)
+            //    {
+            //        utenteCercato.Saldo += ultimaTransazione.Valore;
+            //    }
+            //}
+
             foreach (Blocco blocco in Catena)
             {
                 foreach (Transazione transazione in blocco.Transazioni)
                 {
-                    foreach (Utente utente in Utenti)
+                    if (!transazione.Contabilizzata)
                     {
-                        if (transazione.IndirizzoMittente == utente.Nome)
+                        Utente mittente = RicercaUtente(transazione.IdMittente);
+                        Utente destinatario = RicercaUtente(transazione.IdDestinatario);
+                        if ((transazione.IdMittente != null) && (transazione.IdMittente == mittente.IdUnivoco) && (transazione.IdDestinatario == destinatario.IdUnivoco))
                         {
-                            utente.Saldo -= transazione.Valore;
+                            SmartContract.VerificaSaldo(mittente.Nome, destinatario.Nome, transazione.Valore);
                         }
 
-                        if (transazione.IndirizzoDestinatario == utente.Nome)
-                        {
-                            utente.Saldo += transazione.Valore;
-                        }
+                        transazione.Contabilizzata = true;
                     }
-
-
                 }
             }
+
+            //foreach (Transazione transazione in TransazioniInAttesa)
+            //{
+            //    transazione.Contabilizzata = false;
+            //}
         }
 
 
@@ -206,8 +238,7 @@ namespace BlockChainP2P
 
         #region Documentazione
         /// <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
-        /// <param name="indirizzoMiner">Prende l'indirizzo del miner della transazione</param>
-        /// <returns>Restituisce il nuovo saldo</returns>
+        /// <param name="miner">Prende un oggetto di tipo utente (miner)</param>
         #endregion
         public void MinaTransazioni(Utente miner)
         {
@@ -219,6 +250,8 @@ namespace BlockChainP2P
             Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
             AggiungiBlocco(blocco);
             Difficoltà++;
+            SmartContract.RicompensaMiner(miner);
+            AggiornaSaldoUtenti();
 
         }
 
@@ -229,29 +262,13 @@ namespace BlockChainP2P
         public int AggiornaBilancio()
         {
 
-            AggiornaSaldoUtenti();
+            //AggiornaSaldoUtenti();
 
             int bilancio = 0;
 
-            foreach (Blocco blocco in Catena)
+            foreach (Utente utente in Utenti)
             {
-                foreach (Transazione transazione in blocco.Transazioni)
-                {
-                    foreach (Utente utente in Utenti)
-                    {
-                        if (transazione.IndirizzoMittente == utente.Nome)
-                        {
-                            bilancio -= transazione.Valore;
-                        }
-
-                        if (transazione.IndirizzoDestinatario == utente.Nome)
-                        {
-                            bilancio += transazione.Valore;
-                        }
-                    }
-
-
-                }
+                bilancio += utente.Saldo.Count;
             }
 
             return bilancio;

@@ -1,16 +1,21 @@
 ﻿using System;
 
-namespace BlockChainP2P
+namespace _4_BlockChainP2P
 {
     internal class Program
     {
-        public static void Main()
+        private static void TemaChiaro()
         {
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Black;
-            new Menu();
+        }
 
+        public static void Main()
+        {
+
+            //TemaChiaro();
+
+            new Menu();
         }
     }
 }

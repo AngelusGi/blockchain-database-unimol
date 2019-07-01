@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\Users\angel\Source\Repos\blockchain-database-unimol\3-BlockChainMenu\Docs\3-BlockChainMenu.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

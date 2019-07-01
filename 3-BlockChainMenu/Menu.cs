@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Xml;
-using Microsoft.CSharp.RuntimeBinder;
 using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
 
 namespace _3_BlockChainMenu
 {
-
-    class Menu
+    internal class Menu
     {
 
         public static BlockChain UniMolCoin { get; private set; }
@@ -101,7 +98,7 @@ namespace _3_BlockChainMenu
                     Console.WriteLine("\t*** Errore utente già presente. ***");
                     ColoreNormale();
                 }
-                
+
                 ColoreRecap();
                 Console.Write("\tVuoi inserire un altro utente? Digita 0 per terminare o qualunque altro tasto per continuare: ");
 
@@ -120,7 +117,7 @@ namespace _3_BlockChainMenu
                 {
                     UniMolCoin.Utenti.Add(utenteTest);
                 }
-                
+
             }
 
             ColoreRecap();
@@ -211,7 +208,7 @@ namespace _3_BlockChainMenu
                             break;
                         }
 
-                        
+
 
                         if ((UniMolCoin.VerificaUtente(nomeMittente)) &&
                             (UniMolCoin.VerificaUtente(nomeDestinatario)))
@@ -223,7 +220,7 @@ namespace _3_BlockChainMenu
                             {
                                 SmartContract.TrasferisciMoneta(Convert.ToInt32(importo), mittente, destinatario);
 
-                                UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario,Convert.ToInt32(importo)));
+                                UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario, Convert.ToInt32(importo)));
 
                                 Random randomMiner = new Random();
 
@@ -274,7 +271,7 @@ namespace _3_BlockChainMenu
                         ColoreNormale();
                         Console.WriteLine("Inserisci il nome dell'utente di cui mostrare il saldo: ");
                         string nomeUtente = Console.ReadLine();
-                        
+
                         try
                         {
                             NormalizzaNome(ref nomeUtente);
@@ -284,13 +281,13 @@ namespace _3_BlockChainMenu
                                               $"\n\tID: {utenteCercato.IdUnivoco}" +
                                               $"\n\tSaldo: {utenteCercato.Saldo.Count}");
                         }
-                        catch (Exception eccezione)
+                        catch (Exception)
                         {
                             ColoreAvvisi();
                             Console.WriteLine("\t*** Errore. Input non valido o utente non trovato. ***");
-                            
+
                         }
-                        
+
                         ColoreNormale();
                         break;
 
@@ -318,7 +315,7 @@ namespace _3_BlockChainMenu
                 ColoreAvvisi();
                 Console.WriteLine("CapsLock attivato: {0}\nNumLock attivato: {1}\n", Console.CapsLock, Console.NumberLock);
             }
-            
+
 
             Benvenuto();
 

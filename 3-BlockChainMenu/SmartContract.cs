@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
@@ -47,7 +45,7 @@ namespace _3_BlockChainMenu
         {
             public string Description { get; set; }
             public string NumVersion { get; set; }
-            
+
         }
 
         #endregion
@@ -77,7 +75,7 @@ namespace _3_BlockChainMenu
             {
                 jsonPath = "./3 - BlockChainMenu/Resources/SmartContract.json";
             }
-            
+
 
             StreamReader lettoreFileJson = new StreamReader(jsonPath);
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
@@ -187,7 +185,7 @@ namespace _3_BlockChainMenu
             {
                 //nel caso in cui non esista già l'utente (nome o hash associato) allora lo autentico
                 AutenticaUtente(utente);
-                
+
             }
 
             return utenteNonPresente;
@@ -224,7 +222,7 @@ namespace _3_BlockChainMenu
                         doppiaSpesa = true;
                         break;
                     }
-                    
+
                 }
             }
 
@@ -233,7 +231,7 @@ namespace _3_BlockChainMenu
 
         public static void RicompensaMiner(Utente miner)
         {
-            miner.Saldo.Push(new Moneta((int) miner.IdUnivoco));
+            miner.Saldo.Push(new Moneta((int)miner.IdUnivoco));
         }
 
         /// <summary>
@@ -247,7 +245,7 @@ namespace _3_BlockChainMenu
 
             for (int i = 0; i < numMonete; i++)
             {
-                ricevente.Saldo.Push( mittente.Saldo.Pop() );
+                ricevente.Saldo.Push(mittente.Saldo.Pop());
             }
 
         }

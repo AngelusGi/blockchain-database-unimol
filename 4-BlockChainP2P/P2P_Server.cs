@@ -4,7 +4,7 @@ using WebSocketSharp;
 using WebSocketSharp.Server;
 
 
-namespace BlockChainP2P
+namespace _4_BlockChainP2P
 {
 
     /// <summary>Gestisce la parte server della Socket</summary>

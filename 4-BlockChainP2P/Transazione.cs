@@ -1,5 +1,7 @@
 ﻿
-namespace BlockChainP2P
+using System.Diagnostics;
+
+namespace _4_BlockChainP2P
 {
 
     /// <summary>Gestione della transazione associata ad un blocco della catena</summary>
@@ -9,41 +11,35 @@ namespace BlockChainP2P
 
 
         /// <summary>Indirizzo di chi effettua (<em>fa partire</em>) la transazione</summary>
-        /// <value>The indirizzo mittente.</value>
-        public string IndirizzoMittente { get; private set; }
+        /// <value>Indirizzo mittente.</value>
+        //la dicitura int? indica che potrebbe essere null
+        public int? IdMittente { get; private set; }
 
         /// <summary>
         ///   <para>Indirizzo del destinatario della transazione</para>
         /// </summary>
-        /// <value>The indirizzo destinatario.</value>
-        public string IndirizzoDestinatario { get; private set; }
+        /// <value>Indirizzo destinatario.</value>
+        public int IdDestinatario { get; private set; }
 
 
         /// <summary>Valore della transazione.</summary>
-        /// <value>The valore.</value>
+        /// <value>Valore.</value>
         public int Valore { get; private set; }
+
+        public bool Contabilizzata { get; set; }
 
         #endregion
 
 
         public Transazione(Utente mittente, Utente destinatario, int valore)
         {
-            //if (mittente != null)
-            //{
-            //    IndirizzoMittente = mittente.Nome;
-            //}
-            //else
-            //{
-            //    IndirizzoMittente = null;
-            //}
-            //questo blocco di codice equivale all'espressione seguente
+            //se indirizzo mittente non è null, allora assegna l'id del mittente al campo IdMittente
+            IdMittente = mittente?.IdUnivoco;
 
-            IndirizzoMittente = mittente?.Nome;
-
-            IndirizzoDestinatario = destinatario.Nome;
+            IdDestinatario = (int) destinatario.IdUnivoco;
             Valore = valore;
+            Contabilizzata = false;
 
         }
-
     }
 }

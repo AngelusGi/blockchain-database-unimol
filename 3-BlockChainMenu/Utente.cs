@@ -7,12 +7,12 @@ namespace _3_BlockChainMenu
     /// </summary>
     public class Utente
     {
-        
+
         /// <value>
         /// Nome dell'utente.
         /// </value>
         public string Nome { get; private set; }
-        
+
         /// <value>
         /// Saldo del portafogli dell'utente.
         /// </value>
@@ -24,7 +24,7 @@ namespace _3_BlockChainMenu
         public int? IdUnivoco { get; set; }
 
         private static readonly int NumMoneteIniziale = 10;
-        
+
         /// <summary>
         /// Costruttore classe utente. In fase di inizializzazione IdUnivoco è imposto a null.
         /// Il saldo iniziale per ogni utente è pari a 10 monete.
