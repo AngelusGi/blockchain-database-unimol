@@ -29,37 +29,6 @@ namespace BlockChainMenu
             AvviaMenu();
         }
 
-
-        #region GestioneColori
-
-        private void NormalizzaNome(ref string nome)
-        {
-            nome = nome.Trim();
-            nome = nome.ToLowerInvariant();
-        }
-
-        private void ColoreAvvisi()
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-        }
-
-        private void ColoreRecap()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-        }
-
-        private void ColoreTitoli()
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-        }
-
-        private void ColoreNormale()
-        {
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
-        #endregion
-
         private void Benvenuto()
         {
             ColoreRecap();
@@ -102,10 +71,11 @@ namespace BlockChainMenu
                 ColoreTitoli();
                 Console.WriteLine("\n\t*** CREA UTENTI PER UNIMOL COIN ***");
                 ColoreNormale();
-                Console.WriteLine("Inserisci un nome utente:");
+
+                Console.WriteLine("Inserisci un nome utente (minimo 4 caratteri):");
                 string nome = Console.ReadLine();
 
-                if (!string.IsNullOrEmpty(nome))
+                if (!string.IsNullOrEmpty(nome) && nome.Length > 3)
                 {
                     NormalizzaNome(ref nome);
                 }
@@ -218,23 +188,22 @@ namespace BlockChainMenu
                         Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
                         Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
 
-                        if ((UniMolCoin.VerificaUtente(mittente.IdUnivoco)) &&
-                            (UniMolCoin.VerificaUtente(destinatario.IdUnivoco)))
+                        if ((UniMolCoin.VerificaUtente((int)mittente.IdUnivoco)) &&
+                            (UniMolCoin.VerificaUtente((int)destinatario.IdUnivoco)))
                         {
 
-                            if (SmartContract.ValidaTransazione(nomeMittente, Convert.ToInt32(importo)))
+                            if (SmartContract.VerificaSaldo(nomeMittente, Convert.ToInt32(importo)))
                             {
 
-                                UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario,
-                                    Convert.ToInt32(importo)));
+                                UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario,Convert.ToInt32(importo)));
 
                                 Random randomMiner = new Random();
 
                                 //il miner sarà estratto casualmente tra la lista degli utenti
-                                UniMolCoin.MinaTransazioni(
-                                    UniMolCoin.Utenti[randomMiner.Next(0, UniMolCoin.Utenti.Count)]);
+                                UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[randomMiner.Next(0, UniMolCoin.Utenti.Count)]);
 
-                                Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin));
+                                Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
+                                
                             }
                             else
                             {
@@ -247,8 +216,7 @@ namespace BlockChainMenu
                         else
                         {
                             ColoreAvvisi();
-                            Console.WriteLine(
-                                "\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
+                            Console.WriteLine("\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
                             ColoreNormale();
                         }
 
@@ -278,12 +246,23 @@ namespace BlockChainMenu
                         ColoreNormale();
                         Console.WriteLine("Inserisci il nome dell'utente di cui mostrare il saldo: ");
                         string nomeUtente = Console.ReadLine();
-                        NormalizzaNome(ref nomeUtente);
-                        Utente utenteCercato = UniMolCoin.RicercaUtente(nomeUtente);
-                        ColoreRecap();
-                        Console.WriteLine($"\tNome: {utenteCercato.Nome}" +
-                                          $"\n\tID: {utenteCercato.IdUnivoco}" +
-                                          $"\n\tSaldo: {utenteCercato.Saldo}");
+                        
+                        try
+                        {
+                            NormalizzaNome(ref nomeUtente);
+                            Utente utenteCercato = UniMolCoin.RicercaUtente(nomeUtente);
+                            ColoreRecap();
+                            Console.WriteLine($"\tNome: {utenteCercato.Nome}" +
+                                              $"\n\tID: {utenteCercato.IdUnivoco}" +
+                                              $"\n\tSaldo: {utenteCercato.Saldo}");
+                        }
+                        catch (Exception eccezione)
+                        {
+                            ColoreAvvisi();
+                            Console.WriteLine("\t*** Errore. Input non valido o utente non trovato. ***");
+                            
+                        }
+                        
                         ColoreNormale();
                         break;
 
@@ -307,6 +286,9 @@ namespace BlockChainMenu
         private void AvviaMenu()
         {
 
+            ColoreAvvisi();
+            Console.WriteLine("CapsLock attivato: {0}\nNumLock attivato: {1}\n", Console.CapsLock, Console.NumberLock);
+
             Benvenuto();
 
             SmartContract.Inizializza();
@@ -315,44 +297,37 @@ namespace BlockChainMenu
 
             GestioneMenu();
 
-            #region VecchiaImplementazione
-
-            //DateTime tempoInizio = DateTime.Now;
-
-            ////instanzia un oggetto che rappresenta il mining della moneta
-            //BlockChain unimolCoin = new BlockChain();
-
-
-            ////implementazione con gestione transazioni
-            //unimolCoin.CreaTransazione(new Transazione("Angelo", "Giusy", 10));
-            //unimolCoin.GesticiTransazioniInAttesa("Carmen");
-
-            //unimolCoin.CreaTransazione(new Transazione("Giusy", "Angelo", 5));
-            //unimolCoin.CreaTransazione(new Transazione("Giusy", "Angelo", 5));
-            //unimolCoin.GesticiTransazioniInAttesa("Carmen");
-
-
-            //DateTime tempoFine = DateTime.Now;
-
-            //Console.WriteLine($"Durata: {tempoFine - tempoInizio}");
-
-            //Console.WriteLine("----------------------------");
-
-            //Console.WriteLine("\nRiepilogo bilanci:");
-            //Console.WriteLine($"\tBilancio Angelo: { unimolCoin.AggiornaBilancio("Angelo")}");
-            //Console.WriteLine($"\tBilancio Giusy: { unimolCoin.AggiornaBilancio("Giusy")}");
-            //Console.WriteLine($"\tBilancio Carmen: { unimolCoin.AggiornaBilancio("Carmen")}");
-
-            //Console.WriteLine("----------------------------");
-
-            //Console.WriteLine("\nUniMolCoin:");
-            //Console.WriteLine($"unimolCoin");
-            //Console.WriteLine(JsonConvert.SerializeObject(unimolCoin, Formatting.Indented));
-
-            ////aspetta la pressione di un tasto per la terminazione del programma
-            //Console.WriteLine("\nEsecuzione terminata.\nPremere un tasto per uscire...");
-
-            #endregion
         }
+
+        #region GestioneColori
+
+        private void NormalizzaNome(ref string nome)
+        {
+            nome = nome.Trim();
+            nome = nome.ToLowerInvariant();
+        }
+
+        private void ColoreAvvisi()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+        }
+
+        private void ColoreRecap()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+        }
+
+        private void ColoreTitoli()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+        }
+
+        private void ColoreNormale()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        #endregion
+
     }
 }

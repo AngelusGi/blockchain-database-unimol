@@ -41,6 +41,12 @@
             <summary>Calcola l'hash del blocco basandosi su SHA512</summary>
             <returns>Impronta digitale del blocco</returns>
         </member>
+        <member name="M:BlockChainMenu.Blocco.Mina(System.Int32)">
+            <summary>
+            Calcola l'hash per veificare la validità di un blocco
+            </summary>
+            <param name="difficoltà">Difficoltà dei calcoli necessari per validare la blockchain.</param>
+        </member>
         <member name="T:BlockChainMenu.BlockChain">
             <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
         </member>
@@ -79,18 +85,19 @@
             <param name="nome">Nome utente.</param>
             <returns>Oggetto di tipo utente</returns>
         </member>
-        <member name="M:BlockChainMenu.BlockChain.VerificaUtente(System.String)">
+        <member name="M:BlockChainMenu.BlockChain.RicercaUtente(System.Nullable{System.Int32})">
+            <summary>
+            Ricerca un utente.
+            </summary>
+            <param name="idUtente">ID univoco dell'utente.</param>
+            <returns>Oggetto di tipo utentea</returns>
+        </member>
+        <member name="M:BlockChainMenu.BlockChain.VerificaUtente(System.Int32)">
             <summary>
             Verifica l'esistenza dell'utente all'interno della lista degli utenti.
             </summary>
-            <param name="nome">Nome utente.</param>
+            <param name="idUtente">ID univoco dell'utente da verificare.</param>
             <returns>Utente esiste (true/false)</returns>
-        </member>
-        <member name="M:BlockChainMenu.BlockChain.GetUltimaTransazione">
-            <summary>
-            Ricerca l'ultima transazione.
-            </summary>
-            <returns>Oggetto di tipo transazione</returns>
         </member>
         <member name="M:BlockChainMenu.BlockChain.AggiornaSaldoUtenti">
             <summary>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain</summary>
@@ -108,7 +115,7 @@
         </member>
         <member name="M:BlockChainMenu.SmartContract.Inizializza">
             <summary>
-            Inizializza l'oggetto SmartContract a partire dal file JSON locale
+            Inizializza l'oggetto SmartContract a partire dal file JSON locale in base alla piattaforma d'esecuzione
             </summary>
         </member>
         <member name="M:BlockChainMenu.SmartContract.MostraContratto">
@@ -116,7 +123,7 @@
             Mostra i dati presenti all'interno del contratto: titolo, versione, data di ultima modifica e clausole
             </summary>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.ValidaTransazione(System.String,System.Int32)">
+        <member name="M:BlockChainMenu.SmartContract.VerificaSaldo(System.String,System.Int32)">
             <summary>
             Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.
             </summary>
@@ -130,21 +137,20 @@
             </summary>
             <returns>La blockchain è valida (true/false)</returns>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.AutenticaUtente(BlockChainMenu.Utente)">
+        <member name="M:BlockChainMenu.SmartContract.AutenticaUtente(System.Collections.Generic.IList{BlockChainMenu.Utente})">
             <summary>
-            Assegna un ID univoco all'utente
+            Assegna un ID univoco agli utenti della lista (hash code)
             </summary>
-            <param name="utente">Utente da autenticare.</param>
-            <returns>ID univoco dell'utente (SHA)</returns>
+            <param name="utenti">Lista di utenti da autenticare.</param>
         </member>
         <member name="T:BlockChainMenu.Transazione">
             <summary>Gestione della transazione associata ad un blocco della catena</summary>
         </member>
-        <member name="P:BlockChainMenu.Transazione.IndirizzoMittente">
+        <member name="P:BlockChainMenu.Transazione.IdMittente">
             <summary>Indirizzo di chi effettua (<em>fa partire</em>) la transazione</summary>
             <value>Indirizzo mittente.</value>
         </member>
-        <member name="P:BlockChainMenu.Transazione.IndirizzoDestinatario">
+        <member name="P:BlockChainMenu.Transazione.IdDestinatario">
             <summary>
               <para>Indirizzo del destinatario della transazione</para>
             </summary>
@@ -153,6 +159,33 @@
         <member name="P:BlockChainMenu.Transazione.Valore">
             <summary>Valore della transazione.</summary>
             <value>Valore.</value>
+        </member>
+        <member name="T:BlockChainMenu.Utente">
+            <summary>
+            Classe che gestisce gli utenti della blockchain
+            </summary>
+        </member>
+        <member name="P:BlockChainMenu.Utente.Nome">
+            <value>
+            Nome dell'utente.
+            </value>
+        </member>
+        <member name="P:BlockChainMenu.Utente.Saldo">
+            <value>
+            Saldo del portafogli dell'utente.
+            </value>
+        </member>
+        <member name="P:BlockChainMenu.Utente.IdUnivoco">
+            <value>
+            Numero identificativo univoco dell'utente.
+            </value>
+        </member>
+        <member name="M:BlockChainMenu.Utente.#ctor(System.String)">
+            <summary>
+            Costruttore classe utente. In fase di inizializzazione IdUnivoco è imposto a null.
+            Il saldo iniziale per ogni utente è pari a 10 monete.
+            </summary>
+            <param name="nome">Nome dell'utente</param>
         </member>
     </members>
 </doc>

@@ -1,4 +1,6 @@
 ﻿
+using System.Diagnostics;
+
 namespace BlockChainMenu
 {
 
@@ -24,16 +26,19 @@ namespace BlockChainMenu
         /// <value>Valore.</value>
         public int Valore { get; private set; }
 
+        public bool Contabilizzata { get; set; }
+
         #endregion
 
 
         public Transazione(Utente mittente, Utente destinatario, int valore)
         {
-            //se indirizzo mittente non è null, allora assegna il nome del mittente
-            IdMittente = (mittente == null) ? (int?) null : mittente.IdUnivoco;
+            //se indirizzo mittente non è null, allora assegna l'id del mittente al campo IdMittente
+            IdMittente = mittente?.IdUnivoco;
 
-            IdDestinatario = destinatario.IdUnivoco;
+            IdDestinatario = (int) destinatario.IdUnivoco;
             Valore = valore;
+            Contabilizzata = false;
 
         }
     }

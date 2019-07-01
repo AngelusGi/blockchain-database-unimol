@@ -135,6 +135,11 @@ namespace BlockChainMenu
             return Utenti.FirstOrDefault(utente => utente.Nome == nome);
         }
 
+        /// <summary>
+        /// Ricerca un utente.
+        /// </summary>
+        /// <param name="idUtente">ID univoco dell'utente.</param>
+        /// <returns>Oggetto di tipo utentea</returns>
         public Utente RicercaUtente(int? idUtente)
         {
             #region spiegazioneCodice
@@ -174,45 +179,59 @@ namespace BlockChainMenu
             return Utenti.Any(utente => utente.IdUnivoco == idUtente);
         }
 
-        /// <summary>
-        /// Ricerca l'ultima transazione.
-        /// </summary>
-        /// <returns>Oggetto di tipo transazione</returns>
-        private Transazione GetUltimaTransazione()
-        {
-            if (GetUltimoBlocco().Transazioni.Count > 0)
-            {
-                return GetUltimoBlocco().Transazioni[GetUltimoBlocco().Transazioni.Count - 1];
-            }
-
-            return null;
-
-        }
-
         #region Documentazione
         /// <summary>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain</summary>
         #endregion 
-        private void AggiornaSaldoUtenti()
+        public void AggiornaSaldoUtenti()
         {
-            Transazione ultimaTransazione = GetUltimaTransazione();
+            //Transazione ultimaTransazione = GetUltimaTransazione();
 
-            if ((ultimaTransazione != null) && (ultimaTransazione.IdMittente != null))
+            ////equivale a scrivere if ((ultimaTransazione != null) && (ultimaTransazione.IdMittente != null))
+            //if (ultimaTransazione?.IdMittente != null)
+            //{
+            //    Utente mittente = RicercaUtente(ultimaTransazione.IdMittente);
+            //    if ((ultimaTransazione.IdMittente != null) && (ultimaTransazione.IdMittente == mittente.IdUnivoco))
+            //    {
+            //        mittente.Saldo -= ultimaTransazione.Valore;
+            //    }
+            //}
+
+
+            //if (ultimaTransazione != null)
+            //{
+            //    Utente utenteCercato = RicercaUtente(ultimaTransazione.IdDestinatario);
+            //    if (ultimaTransazione.IdDestinatario == utenteCercato.IdUnivoco)
+            //    {
+            //        utenteCercato.Saldo += ultimaTransazione.Valore;
+            //    }
+            //}
+
+            foreach (Blocco blocco in Catena)
             {
-                Utente mittente = RicercaUtente(ultimaTransazione.IdMittente);
-                if ((ultimaTransazione.IdMittente != null) && (ultimaTransazione.IdMittente == mittente.IdUnivoco))
+                foreach (Transazione transazione in blocco.Transazioni)
                 {
-                    mittente.Saldo -= ultimaTransazione.Valore;
+                    if (!transazione.Contabilizzata)
+                    {
+                        Utente utenteCercato = RicercaUtente(transazione.IdMittente);
+                        if ((transazione.IdMittente != null) && (transazione.IdMittente == utenteCercato.IdUnivoco))
+                        {
+                            utenteCercato.Saldo -= transazione.Valore;
+                        }
+
+                        utenteCercato = RicercaUtente(transazione.IdDestinatario);
+                        if (transazione.IdDestinatario == utenteCercato.IdUnivoco)
+                        {
+                            utenteCercato.Saldo += transazione.Valore;
+                        }
+
+                        transazione.Contabilizzata = true;
+                    }
                 }
             }
 
-
-            if (ultimaTransazione != null)
+            foreach (Transazione transazione in TransazioniInAttesa)
             {
-                Utente utenteCercato = RicercaUtente(ultimaTransazione.IdDestinatario);
-                if (ultimaTransazione.IdDestinatario == utenteCercato.IdUnivoco)
-                {
-                    utenteCercato.Saldo += ultimaTransazione.Valore;
-                }
+                transazione.Contabilizzata = false;
             }
         }
 
@@ -236,6 +255,7 @@ namespace BlockChainMenu
             Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
             AggiungiBlocco(blocco);
             Difficoltà++;
+            AggiornaSaldoUtenti();
 
         }
 
@@ -246,7 +266,7 @@ namespace BlockChainMenu
         public int AggiornaBilancio()
         {
 
-            AggiornaSaldoUtenti();
+            //AggiornaSaldoUtenti();
 
             int bilancio = 0;
 

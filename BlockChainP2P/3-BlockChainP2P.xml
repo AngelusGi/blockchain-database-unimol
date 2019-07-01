@@ -116,7 +116,7 @@
             Mostra i dati presenti all'interno del contratto: titolo, versione, data di ultima modifica e clausole
             </summary>
         </member>
-        <member name="M:BlockChainMenu.SmartContract.ValidaTransazione(System.String,System.Int32)">
+        <member name="M:BlockChainMenu.SmartContract.VerificaSaldo(System.String,System.Int32)">
             <summary>
             Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.
             </summary>

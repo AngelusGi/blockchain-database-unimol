@@ -1,4 +1,6 @@
-﻿namespace BlockChainMenu
+﻿using System;
+
+namespace BlockChainMenu
 {
     internal class Program
     {

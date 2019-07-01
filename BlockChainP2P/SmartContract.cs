@@ -99,12 +99,12 @@ namespace BlockChainMenu
         }
 
         /// <summary>
-        /// Valida la transazione verificando se il saldo dell'utenti è necessario a coprire l'importo che si vole spendere.
+        /// Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.
         /// </summary>
         /// <param name="nomeMittente">Nome di colui che vuole fare la transazione.</param>
         /// <param name="importoTransazione">Importo della transazione.</param>
         /// <returns>Il saldo è sufficiente (true/false)</returns>
-        public static bool ValidaTransazione(string nomeMittente, int importoTransazione)
+        public static bool VerificaSaldo(string nomeMittente, int importoTransazione)
         {
             return UniMolCoin.RicercaUtente(nomeMittente).Saldo >= importoTransazione;
         }
@@ -140,10 +140,9 @@ namespace BlockChainMenu
         }
 
         /// <summary>
-        /// Assegna un ID univoco all'utenti
+        /// Assegna un ID univoco agli utenti della lista (hash code)
         /// </summary>
-        /// <param name="utenti">Utente da autenticare.</param>
-        /// <returns>ID univoco dell'utenti (SHA)</returns>
+        /// <param name="utenti">Lista di utenti da autenticare.</param>
         public static void AutenticaUtente(IList<Utente> utenti)
         {
 
