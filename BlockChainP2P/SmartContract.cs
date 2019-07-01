@@ -69,10 +69,10 @@ namespace BlockChainMenu
             {
                 jsonPath = "../../../Resources/SmartContract.json";
             }
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-            {
-                jsonPath = "./Resources/SmartContract.json";
-            }
+            //else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            //{
+            //    jsonPath = "./Resources/SmartContract.json";
+            //}
             else
             {
                 jsonPath = "./BlockChainP2P/Resources/SmartContract.json";
