@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 
-namespace BlockChainMenu
+namespace _3_BlockChainMenu
 {
 
     /// <summary>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON</summary>
@@ -75,7 +75,7 @@ namespace BlockChainMenu
             //}
             else
             {
-                jsonPath = "./BlockChainP2P/Resources/SmartContract.json";
+                jsonPath = "./3 - BlockChainMenu/Resources/SmartContract.json";
             }
             
 

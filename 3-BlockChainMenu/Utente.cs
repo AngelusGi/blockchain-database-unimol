@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlockChainMenu
+namespace _3_BlockChainMenu
 {
     /// <summary>
     /// Classe che gestisce gli utenti della blockchain

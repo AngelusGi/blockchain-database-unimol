@@ -5,7 +5,7 @@ using Microsoft.CSharp.RuntimeBinder;
 using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
 
-namespace BlockChainMenu
+namespace _3_BlockChainMenu
 {
 
     class Menu

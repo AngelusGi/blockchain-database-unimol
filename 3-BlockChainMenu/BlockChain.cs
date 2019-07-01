@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 //libreria per la gestione delle liste
 
-namespace BlockChainMenu
+namespace _3_BlockChainMenu
 {
 
     /// <summary>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain</summary>
