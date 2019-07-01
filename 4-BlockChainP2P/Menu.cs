@@ -153,6 +153,7 @@ namespace BlockChainP2P
                         }
 
                         Client.Connetti($"{serverUrl}/Blockchain");
+                        Console.WriteLine("Connessione effettuata con successo!");
                         break;
 
                     case AggiungiTransazione:

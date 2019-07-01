@@ -162,7 +162,7 @@ namespace _3_BlockChainMenu
         /// </summary>
         /// <param name="idUtente">ID univoco dell'utente da verificare.</param>
         /// <returns>Utente esiste (true/false)</returns>
-        public bool VerificaUtente(int idUtente)
+        public bool VerificaUtente(string nome)
         {
             #region spiegazioneCodice
             //foreach (var utente in Utenti)
@@ -176,7 +176,7 @@ namespace _3_BlockChainMenu
             //questo blocco di codice equivale all'espressione seguente
             #endregion
 
-            return Utenti.Any(utente => utente.IdUnivoco == idUtente);
+            return Utenti.Any(utente => utente.Nome == nome);
         }
 
         #region Documentazione

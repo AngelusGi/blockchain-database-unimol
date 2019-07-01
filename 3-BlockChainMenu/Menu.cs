@@ -208,16 +208,16 @@ namespace _3_BlockChainMenu
                         {
                             ColoreAvvisi();
                             Console.WriteLine("\t*** Errore. Importo non valido. ***");
-                            ColoreNormale();
                             break;
                         }
 
-                        Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
-                        Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
+                        
 
-                        if ((UniMolCoin.VerificaUtente((int)mittente.IdUnivoco)) &&
-                            (UniMolCoin.VerificaUtente((int)destinatario.IdUnivoco)))
+                        if ((UniMolCoin.VerificaUtente(nomeMittente)) &&
+                            (UniMolCoin.VerificaUtente(nomeDestinatario)))
                         {
+                            Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
+                            Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
 
                             if (SmartContract.VerificaSaldo(mittente.Nome, destinatario.Nome, Convert.ToInt32(importo)))
                             {
@@ -237,7 +237,7 @@ namespace _3_BlockChainMenu
                             {
                                 ColoreAvvisi();
                                 Console.WriteLine("\t*** Errore: Transazione non valida, importo più alto della capacità di spesa del mittente. ***");
-                                ColoreNormale();
+                                break;
                             }
 
                         }
@@ -245,7 +245,7 @@ namespace _3_BlockChainMenu
                         {
                             ColoreAvvisi();
                             Console.WriteLine("\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
-                            ColoreNormale();
+                            break;
                         }
 
                         break;
@@ -363,6 +363,7 @@ namespace _3_BlockChainMenu
             {
                 Console.ForegroundColor = ConsoleColor.Black;
             }
+
         }
 
         #endregion

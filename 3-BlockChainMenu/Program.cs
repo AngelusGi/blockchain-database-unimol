@@ -4,10 +4,17 @@ namespace _3_BlockChainMenu
 {
     internal class Program
     {
-        public static void Main()
+
+        private static void TemaChiaro()
         {
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
+        }
+
+        public static void Main()
+        {
+
+            //TemaChiaro();
 
             new Menu();
         }
