@@ -3,3 +3,10 @@
 Exam project "Database 2nd module: BlockChain" - Professor Remo Pareschi (UniMol - University of Molise)
 
 Team: Angelo Gino Varrati (@angelus_gi) & Giusy Mazzocco (@GiusyMaz) & Carmen Armenti (@carmenarmenti)
+
+La soluzione comprende 4 progetti:
+    - 1: implementa solo la validazione dei blocchi che contengono la blockchain
+    - 2: implenta lo step precedente con l'aggiunta del PoW (mining)
+    - 3: implementa lo step precedente con l'aggiunta dello Smart Contract e dei suoi principi (no double spending, no alterazione blocchi, no utenti con più ID)
+    - 4: implementa lo step precedente con l'aggiunta del network P2P
+    

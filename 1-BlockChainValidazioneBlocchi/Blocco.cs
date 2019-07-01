@@ -4,9 +4,9 @@ using System.Security.Cryptography;
 //libreria per la formattazione del testo
 using System.Text;
 
-namespace BlockChain
+namespace _1_BlockChainValidazioneBlocchi
 {
-    class Blocco
+    internal class Blocco
     {
 
         #region Membri
@@ -34,7 +34,7 @@ namespace BlockChain
 
         #region Costruttore
 
-        
+
         public Blocco(DateTime dataOra, string hashPrecedente, string transazione)
         {
             Indice = 0;

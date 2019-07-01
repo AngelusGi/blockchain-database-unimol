@@ -9,7 +9,7 @@ using System.Text;
 using Newtonsoft.Json;
 
 
-namespace BlockChainBlocchi
+namespace _2_BlockChainPoW
 {
     internal class Blocco
     {

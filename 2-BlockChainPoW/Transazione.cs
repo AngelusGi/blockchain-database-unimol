@@ -1,14 +1,14 @@
 ﻿
-namespace BlockChainBlocchi
+namespace _2_BlockChainPoW
 {
-    class Transazione
+    internal class Transazione
     {
         #region Membri
 
         public string IndirizzoSorgente { get; private set; }
         public string IndirizzoDestinazione { get; private set; }
         public int Valore { get; private set; }
-        
+
         #endregion
 
 

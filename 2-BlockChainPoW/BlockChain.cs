@@ -3,9 +3,9 @@
 //libreria per la gestione delle liste
 using System.Collections.Generic;
 
-namespace BlockChainBlocchi
+namespace _2_BlockChainPoW
 {
-    class BlockChain
+    internal class BlockChain
     {
 
         #region Membri
@@ -26,7 +26,7 @@ namespace BlockChainBlocchi
 
         #region Costruttore
 
-        
+
         //costruttore della classe blockchain che si occupa di istanzare il
         //primo blocco della caena ed eventuali successivi
         public BlockChain()
@@ -140,9 +140,9 @@ namespace BlockChainBlocchi
         {
             int bilancio = 0;
 
-            foreach (var blocco in Catena)
+            foreach (Blocco blocco in Catena)
             {
-                foreach (var transazione in blocco.Transazioni)
+                foreach (Transazione transazione in blocco.Transazioni)
                 {
                     if (transazione.IndirizzoSorgente == indirizzo)
                     {

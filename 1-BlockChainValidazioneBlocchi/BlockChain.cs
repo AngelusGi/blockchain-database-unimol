@@ -3,9 +3,9 @@
 //libreria per la gestione delle liste
 using System.Collections.Generic;
 
-namespace BlockChain
+namespace _1_BlockChainValidazioneBlocchi
 {
-    class BlockChain
+    internal class BlockChain
     {
         #region Membri
 
@@ -14,7 +14,7 @@ namespace BlockChain
 
         //sistema per aumentare la complessità all'aumentare della dimensione della catena (Proof of Work)
         private int Difficoltà { get; set; } = 2;
-        
+
         #endregion
 
 

@@ -2,9 +2,9 @@
 //libreria per la gestione dei json
 using Newtonsoft.Json;
 
-namespace BlockChainBlocchi
+namespace _2_BlockChainPoW
 {
-    class Program
+    internal class Program
     {
         private static void Main()
         {
