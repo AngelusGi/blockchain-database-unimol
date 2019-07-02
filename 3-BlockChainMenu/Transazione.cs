@@ -4,6 +4,7 @@
     /// <summary>Gestione della transazione associata ad un blocco della catena</summary>
     internal class Transazione
     {
+
         #region Membri
 
 

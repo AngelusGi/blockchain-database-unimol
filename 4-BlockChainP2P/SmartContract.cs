@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -51,7 +49,7 @@ namespace _4_BlockChainP2P
         {
             public string Description { get; set; }
             public string NumVersion { get; set; }
-            
+
         }
 
         #endregion
@@ -73,10 +71,10 @@ namespace _4_BlockChainP2P
         public static void Inizializza()
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+            string jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
 
 
-            using var lettoreFileJson = new StreamReader(jsonPath);
+            using StreamReader lettoreFileJson = new StreamReader(jsonPath);
 
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
@@ -111,11 +109,11 @@ namespace _4_BlockChainP2P
         public static bool VerificaSaldo(string nomeMittente, string nomeDestinatario, int importoTransazione)
         {
 
-            var mittente = UniMolCoin.RicercaUtente(nomeMittente);
+            Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
 
             if (mittente.Saldo.Count >= importoTransazione)
             {
-                var destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
+                Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
 
                 //TrasferisciMoneta(importoTransazione, mittente, destinatario);
                 return !VerificaMonete(mittente, destinatario);
@@ -137,10 +135,10 @@ namespace _4_BlockChainP2P
         public static bool ValidaBlockchain()
         {
             //finché ci sono blocchi
-            for (var pos = 1; pos < UniMolCoin.Catena.Count; pos++)
+            for (int pos = 1; pos < UniMolCoin.Catena.Count; pos++)
             {
-                var bloccoCorrente = UniMolCoin.Catena[pos];
-                var bloccoPrecedente = UniMolCoin.Catena[pos - 1];
+                Blocco bloccoCorrente = UniMolCoin.Catena[pos];
+                Blocco bloccoPrecedente = UniMolCoin.Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
                 if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
@@ -185,7 +183,7 @@ namespace _4_BlockChainP2P
             #endregion
 
 
-            var utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
+            bool utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
 
 
             if (utenteNonPresente)
@@ -221,17 +219,17 @@ namespace _4_BlockChainP2P
         #endregion
         private static bool VerificaMonete(Utente mittente, Utente ricevente)
         {
-            var doppiaSpesa = false;
-            foreach (var monetaMittente in mittente.Saldo)
+            bool doppiaSpesa = false;
+            foreach (Moneta monetaMittente in mittente.Saldo)
             {
-                foreach (var monetaRicevuta in ricevente.Saldo)
+                foreach (Moneta monetaRicevuta in ricevente.Saldo)
                 {
                     if (monetaMittente.IdMoneta == monetaRicevuta.IdMoneta)
                     {
                         doppiaSpesa = true;
                         break;
                     }
-                    
+
                 }
             }
 
@@ -241,7 +239,7 @@ namespace _4_BlockChainP2P
 
         public static void RicompensaMiner(Utente miner)
         {
-            miner.Saldo.Push(new Moneta((int) miner.IdUnivoco));
+            miner.Saldo.Push(new Moneta((int)miner.IdUnivoco));
         }
 
 
@@ -258,9 +256,9 @@ namespace _4_BlockChainP2P
         public static void TrasferisciMoneta(int numMonete, Utente mittente, Utente ricevente)
         {
 
-            for (var i = 0; i < numMonete; i++)
+            for (int i = 0; i < numMonete; i++)
             {
-                ricevente.Saldo.Push( mittente.Saldo.Pop() );
+                ricevente.Saldo.Push(mittente.Saldo.Pop());
             }
 
         }

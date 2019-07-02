@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 
@@ -9,6 +10,9 @@ namespace _3_BlockChainMenu
     /// <summary>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON</summary>
     internal static class SmartContract
     {
+
+
+        #region Membi
 
         #region DefinizioneProprietàOggettoJson
 
@@ -54,37 +58,34 @@ namespace _3_BlockChainMenu
 
         private static ContrattoJson _contratto;
 
+        #endregion
+
+
+        #region Documentazione
 
         /// <summary>
         /// Inizializza l'oggetto SmartContract a partire dal file JSON locale in base alla piattaforma d'esecuzione
         /// </summary>
+
+        #endregion
         public static void Inizializza()
         {
-
-            string jsonPath;
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                jsonPath = "../../../Resources/SmartContract.json";
-            }
-            //else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-            //{
-            //    jsonPath = "./Resources/SmartContract.json";
-            //}
-            else
-            {
-                jsonPath = "./3 - BlockChainMenu/Resources/SmartContract.json";
-            }
+            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
 
 
-            StreamReader lettoreFileJson = new StreamReader(jsonPath);
+            using var lettoreFileJson = new StreamReader(jsonPath);
+
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
         }
 
+
+        #region Documentazione
         /// <summary>
         /// Mostra i dati presenti all'interno del contratto: titolo, versione, data di ultima modifica e clausole
         /// </summary>
+        #endregion
         public static void MostraContratto()
         {
             Console.WriteLine($"\t{_contratto.Title.ToUpperInvariant()}");
@@ -97,30 +98,25 @@ namespace _3_BlockChainMenu
                               $"\n\t\t{_contratto.Properties.Clause.BalanceCheck}");
         }
 
+
+        #region Documentazione
         /// <summary>Valida la transazione verificando se il saldo dell'utente è necessario a coprire l'importo che si vole spendere.</summary>
         /// <param name="nomeMittente">Nome di colui che vuole fare la transazione.</param>
         /// <param name="nomeDestinatario">Nome del beneficiario della transazione</param>
         /// <param name="importoTransazione">Importo della transazione.</param>
         /// <returns>Il saldo è sufficiente (true/false)</returns>
-
+        #endregion
         public static bool VerificaSaldo(string nomeMittente, string nomeDestinatario, int importoTransazione)
         {
 
-            Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
+            var mittente = UniMolCoin.RicercaUtente(nomeMittente);
 
             if (mittente.Saldo.Count >= importoTransazione)
             {
-                Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
+                var destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
 
-                if (!VerificaMonete(mittente, destinatario))
-                {
-                    //TrasferisciMoneta(importoTransazione, mittente, destinatario);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                //TrasferisciMoneta(importoTransazione, mittente, destinatario);
+                return !VerificaMonete(mittente, destinatario);
             }
             else
             {
@@ -129,17 +125,20 @@ namespace _3_BlockChainMenu
 
         }
 
+
+        #region Documentazione
         /// <summary>
         /// Verifica lo stato di validità dei blocchi presenti all'interno della blockchain.
         /// </summary>
         /// <returns>La blockchain è valida (true/false)</returns>
+        #endregion
         public static bool ValidaBlockchain()
         {
             //finché ci sono blocchi
-            for (int pos = 1; pos < UniMolCoin.Catena.Count; pos++)
+            for (var pos = 1; pos < UniMolCoin.Catena.Count; pos++)
             {
-                Blocco bloccoCorrente = UniMolCoin.Catena[pos];
-                Blocco bloccoPrecedente = UniMolCoin.Catena[pos - 1];
+                var bloccoCorrente = UniMolCoin.Catena[pos];
+                var bloccoPrecedente = UniMolCoin.Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
                 if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
@@ -160,49 +159,56 @@ namespace _3_BlockChainMenu
         }
 
 
+        #region Documentazione
         /// <summary>
         /// Verifica se l'utente che si vuole inserire esiste già all'interno degli utenti inseriti nella blockain
         /// </summary>
         /// <param name="utente"></param>
         /// <returns>UtenteNonPresente (true/false)</returns>
+        #endregion
         public static bool VerificaOmonimie(Utente utente)
         {
 
-            bool utenteNonPresente = true;
+            #region Spiegazione codice
+            //foreach (Utente utenteCorrente in UniMolCoin.Utenti)
+            //{
+            //    //se l'utente da inserire non è già presente o per hash o per nome, allora posso autenticarlo e ritorno true
+            //    if (utenteCorrente.Nome == utente.Nome)
+            //    {
+            //        utenteNonPresente = false;
+            //        break;
+            //    }
+            //}
+            //questa porzione di codice, equivale alla riga sottostante
+            #endregion
 
-            foreach (Utente utenteCorrente in UniMolCoin.Utenti)
-            {
-                //se l'utente da inserire non è già presente o per hash o per nome, allora posso autenticarlo e ritorno true
-                if (utenteCorrente.Nome == utente.Nome)
-                {
-                    utenteNonPresente = false;
-                    break;
-                }
 
-            }
+            var utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
+
 
             if (utenteNonPresente)
             {
                 //nel caso in cui non esista già l'utente (nome o hash associato) allora lo autentico
                 AutenticaUtente(utente);
-
             }
 
             return utenteNonPresente;
-
         }
 
 
+        #region Documentazione
         /// <summary>
         /// Assegna un ID univoco agli utenti della lista (hash code)
         /// </summary>
         /// <param name="utente">Singolo utente da autenticare.</param>
+        #endregion
         private static void AutenticaUtente(Utente utente)
         {
             utente.IdUnivoco = utente.GetHashCode();
         }
 
 
+        #region Documentazione
         /// <summary>
         /// Verificano che non vi siano nè nel portafogli del mittente, nè nel destinario monete con lo stesso ID,
         /// al fine di evitare il double spending.
@@ -210,12 +216,13 @@ namespace _3_BlockChainMenu
         /// <param name="mittente">Committente della transazione</param>
         /// <param name="ricevente">Beneficiario della transazione</param>
         /// <returns> False se non è presente un caso di doubleSpending, in caso contrario true </returns>
+        #endregion
         private static bool VerificaMonete(Utente mittente, Utente ricevente)
         {
-            bool doppiaSpesa = false;
-            foreach (Moneta monetaMittente in mittente.Saldo)
+            var doppiaSpesa = false;
+            foreach (var monetaMittente in mittente.Saldo)
             {
-                foreach (Moneta monetaRicevuta in ricevente.Saldo)
+                foreach (var monetaRicevuta in ricevente.Saldo)
                 {
                     if (monetaMittente.IdMoneta == monetaRicevuta.IdMoneta)
                     {
@@ -229,10 +236,14 @@ namespace _3_BlockChainMenu
             return doppiaSpesa;
         }
 
+
         public static void RicompensaMiner(Utente miner)
         {
             miner.Saldo.Push(new Moneta((int)miner.IdUnivoco));
         }
+
+
+        #region Documentazione
 
         /// <summary>
         /// Trasferisce l'importo che si vuole spendere dal mittente al beneficiario.
@@ -240,10 +251,12 @@ namespace _3_BlockChainMenu
         /// <param name="numMonete">Numero di monete che si vogliono spendere</param>
         /// <param name="mittente">Committente della transazione</param>
         /// <param name="ricevente">Beneficiario della transazione</param>
+
+        #endregion
         public static void TrasferisciMoneta(int numMonete, Utente mittente, Utente ricevente)
         {
 
-            for (int i = 0; i < numMonete; i++)
+            for (var i = 0; i < numMonete; i++)
             {
                 ricevente.Saldo.Push(mittente.Saldo.Pop());
             }

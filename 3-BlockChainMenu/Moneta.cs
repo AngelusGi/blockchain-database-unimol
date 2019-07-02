@@ -5,19 +5,28 @@
     /// </summary>
     internal class Moneta
     {
+
+
+        #region Membri
+
         public static readonly int Valore = 1;
 
         public int? IdVecchioProprietario { get; private set; }
 
         public int IdAttualeProprietario { get; private set; }
 
+
+        #region Documentazione
         /// <summary>
         /// Codice identificativo della moneta.
         /// </summary>
         /// <value>
         /// Codice hash della moneta (int)
         /// </value>
+        #endregion
         public int IdMoneta { get; private set; }
+        #endregion
+
 
         public Moneta(int idAttualeProprietario)
         {
@@ -26,11 +35,15 @@
         }
 
 
+        #region Documentazione
+
         /// <summary>
         /// Trasferisce la moneta dal proprietario al destinatario della transazione.
         /// </summary>
         /// <param name="idNuovoProprietario">Identificativo dell'utente a cui deve essere inviata.</param>
         /// <returns>Trasferimento effettuato con successo (bool)</returns>
+
+        #endregion
         public bool TrasferisciMoneta(int idNuovoProprietario)
         {
 

@@ -34,9 +34,9 @@ namespace _3_BlockChainMenu
         {
             ColoreRecap();
             //todo inserire nomeProf + nome cognome e matricole nostre
-            string[] unimol = new string[4];
+            var unimol = new string[4];
 
-            for (int i = 0; i < unimol.Length; i++)
+            for (var i = 0; i < unimol.Length; i++)
             {
                 if (!string.IsNullOrEmpty(unimol[i]))
                 {
@@ -74,7 +74,7 @@ namespace _3_BlockChainMenu
                 ColoreNormale();
 
                 Console.WriteLine("Inserisci un nome utente (minimo 4 caratteri):");
-                string nome = Console.ReadLine();
+                var nome = Console.ReadLine();
 
                 if (!string.IsNullOrEmpty(nome) && nome.Length > 3)
                 {
@@ -85,7 +85,7 @@ namespace _3_BlockChainMenu
                     nome = CreaUtenteTest(ref _numUtentiTest);
                 }
 
-                Utente utenteDaRegistrare = new Utente(nome);
+                var utenteDaRegistrare = new Utente(nome);
 
                 if (SmartContract.VerificaOmonimie(utenteDaRegistrare))
                 {
@@ -112,7 +112,7 @@ namespace _3_BlockChainMenu
 
             while (UniMolCoin.Utenti.Count < 3)
             {
-                Utente utenteTest = new Utente(CreaUtenteTest(ref _numUtentiTest));
+                var utenteTest = new Utente(CreaUtenteTest(ref _numUtentiTest));
                 if (SmartContract.VerificaOmonimie(utenteTest))
                 {
                     UniMolCoin.Utenti.Add(utenteTest);
@@ -123,10 +123,10 @@ namespace _3_BlockChainMenu
             ColoreRecap();
             Console.WriteLine("\n\t*** Riepilogo utenti creati ***");
             ColoreNormale();
-            foreach (Utente utente in UniMolCoin.Utenti)
+            foreach (var utente in UniMolCoin.Utenti)
             {
                 utente.CreaPortafogli();
-                Console.WriteLine($"\tNome: {utente.Nome} \t ID assciato: {utente.IdUnivoco} \t Saldo iniziale: {utente.Saldo.Count}");
+                Console.WriteLine($"\tNome: {utente.Nome} \t ID associato: {utente.IdUnivoco} \t Saldo iniziale: {utente.Saldo.Count}");
             }
 
         }
@@ -134,11 +134,11 @@ namespace _3_BlockChainMenu
         private void GestioneMenu()
         {
 
-            int selezione = Annulla;
+            var selezione = Annulla;
 
             do
             {
-                int moneteCircolanti = UniMolCoin.AggiornaBilancio();
+                var moneteCircolanti = UniMolCoin.AggiornaBilancio();
 
                 ColoreTitoli();
                 Console.WriteLine("\n\t*** MENU UNIMOL COIN ***");
@@ -152,7 +152,7 @@ namespace _3_BlockChainMenu
                 ColoreNormale();
                 Console.Write("\tInserisci una scelta: ");
 
-                string azione = Console.ReadLine();
+                var azione = Console.ReadLine();
 
                 try
                 {
@@ -175,7 +175,7 @@ namespace _3_BlockChainMenu
                         Console.WriteLine("\t\n*** REGISTRA TRANSAZIONE ***");
                         ColoreNormale();
                         Console.WriteLine($"Per favore, inserisci il nome del mittente ( {Annulla} per annullare)");
-                        string nomeMittente = Console.ReadLine();
+                        var nomeMittente = Console.ReadLine();
 
                         if ((nomeMittente == Annulla.ToString()) || (string.IsNullOrEmpty(nomeMittente)))
                         {
@@ -185,7 +185,7 @@ namespace _3_BlockChainMenu
                         NormalizzaNome(ref nomeMittente);
 
                         Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {Annulla} per annullare)");
-                        string nomeDestinatario = Console.ReadLine();
+                        var nomeDestinatario = Console.ReadLine();
                         if ((nomeDestinatario == Annulla.ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
                         {
                             break;
@@ -194,7 +194,7 @@ namespace _3_BlockChainMenu
                         NormalizzaNome(ref nomeDestinatario);
 
                         Console.WriteLine($"Per favore, inserisci l'importo ( {Annulla} per annullare)");
-                        string importo = Console.ReadLine();
+                        var importo = Console.ReadLine();
 
                         if (importo == Annulla.ToString())
                         {
@@ -270,7 +270,7 @@ namespace _3_BlockChainMenu
                         Console.WriteLine("\t\n*** MOSTRA SALDO UTENTE ***");
                         ColoreNormale();
                         Console.WriteLine("Inserisci il nome dell'utente di cui mostrare il saldo: ");
-                        string nomeUtente = Console.ReadLine();
+                        var nomeUtente = Console.ReadLine();
 
                         try
                         {
@@ -327,40 +327,34 @@ namespace _3_BlockChainMenu
 
         }
 
-        #region GestioneColori
 
-        private void NormalizzaNome(ref string nome)
+        private static void NormalizzaNome(ref string nome)
         {
             nome = nome.Trim();
             nome = nome.ToLowerInvariant();
         }
 
-        private void ColoreAvvisi()
+        
+        #region GestioneColori
+
+        private static void ColoreAvvisi()
         {
             Console.ForegroundColor = ConsoleColor.Red;
         }
 
-        private void ColoreRecap()
+        private static void ColoreRecap()
         {
             Console.ForegroundColor = ConsoleColor.Green;
         }
 
-        private void ColoreTitoli()
+        private static void ColoreTitoli()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
         }
 
-        private void ColoreNormale()
+        private static void ColoreNormale()
         {
-            if (Console.BackgroundColor == ConsoleColor.Black)
-            {
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Black;
-            }
-
+            Console.ForegroundColor = Console.BackgroundColor == ConsoleColor.Black ? ConsoleColor.White : ConsoleColor.Black;
         }
 
         #endregion

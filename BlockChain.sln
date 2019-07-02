@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-BlockChainP2P", "4-BlockC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-BlockChainMenu", "3-BlockChainMenu\3-BlockChainMenu.csproj", "{1C2DC7D4-A5B9-4727-B745-E1E5C8533A5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-BlockChainPoW", "2-BlockChainPoW\2-BlockChainPoW.csproj", "{EBDFC890-E73C-42A1-814F-F34980058515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-BlockChainPoW", "2-BlockChainPoW\2-BlockChainPoW.csproj", "{EBDFC890-E73C-42A1-814F-F34980058515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-BlockChainValidazioneBlocchi", "1-BlockChainValidazioneBlocchi\1-BlockChainValidazioneBlocchi.csproj", "{312A7343-1FA0-4E05-94AE-38DC17788DA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-BlockChainValidazioneBlocchi", "1-BlockChainValidazioneBlocchi\1-BlockChainValidazioneBlocchi.csproj", "{312A7343-1FA0-4E05-94AE-38DC17788DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockChainTest", "BlockChainTest\BlockChainTest.csproj", "{D2733F7E-66CE-481A-BE3C-B9B17CD39085}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{312A7343-1FA0-4E05-94AE-38DC17788DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312A7343-1FA0-4E05-94AE-38DC17788DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312A7343-1FA0-4E05-94AE-38DC17788DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2733F7E-66CE-481A-BE3C-B9B17CD39085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2733F7E-66CE-481A-BE3C-B9B17CD39085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2733F7E-66CE-481A-BE3C-B9B17CD39085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2733F7E-66CE-481A-BE3C-B9B17CD39085}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

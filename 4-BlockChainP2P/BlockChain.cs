@@ -108,15 +108,6 @@ namespace _4_BlockChainP2P
         #endregion
 
 
-        #region Documentazione
-        /// <summary>
-        /// Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
-        /// Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
-        /// </summary>
-        /// <returns>Restituisce lo stato di validità di un blocco</returns>
-        #endregion
-       
-
         #region MetodiPerUtenti
 
         #region Documentazione
@@ -259,6 +250,13 @@ namespace _4_BlockChainP2P
         #endregion
 
 
+        #region Documentazione
+        /// <summary>
+        /// Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
+        /// Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
+        /// </summary>
+        /// <returns>Restituisce lo stato di validità di un blocco</returns>
+        #endregion
         public bool IsValido()
         {
             return SmartContract.ValidaBlockchain();
