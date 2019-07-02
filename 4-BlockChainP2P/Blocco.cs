@@ -68,8 +68,11 @@ namespace _4_BlockChainP2P
 
         #endregion
 
+
+        #region Documentazione
         /// <summary>Calcola l'hash del blocco basandosi su SHA512</summary>
         /// <returns>Impronta digitale del blocco</returns>
+        #endregion
         public string CalcolaHash()
         {
             SHA512 cifraturaSha = SHA512.Create();
@@ -81,14 +84,16 @@ namespace _4_BlockChainP2P
         }
 
 
+        #region Documentazione
         /// <summary>
         /// Calcola l'hash per veificare la validità di un blocco
         /// </summary>
         /// <param name="difficoltà">Difficoltà dei calcoli necessari per validare la blockchain.</param>
+        #endregion
         public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficoltà);
+            var zeroIniziali = new string('0', difficoltà);
             while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;

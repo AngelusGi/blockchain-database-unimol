@@ -8,6 +8,7 @@ namespace _4_BlockChainP2P
     internal class Menu
     {
 
+        #region Membri
         public static BlockChain UniMolCoin { get; set; }
 
         public static int Porta = 0;
@@ -25,6 +26,10 @@ namespace _4_BlockChainP2P
         private string _risposta;
         private int _numUtentiTest;
 
+        #endregion
+
+
+        #region Costruttore
 
         public Menu()
         {
@@ -35,6 +40,14 @@ namespace _4_BlockChainP2P
             AvviaMenu();
         }
 
+        #endregion
+
+
+        #region Documentazione
+        /// <summary>
+        /// Produce l'instestazione iniziale della console e le informazioni circa i realizzatori del progetto.
+        /// </summary>
+        #endregion
         private void Benvenuto()
         {
             ColoreRecap();
@@ -61,6 +74,7 @@ namespace _4_BlockChainP2P
         }
 
 
+        #region MetodiPerUtenti
         private string CreaUtenteTest(ref int num)
         {
             ColoreAvvisi();
@@ -115,6 +129,7 @@ namespace _4_BlockChainP2P
             } while (!Annulla.ToString().Equals(_risposta));
 
 
+            //se non ci sono almeno 3 utenti, crea il numero di utenti necessario per raggiungere la quota minima
             while (UniMolCoin.Utenti.Count < 3)
             {
                 Utente utenteTest = new Utente(CreaUtenteTest(ref _numUtentiTest));
@@ -126,8 +141,11 @@ namespace _4_BlockChainP2P
             }
 
             ColoreRecap();
+
             Console.WriteLine("\n\t*** Riepilogo utenti creati ***");
+
             ColoreNormale();
+
             foreach (Utente utente in UniMolCoin.Utenti)
             {
                 utente.CreaPortafogli();
@@ -135,6 +153,8 @@ namespace _4_BlockChainP2P
             }
 
         }
+        #endregion
+
 
         private void GestioneMenu()
         {
@@ -160,6 +180,8 @@ namespace _4_BlockChainP2P
 
                 string azione = Console.ReadLine();
 
+
+                //cerca di convertire l'azione selezionata in un intero
                 try
                 {
                     selezione = Convert.ToInt16(azione);
@@ -169,9 +191,11 @@ namespace _4_BlockChainP2P
                 {
                     ColoreAvvisi();
                     Console.WriteLine("\t\n*** Errore. Operazione non riconosciuta, riprova! ***");
+
                     ColoreNormale();
                     Console.WriteLine(exception.Message);
                 }
+
 
                 switch (selezione)
                 {
@@ -190,11 +214,13 @@ namespace _4_BlockChainP2P
                         Console.WriteLine("Connessione effettuata con successo!");
                         break;
 
+
                     case AggiungiTransazione:
                         ColoreTitoli();
                         Console.WriteLine("\t\n*** REGISTRA TRANSAZIONE ***");
                         ColoreNormale();
                         Console.WriteLine($"Per favore, inserisci il nome del mittente ( {Annulla} per annullare)");
+
                         string nomeMittente = Console.ReadLine();
 
                         if ((nomeMittente == Annulla.ToString()) || (string.IsNullOrEmpty(nomeMittente)))
@@ -206,6 +232,7 @@ namespace _4_BlockChainP2P
 
                         Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {Annulla} per annullare)");
                         string nomeDestinatario = Console.ReadLine();
+
                         if ((nomeDestinatario == Annulla.ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
                         {
                             break;
@@ -228,10 +255,7 @@ namespace _4_BlockChainP2P
                             break;
                         }
 
-
-
-                        if ((UniMolCoin.VerificaUtente(nomeMittente)) &&
-                            (UniMolCoin.VerificaUtente(nomeDestinatario)))
+                        if ((UniMolCoin.VerificaUtente(nomeMittente)) && (UniMolCoin.VerificaUtente(nomeDestinatario)))
                         {
                             Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
                             Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
@@ -243,9 +267,15 @@ namespace _4_BlockChainP2P
                                 UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario, Convert.ToInt32(importo)));
 
                                 Random randomMiner = new Random();
+                                int minerSelezionato = randomMiner.Next(0, UniMolCoin.Utenti.Count);
 
-                                //il miner sarà estratto casualmente tra la lista degli utenti
-                                UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[randomMiner.Next(0, UniMolCoin.Utenti.Count)]);
+                                //il miner sarà estratto casualmente tra la lista degli utenti e non deve corrispondere nè al mittente, nè al destinatario
+                                while ((minerSelezionato != UniMolCoin.Utenti.IndexOf(mittente)) && (minerSelezionato != UniMolCoin.Utenti.IndexOf(destinatario)))
+                                {
+                                    minerSelezionato = randomMiner.Next(0, UniMolCoin.Utenti.Count);
+                                }
+
+                                UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[minerSelezionato]);
 
                                 Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
 
@@ -264,8 +294,8 @@ namespace _4_BlockChainP2P
                             Console.WriteLine("\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
                             break;
                         }
-
                         break;
+
 
                     case MostraBlockchain:
                         ColoreTitoli();
@@ -277,6 +307,7 @@ namespace _4_BlockChainP2P
                         ColoreNormale();
                         break;
 
+
                     case MostraSmartContract:
                         ColoreTitoli();
                         Console.WriteLine("\t\n*** MOSTRA SMART CONTRACT ***\n");
@@ -284,6 +315,7 @@ namespace _4_BlockChainP2P
                         SmartContract.MostraContratto();
                         ColoreNormale();
                         break;
+
 
                     case VerificaSaldo:
                         ColoreTitoli();
@@ -311,11 +343,13 @@ namespace _4_BlockChainP2P
                         ColoreNormale();
                         break;
 
+
                     case Esci:
                         ColoreAvvisi();
                         Console.WriteLine("\t\n*** Arrivederci! ***");
                         ColoreNormale();
                         break;
+
 
                     default:
                         Console.Clear();
@@ -326,6 +360,7 @@ namespace _4_BlockChainP2P
                 }
 
             } while (!Esci.Equals(selezione));
+
 
             if (Client != null)
             {
@@ -340,6 +375,7 @@ namespace _4_BlockChainP2P
             }
 
         }
+
 
         private void AvviaMenu()
         {
@@ -360,7 +396,8 @@ namespace _4_BlockChainP2P
 
         }
 
-        #region GestioneColori
+
+        #region MetodiGestioneColori
 
         private void NormalizzaNome(ref string nome)
         {

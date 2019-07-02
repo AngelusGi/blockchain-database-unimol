@@ -7,6 +7,7 @@ namespace _4_BlockChainP2P
     /// <summary>Gestione della transazione associata ad un blocco della catena</summary>
     internal class Transazione
     {
+
         #region Membri
 
 

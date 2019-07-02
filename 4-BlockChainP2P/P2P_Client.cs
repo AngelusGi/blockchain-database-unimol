@@ -10,10 +10,16 @@ namespace _4_BlockChainP2P
     internal class P2PClient
     {
 
+
+        #region Membri
+        
         private readonly IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
         public static int Porta { get; private set; }
         private const int MinPorta = 1024;
         private const int MaxPorta = 49151;
+
+        #endregion
+
 
         public void Connetti(string url)
         {
@@ -22,11 +28,15 @@ namespace _4_BlockChainP2P
 
             if (!_webSocketDictionary.ContainsKey(url))
             {
-                WebSocket webSocket = new WebSocket(url);
+                var webSocket = new WebSocket(url);
+
+                #region Spiegazione
 
                 //espressione lambda =>
                 //aggiunge mittente ed evento al messaggio trasmesso dalla socket. L'if verifica che si tratti della fase di instaurazione
                 //della connessione o se si tratta di un blocco
+
+                #endregion
                 webSocket.OnMessage += (mittente, evento) =>
                 {
                     if (evento.Data.Contains("Ciao Client"))
@@ -39,7 +49,7 @@ namespace _4_BlockChainP2P
                         if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Menu.UniMolCoin.Catena.Count)
                         {
 
-                            List<Transazione> nuoveTransazioni = new List<Transazione>();
+                            var nuoveTransazioni = new List<Transazione>();
 
                             nuoveTransazioni.AddRange(nuovaCatena.TransazioniInAttesa);
                             nuoveTransazioni.AddRange(Menu.UniMolCoin.TransazioniInAttesa);
@@ -60,11 +70,13 @@ namespace _4_BlockChainP2P
             }
         }
 
+
         private int SelezionaPorta()
         {
-            Random portaRandom = new Random();
+            var portaRandom = new Random();
             return portaRandom.Next(MinPorta, MaxPorta);
         }
+
 
         public void Send(string url, string data)
         {
@@ -77,6 +89,7 @@ namespace _4_BlockChainP2P
             }
         }
 
+
         public void Broadcast(string data)
         {
             foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
@@ -84,6 +97,7 @@ namespace _4_BlockChainP2P
                 item.Value.Send(data);
             }
         }
+
 
         public IList<string> GetServers()
         {
@@ -94,6 +108,7 @@ namespace _4_BlockChainP2P
             }
             return servers;
         }
+
 
         public void Close()
         {
