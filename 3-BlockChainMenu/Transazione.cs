@@ -1,4 +1,6 @@
-﻿namespace _3_BlockChainMenu
+﻿using System;
+
+namespace _3_BlockChainMenu
 {
 
     /// <summary>Gestione della transazione associata ad un blocco della catena</summary>
@@ -34,7 +36,19 @@
             //se indirizzo mittente non è null, allora assegna l'id del mittente al campo IdMittente
             IdMittente = mittente?.IdUnivoco;
 
-            IdDestinatario = (int)destinatario.IdUnivoco;
+            try
+            {
+                if (destinatario.IdUnivoco != null)
+                {
+                    IdDestinatario = (int)destinatario.IdUnivoco;
+                }
+            }
+            catch (InvalidOperationException eccezione)
+            {
+                Console.WriteLine(eccezione.Message);
+                throw;
+            }
+
             Valore = valore;
             Contabilizzata = false;
 

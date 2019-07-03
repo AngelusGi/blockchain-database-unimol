@@ -12,7 +12,7 @@ namespace _4_BlockChainP2P
 
 
         #region Membri
-        
+
         private readonly IDictionary<string, WebSocket> _webSocketDictionary = new Dictionary<string, WebSocket>();
         public static int Porta { get; private set; }
         private const int MinPorta = 1024;
@@ -28,7 +28,7 @@ namespace _4_BlockChainP2P
 
             if (!_webSocketDictionary.ContainsKey(url))
             {
-                var webSocket = new WebSocket(url);
+                WebSocket webSocket = new WebSocket(url);
 
                 #region Spiegazione
 
@@ -49,7 +49,7 @@ namespace _4_BlockChainP2P
                         if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Menu.UniMolCoin.Catena.Count)
                         {
 
-                            var nuoveTransazioni = new List<Transazione>();
+                            List<Transazione> nuoveTransazioni = new List<Transazione>();
 
                             nuoveTransazioni.AddRange(nuovaCatena.TransazioniInAttesa);
                             nuoveTransazioni.AddRange(Menu.UniMolCoin.TransazioniInAttesa);
@@ -73,7 +73,7 @@ namespace _4_BlockChainP2P
 
         private int SelezionaPorta()
         {
-            var portaRandom = new Random();
+            Random portaRandom = new Random();
             return portaRandom.Next(MinPorta, MaxPorta);
         }
 

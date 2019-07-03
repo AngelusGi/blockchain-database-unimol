@@ -51,24 +51,8 @@ namespace _4_BlockChainP2P
         private void Benvenuto()
         {
             ColoreRecap();
-            //todo inserire nomeProf + nome cognome e matricole nostre
-            string[] unimol = new string[4];
 
-            for (int i = 0; i < unimol.Length; i++)
-            {
-                if (!string.IsNullOrEmpty(unimol[i]))
-                {
-                    unimol[i] = unimol[i].ToUpperInvariant();
-                }
-            }
-
-            Console.WriteLine("\t*** PROGETTO BASI DI DATI E SISTEMI INFORMATIVI: BLOCKCHAIN 'UNIMOL COIN' ***");
-            Console.WriteLine($"*** PROF. {unimol[0]}***");
-            Console.WriteLine("*** CDL IN INFORMATICA - UNIVERSITÀ DEGLI STUDI DEL MOLISE ***");
-            Console.WriteLine("*** CANDIDATI:" +
-                              $"\n\t{unimol[1]}" +
-                              $"\n\t{unimol[2]}" +
-                              $"\n\t{unimol[3]}");
+            Candidati.MostraCanidati();
 
             ColoreNormale();
         }
@@ -196,168 +180,179 @@ namespace _4_BlockChainP2P
                     Console.WriteLine(exception.Message);
                 }
 
-
-                switch (selezione)
+                if (UniMolCoin.IsValido())
                 {
+                    switch (selezione)
+                    {
 
-                    case UrlServer:
-                        Console.WriteLine("*** CONNESSIONE AL SERVER ***");
-                        Console.WriteLine($"Per favore, inserisci l'URL del server ({Annulla} per annullare)");
-                        string serverUrl = Console.ReadLine();
+                        case UrlServer:
+                            Console.WriteLine("*** CONNESSIONE AL SERVER ***");
+                            Console.WriteLine($"Per favore, inserisci l'URL del server ({Annulla} per annullare)");
+                            string serverUrl = Console.ReadLine();
 
-                        if (Annulla.ToString().Equals(serverUrl))
-                        {
-                            break;
-                        }
-
-                        Client.Connetti($"{serverUrl}/Blockchain");
-                        Console.WriteLine("Connessione effettuata con successo!");
-                        break;
-
-
-                    case AggiungiTransazione:
-                        ColoreTitoli();
-                        Console.WriteLine("\t\n*** REGISTRA TRANSAZIONE ***");
-                        ColoreNormale();
-                        Console.WriteLine($"Per favore, inserisci il nome del mittente ( {Annulla} per annullare)");
-
-                        string nomeMittente = Console.ReadLine();
-
-                        if ((nomeMittente == Annulla.ToString()) || (string.IsNullOrEmpty(nomeMittente)))
-                        {
-                            break;
-                        }
-
-                        NormalizzaNome(ref nomeMittente);
-
-                        Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {Annulla} per annullare)");
-                        string nomeDestinatario = Console.ReadLine();
-
-                        if ((nomeDestinatario == Annulla.ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
-                        {
-                            break;
-                        }
-
-                        NormalizzaNome(ref nomeDestinatario);
-
-                        Console.WriteLine($"Per favore, inserisci l'importo ( {Annulla} per annullare)");
-                        string importo = Console.ReadLine();
-
-                        if (importo == Annulla.ToString())
-                        {
-                            break;
-                        }
-
-                        if (Convert.ToInt32(importo) < 0)
-                        {
-                            ColoreAvvisi();
-                            Console.WriteLine("\t*** Errore. Importo non valido. ***");
-                            break;
-                        }
-
-                        if ((UniMolCoin.VerificaUtente(nomeMittente)) && (UniMolCoin.VerificaUtente(nomeDestinatario)))
-                        {
-                            Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
-                            Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
-
-                            if (SmartContract.VerificaSaldo(mittente.Nome, destinatario.Nome, Convert.ToInt32(importo)))
+                            if (Annulla.ToString().Equals(serverUrl))
                             {
-                                SmartContract.TrasferisciMoneta(Convert.ToInt32(importo), mittente, destinatario);
+                                break;
+                            }
 
-                                UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario, Convert.ToInt32(importo)));
+                            Client.Connetti($"{serverUrl}/Blockchain");
+                            Console.WriteLine("Connessione effettuata con successo!");
+                            break;
 
-                                Random randomMiner = new Random();
-                                int minerSelezionato = randomMiner.Next(0, UniMolCoin.Utenti.Count);
 
-                                //il miner sarà estratto casualmente tra la lista degli utenti e non deve corrispondere nè al mittente, nè al destinatario
-                                while ((minerSelezionato != UniMolCoin.Utenti.IndexOf(mittente)) && (minerSelezionato != UniMolCoin.Utenti.IndexOf(destinatario)))
+                        case AggiungiTransazione:
+                            ColoreTitoli();
+                            Console.WriteLine("\t\n*** REGISTRA TRANSAZIONE ***");
+                            ColoreNormale();
+                            Console.WriteLine($"Per favore, inserisci il nome del mittente ( {Annulla} per annullare)");
+
+                            string nomeMittente = Console.ReadLine();
+
+                            if ((nomeMittente == Annulla.ToString()) || (string.IsNullOrEmpty(nomeMittente)))
+                            {
+                                break;
+                            }
+
+                            NormalizzaNome(ref nomeMittente);
+
+                            Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {Annulla} per annullare)");
+                            string nomeDestinatario = Console.ReadLine();
+
+                            if ((nomeDestinatario == Annulla.ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
+                            {
+                                break;
+                            }
+
+                            NormalizzaNome(ref nomeDestinatario);
+
+                            Console.WriteLine($"Per favore, inserisci l'importo ( {Annulla} per annullare)");
+                            string importo = Console.ReadLine();
+
+                            if (importo == Annulla.ToString())
+                            {
+                                break;
+                            }
+
+                            if (Convert.ToInt32(importo) < 0)
+                            {
+                                ColoreAvvisi();
+                                Console.WriteLine("\t*** Errore. Importo non valido. ***");
+                                break;
+                            }
+
+                            if ((UniMolCoin.VerificaUtente(nomeMittente)) && (UniMolCoin.VerificaUtente(nomeDestinatario)))
+                            {
+                                Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
+                                Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
+
+                                if (SmartContract.VerificaSaldo(mittente.Nome, destinatario.Nome, Convert.ToInt32(importo)))
                                 {
-                                    minerSelezionato = randomMiner.Next(0, UniMolCoin.Utenti.Count);
+                                    SmartContract.TrasferisciMoneta(Convert.ToInt32(importo), mittente, destinatario);
+
+                                    UniMolCoin.CreaTransazione(new Transazione(mittente, destinatario, Convert.ToInt32(importo)));
+
+                                    Random randomMiner = new Random();
+                                    int minerSelezionato = randomMiner.Next(0, UniMolCoin.Utenti.Count);
+
+                                    //il miner sarà estratto casualmente tra la lista degli utenti e non deve corrispondere nè al mittente, nè al destinatario
+                                    while ((minerSelezionato != UniMolCoin.Utenti.IndexOf(mittente)) && (minerSelezionato != UniMolCoin.Utenti.IndexOf(destinatario)))
+                                    {
+                                        minerSelezionato = randomMiner.Next(0, UniMolCoin.Utenti.Count);
+                                    }
+
+                                    UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[minerSelezionato]);
+
+                                    Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
+
                                 }
-
-                                UniMolCoin.MinaTransazioni(UniMolCoin.Utenti[minerSelezionato]);
-
-                                Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
+                                else
+                                {
+                                    ColoreAvvisi();
+                                    Console.WriteLine("\t*** Errore: Transazione non valida, importo più alto della capacità di spesa del mittente. ***");
+                                    break;
+                                }
 
                             }
                             else
                             {
                                 ColoreAvvisi();
-                                Console.WriteLine("\t*** Errore: Transazione non valida, importo più alto della capacità di spesa del mittente. ***");
+                                Console.WriteLine("\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
                                 break;
                             }
-
-                        }
-                        else
-                        {
-                            ColoreAvvisi();
-                            Console.WriteLine("\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
                             break;
-                        }
-                        break;
 
 
-                    case MostraBlockchain:
-                        ColoreTitoli();
-                        Console.WriteLine("\t\n*** MOSTRA BLOCKCHAIN ***");
-                        ColoreNormale();
-                        Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
-                        ColoreRecap();
-                        Console.WriteLine($"Sono in circolazione {moneteCircolanti} UniMolCoin");
-                        ColoreNormale();
-                        break;
-
-
-                    case MostraSmartContract:
-                        ColoreTitoli();
-                        Console.WriteLine("\t\n*** MOSTRA SMART CONTRACT ***\n");
-                        ColoreRecap();
-                        SmartContract.MostraContratto();
-                        ColoreNormale();
-                        break;
-
-
-                    case VerificaSaldo:
-                        ColoreTitoli();
-                        Console.WriteLine("\t\n*** MOSTRA SALDO UTENTE ***");
-                        ColoreNormale();
-                        Console.WriteLine("Inserisci il nome dell'utente di cui mostrare il saldo: ");
-                        string nomeUtente = Console.ReadLine();
-
-                        try
-                        {
-                            NormalizzaNome(ref nomeUtente);
-                            Utente utenteCercato = UniMolCoin.RicercaUtente(nomeUtente);
+                        case MostraBlockchain:
+                            ColoreTitoli();
+                            Console.WriteLine("\t\n*** MOSTRA BLOCKCHAIN ***");
+                            ColoreNormale();
+                            Console.WriteLine(JsonConvert.SerializeObject(UniMolCoin, Formatting.Indented));
                             ColoreRecap();
-                            Console.WriteLine($"\tNome: {utenteCercato.Nome}" +
-                                              $"\n\tID: {utenteCercato.IdUnivoco}" +
-                                              $"\n\tSaldo: {utenteCercato.Saldo.Count}");
-                        }
-                        catch (Exception)
-                        {
+                            Console.WriteLine($"Sono in circolazione {moneteCircolanti} UniMolCoin");
+                            ColoreNormale();
+                            break;
+
+
+                        case MostraSmartContract:
+                            ColoreTitoli();
+                            Console.WriteLine("\t\n*** MOSTRA SMART CONTRACT ***\n");
+                            ColoreRecap();
+                            SmartContract.MostraContratto();
+                            ColoreNormale();
+                            break;
+
+
+                        case VerificaSaldo:
+                            ColoreTitoli();
+                            Console.WriteLine("\t\n*** MOSTRA SALDO UTENTE ***");
+                            ColoreNormale();
+                            Console.WriteLine("Inserisci il nome dell'utente di cui mostrare il saldo: ");
+                            string nomeUtente = Console.ReadLine();
+
+                            try
+                            {
+                                NormalizzaNome(ref nomeUtente);
+                                Utente utenteCercato = UniMolCoin.RicercaUtente(nomeUtente);
+                                ColoreRecap();
+                                Console.WriteLine($"\tNome: {utenteCercato.Nome}" +
+                                                  $"\n\tID: {utenteCercato.IdUnivoco}" +
+                                                  $"\n\tSaldo: {utenteCercato.Saldo.Count}");
+                            }
+                            catch (Exception)
+                            {
+                                ColoreAvvisi();
+                                Console.WriteLine("\t*** Errore. Input non valido o utente non trovato. ***");
+
+                            }
+
+                            ColoreNormale();
+                            break;
+
+
+                        case Esci:
                             ColoreAvvisi();
-                            Console.WriteLine("\t*** Errore. Input non valido o utente non trovato. ***");
-
-                        }
-
-                        ColoreNormale();
-                        break;
+                            Console.WriteLine("\t\n*** Arrivederci! ***");
+                            ColoreNormale();
+                            break;
 
 
-                    case Esci:
-                        ColoreAvvisi();
-                        Console.WriteLine("\t\n*** Arrivederci! ***");
-                        ColoreNormale();
-                        break;
+                        default:
+                            Console.Clear();
+                            ColoreAvvisi();
+                            Console.WriteLine("\t\n*** Errore. Operazione non riconosciuta, riprova! ***");
+                            ColoreNormale();
+                            break;
+                    }
 
-
-                    default:
-                        Console.Clear();
-                        ColoreAvvisi();
-                        Console.WriteLine("\t\n*** Errore. Operazione non riconosciuta, riprova! ***");
-                        ColoreNormale();
-                        break;
                 }
+                else
+                {
+                    ColoreAvvisi();
+                    Console.WriteLine("*** Errore. BlockChain non valida! ***");
+                    selezione = Esci;
+                }
+
+
 
             } while (!Esci.Equals(selezione));
 

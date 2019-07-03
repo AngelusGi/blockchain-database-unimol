@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace _3_BlockChainMenu
 {
     /// <summary>
     /// Classe che gestisce gli utenti della blockchain
     /// </summary>
-    public class Utente
+    internal class Utente
     {
 
         #region Documentazione
@@ -60,9 +61,21 @@ namespace _3_BlockChainMenu
         public void CreaPortafogli()
         {
 
-            for (var i = 0; i < NumMoneteIniziale; i++)
+            for (int i = 0; i < NumMoneteIniziale; i++)
             {
-                Saldo.Push(new Moneta((int)IdUnivoco));
+                try
+                {
+                    if (IdUnivoco != null)
+                    {
+                        Saldo.Push(new Moneta((int)IdUnivoco));
+                    }
+                }
+                catch (InvalidOperationException eccezione)
+                {
+                    Console.WriteLine(eccezione.Message);
+                    throw;
+                }
+
             }
 
         }

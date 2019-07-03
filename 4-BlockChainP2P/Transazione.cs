@@ -1,7 +1,4 @@
-﻿
-using System.Diagnostics;
-
-namespace _4_BlockChainP2P
+﻿namespace _4_BlockChainP2P
 {
 
     /// <summary>Gestione della transazione associata ad un blocco della catena</summary>
@@ -37,7 +34,11 @@ namespace _4_BlockChainP2P
             //se indirizzo mittente non è null, allora assegna l'id del mittente al campo IdMittente
             IdMittente = mittente?.IdUnivoco;
 
-            IdDestinatario = (int) destinatario.IdUnivoco;
+            if (destinatario.IdUnivoco != null)
+            {
+                IdDestinatario = (int)destinatario.IdUnivoco;
+            }
+
             Valore = valore;
             Contabilizzata = false;
 

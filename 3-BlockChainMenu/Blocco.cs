@@ -93,7 +93,7 @@ namespace _3_BlockChainMenu
         public void Mina(int difficoltà)
         {
 
-            var zeroIniziali = new string('0', difficoltà);
+            string zeroIniziali = new string('0', difficoltà);
             while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;

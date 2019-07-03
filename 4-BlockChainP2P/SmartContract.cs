@@ -140,14 +140,28 @@ namespace _4_BlockChainP2P
                 Blocco bloccoCorrente = UniMolCoin.Catena[pos];
                 Blocco bloccoPrecedente = UniMolCoin.Catena[pos - 1];
 
+                #region VecchiaImplementazione
+
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
-                {
-                    return false;
-                }
+
+                //if (!bloccoCorrente.Equals(bloccoCorrente.CalcolaHash()))
+                //{
+                //    return false;
+                //}
+                //if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
+                //{
+                //    return false;
+                //}
 
                 //ricalcola l'hash del blocco precedente, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashBloccoCorrente)
+                //if (bloccoCorrente.HashPrecedente != bloccoPrecedente.CalcolaHash())
+                //{
+                //    return false;
+                //}
+
+                #endregion
+
+                if (bloccoPrecedente.HashBloccoCorrente != bloccoCorrente.HashPrecedente)
                 {
                     return false;
                 }

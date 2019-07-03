@@ -8,7 +8,7 @@ namespace _4_BlockChainP2P
     /// Classe che gestisce gli utenti della blockchain
     /// </summary>
     #endregion
-    public class Utente
+    internal class Utente
     {
 
         #region Documentazione
@@ -63,9 +63,12 @@ namespace _4_BlockChainP2P
         public void CreaPortafogli()
         {
 
-            for (var i = 0; i < NumMoneteIniziale; i++)
+            for (int i = 0; i < NumMoneteIniziale; i++)
             {
-                Saldo.Push(new Moneta((int)IdUnivoco));
+                if (IdUnivoco != null)
+                {
+                    Saldo.Push(new Moneta((int)IdUnivoco));
+                }
             }
 
         }

@@ -70,7 +70,7 @@ namespace _4_BlockChainP2P
         public Blocco CreaBloccoIniziale()
         {
             TransazioniInAttesa = new List<Transazione>();
-            var blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
+            Blocco blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
             blocco.Mina(Difficoltà);
             return blocco;
         }
@@ -89,7 +89,7 @@ namespace _4_BlockChainP2P
         public void AggiungiBlocco(Blocco blocco)
         {
             // prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
-            var ultimoBlocco = GetUltimoBlocco();
+            Blocco ultimoBlocco = GetUltimoBlocco();
 
             // aumenta l'indice del blocco +1 rispetto a precedente
             blocco.Indice = ultimoBlocco.Indice + 1;
@@ -200,8 +200,8 @@ namespace _4_BlockChainP2P
                 {
                     if (!transazione.Contabilizzata)
                     {
-                        var mittente = RicercaUtente(transazione.IdMittente);
-                        var destinatario = RicercaUtente(transazione.IdDestinatario);
+                        Utente mittente = RicercaUtente(transazione.IdMittente);
+                        Utente destinatario = RicercaUtente(transazione.IdDestinatario);
 
                         if ((transazione.IdMittente != null) && (transazione.IdMittente == mittente.IdUnivoco) && (transazione.IdDestinatario == destinatario.IdUnivoco))
                         {
@@ -235,7 +235,7 @@ namespace _4_BlockChainP2P
 
             CreaTransazione(new Transazione(null, miner, Ricompensa));
 
-            var blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
+            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
 
             AggiungiBlocco(blocco);
 

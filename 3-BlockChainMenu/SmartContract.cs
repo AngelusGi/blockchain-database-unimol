@@ -18,9 +18,8 @@ namespace _3_BlockChainMenu
 
         private class ContrattoJson
         {
-            public string Title { get; set; }
-            public string Type { get; set; }
-            public Properties Properties { get; set; }
+            public string Title { get; }
+            public Properties Properties { get; }
         }
 
         public class Properties
@@ -71,10 +70,10 @@ namespace _3_BlockChainMenu
         public static void Inizializza()
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+            string jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
 
 
-            using var lettoreFileJson = new StreamReader(jsonPath);
+            using StreamReader lettoreFileJson = new StreamReader(jsonPath);
 
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
@@ -109,11 +108,11 @@ namespace _3_BlockChainMenu
         public static bool VerificaSaldo(string nomeMittente, string nomeDestinatario, int importoTransazione)
         {
 
-            var mittente = UniMolCoin.RicercaUtente(nomeMittente);
+            Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
 
             if (mittente.Saldo.Count >= importoTransazione)
             {
-                var destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
+                Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
 
                 //TrasferisciMoneta(importoTransazione, mittente, destinatario);
                 return !VerificaMonete(mittente, destinatario);
@@ -135,19 +134,33 @@ namespace _3_BlockChainMenu
         public static bool ValidaBlockchain()
         {
             //finché ci sono blocchi
-            for (var pos = 1; pos < UniMolCoin.Catena.Count; pos++)
+            for (int pos = 1; pos < UniMolCoin.Catena.Count; pos++)
             {
-                var bloccoCorrente = UniMolCoin.Catena[pos];
-                var bloccoPrecedente = UniMolCoin.Catena[pos - 1];
+                Blocco bloccoCorrente = UniMolCoin.Catena[pos];
+                Blocco bloccoPrecedente = UniMolCoin.Catena[pos - 1];
+
+                #region VecchiaImplementazione
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
-                {
-                    return false;
-                }
+
+                //if (!bloccoCorrente.Equals(bloccoCorrente.CalcolaHash()))
+                //{
+                //    return false;
+                //}
+                //if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
+                //{
+                //    return false;
+                //}
 
                 //ricalcola l'hash del blocco precedente, se è diverso da quello memorizzato ritorna false (catena non valida)
-                if (bloccoCorrente.HashPrecedente != bloccoPrecedente.HashBloccoCorrente)
+                //if (bloccoCorrente.HashPrecedente != bloccoPrecedente.CalcolaHash())
+                //{
+                //    return false;
+                //}
+
+                #endregion
+
+                if (bloccoPrecedente.HashBloccoCorrente != bloccoCorrente.HashPrecedente)
                 {
                     return false;
                 }
@@ -183,7 +196,7 @@ namespace _3_BlockChainMenu
             #endregion
 
 
-            var utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
+            bool utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
 
 
             if (utenteNonPresente)
@@ -219,10 +232,10 @@ namespace _3_BlockChainMenu
         #endregion
         private static bool VerificaMonete(Utente mittente, Utente ricevente)
         {
-            var doppiaSpesa = false;
-            foreach (var monetaMittente in mittente.Saldo)
+            bool doppiaSpesa = false;
+            foreach (Moneta monetaMittente in mittente.Saldo)
             {
-                foreach (var monetaRicevuta in ricevente.Saldo)
+                foreach (Moneta monetaRicevuta in ricevente.Saldo)
                 {
                     if (monetaMittente.IdMoneta == monetaRicevuta.IdMoneta)
                     {
@@ -239,7 +252,18 @@ namespace _3_BlockChainMenu
 
         public static void RicompensaMiner(Utente miner)
         {
-            miner.Saldo.Push(new Moneta((int)miner.IdUnivoco));
+            try
+            {
+                if (miner.IdUnivoco != null)
+                {
+                    miner.Saldo.Push(new Moneta((int)miner.IdUnivoco));
+                }
+            }
+            catch (InvalidOperationException eccezione)
+            {
+                Console.WriteLine(eccezione);
+                throw;
+            }
         }
 
 
@@ -256,7 +280,7 @@ namespace _3_BlockChainMenu
         public static void TrasferisciMoneta(int numMonete, Utente mittente, Utente ricevente)
         {
 
-            for (var i = 0; i < numMonete; i++)
+            for (int i = 0; i < numMonete; i++)
             {
                 ricevente.Saldo.Push(mittente.Saldo.Pop());
             }

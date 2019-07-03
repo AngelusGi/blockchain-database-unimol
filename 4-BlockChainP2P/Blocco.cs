@@ -93,7 +93,7 @@ namespace _4_BlockChainP2P
         public void Mina(int difficoltà)
         {
 
-            var zeroIniziali = new string('0', difficoltà);
+            string zeroIniziali = new string('0', difficoltà);
             while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;

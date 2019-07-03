@@ -3,12 +3,12 @@
     /// <summary>
     /// Classe per gestire la moneta
     /// </summary>
-    internal class Moneta
+    internal sealed class Moneta
     {
 
 
         #region Membri
-        
+
         public static readonly int Valore = 1;
 
         public int? IdVecchioProprietario { get; private set; }

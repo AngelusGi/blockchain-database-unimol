@@ -3,7 +3,7 @@
     /// <summary>
     /// Classe per gestire la moneta
     /// </summary>
-    internal class Moneta
+    internal sealed class Moneta
     {
 
 
