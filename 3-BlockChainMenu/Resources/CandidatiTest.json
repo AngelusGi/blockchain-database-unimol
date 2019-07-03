@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "professor": {
+      "type": "string",
+      "name": "xxx"
+    },
+    "agv": {
+      "type": "string",
+      "name": "xxx yyy",
+      "matricola": "000"
+    },
+    "ca": {
+      "type": "string",
+      "name": "xxx yyy",
+      "matricola": "000"
+    },
+    "gm": {
+      "type": "string",
+      "name": "xxx yyy",
+      "matricola": "000"
+    }
+  }
+}
