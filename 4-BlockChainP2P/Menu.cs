@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
-using Formatting = Newtonsoft.Json.Formatting;
 
 namespace _4_BlockChainP2P
 {
@@ -269,7 +268,6 @@ namespace _4_BlockChainP2P
                                 {
                                     ColoreAvvisi();
                                     Console.WriteLine("\t*** Errore: Transazione non valida, importo più alto della capacità di spesa del mittente. ***");
-                                    break;
                                 }
 
                             }
@@ -277,7 +275,6 @@ namespace _4_BlockChainP2P
                             {
                                 ColoreAvvisi();
                                 Console.WriteLine("\t*** Errore. Verificare i valori inseriti di mittente e destinatario. ***");
-                                break;
                             }
                             break;
 

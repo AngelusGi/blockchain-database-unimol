@@ -70,12 +70,21 @@ namespace _4_BlockChainP2P
         #endregion
         public static void Inizializza()
         {
-            //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            string jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+            string jsonPath;
+            StreamReader lettoreFileJson;
 
-
-            using StreamReader lettoreFileJson = new StreamReader(jsonPath);
-
+            try
+            {
+                //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+                lettoreFileJson = new StreamReader(jsonPath);
+            }
+            catch (Exception)
+            {
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+                lettoreFileJson = new StreamReader(jsonPath);
+            }
+            
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
         }
@@ -118,10 +127,8 @@ namespace _4_BlockChainP2P
                 //TrasferisciMoneta(importoTransazione, mittente, destinatario);
                 return !VerificaMonete(mittente, destinatario);
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
 
         }
 

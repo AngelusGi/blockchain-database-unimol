@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 //libreria per la gestione delle liste
 
 namespace _4_BlockChainP2P

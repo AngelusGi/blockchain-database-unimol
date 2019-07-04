@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
-using Newtonsoft.Json;
+
 //libreria per Ilist e liste
+using System.Collections.Generic;
+
 //libreria per la crittografia
+using System.Security.Cryptography;
+
 //libreria per la formattazione del testo
+using System.Text;
+
 //libreria gestione JSON
+using Newtonsoft.Json;
 
 
 namespace _4_BlockChainP2P

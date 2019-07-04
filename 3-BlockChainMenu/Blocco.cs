@@ -1,10 +1,14 @@
 ﻿using System;
+
 //libreria per Ilist e liste
 using System.Collections.Generic;
+
 //libreria per la crittografia
 using System.Security.Cryptography;
+
 //libreria per la formattazione del testo
 using System.Text;
+
 //libreria gestione JSON
 using Newtonsoft.Json;
 

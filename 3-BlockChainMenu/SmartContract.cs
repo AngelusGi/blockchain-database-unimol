@@ -16,27 +16,32 @@ namespace _3_BlockChainMenu
 
         #region DefinizioneProprietàOggettoJson
 
-        private class ContrattoJson
+
+        public class ContrattoJson
         {
-            public string Title { get; }
-            public Properties Properties { get; }
+            public string Schema { get; set; }
+            public string Title { get; set; }
+            public string Type { get; set; }
+            public Properties Properties { get; set; }
         }
 
         public class Properties
         {
-            public ValidationData ValidationData { get; set; }
+            public Validationdata ValidationData { get; set; }
             public Clause Clause { get; set; }
             public Revision Revision { get; set; }
         }
 
-        public class ValidationData
+        public class Validationdata
         {
+            public string Type { get; set; }
             public string Description { get; set; }
             public string Datetime { get; set; }
         }
 
         public class Clause
         {
+            public string Type { get; set; }
             public string Description { get; set; }
             public string IdContract { get; set; }
             public string TransactionContract { get; set; }
@@ -46,10 +51,11 @@ namespace _3_BlockChainMenu
 
         public class Revision
         {
+            public string Type { get; set; }
             public string Description { get; set; }
             public string NumVersion { get; set; }
-
         }
+
 
         #endregion
 
@@ -70,7 +76,8 @@ namespace _3_BlockChainMenu
         public static void Inizializza()
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            string jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+            string jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./3 - BlockChainMenu/Resources/SmartContract.json";
+
 
 
             using StreamReader lettoreFileJson = new StreamReader(jsonPath);
@@ -117,10 +124,8 @@ namespace _3_BlockChainMenu
                 //TrasferisciMoneta(importoTransazione, mittente, destinatario);
                 return !VerificaMonete(mittente, destinatario);
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
 
         }
 

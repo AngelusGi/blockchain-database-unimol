@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using WebSocketSharp;
 using WebSocketSharp.Server;
 
-
 namespace _4_BlockChainP2P
 {
 
@@ -13,8 +12,8 @@ namespace _4_BlockChainP2P
     {
         private const int MinPorta = 1024;
         private const int MaxPorta = 49151;
-        private bool _bloccoSincronizzato = false;
-        private WebSocketServer _webSocketServer = null;
+        private bool _bloccoSincronizzato;
+        private WebSocketServer _webSocketServer;
 
         public void Start()
         {
