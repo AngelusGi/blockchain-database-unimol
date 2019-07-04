@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_0864704149d7441d2e7c869c70243548" kind="dir">
+    <compoundname>blockchain-database-unimol</compoundname>
+    <innerdir refid="dir_258dc8288764456cf01fbb08f9915202">blockchain-database-unimol/4-BlockChainP2P</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/"/>
+  </compounddef>
+</doxygen>

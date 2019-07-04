@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_properties" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Properties</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_properties_1aa39ae05e5682619452ebdbf69d398681" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_professor" kindref="compound">Professor</ref></type>
+        <definition>Professor _4_BlockChainP2P.Properties.Professor</definition>
+        <argsstring></argsstring>
+        <name>Professor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="67" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_properties_1a6c55bc54800a3ceed342f2cbdc423685" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_agv" kindref="compound">Agv</ref></type>
+        <definition>Agv _4_BlockChainP2P.Properties.Agv</definition>
+        <argsstring></argsstring>
+        <name>Agv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="68" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_properties_1a31eeb1456a8511239b8fc46f0e11a681" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_ca" kindref="compound">Ca</ref></type>
+        <definition>Ca _4_BlockChainP2P.Properties.Ca</definition>
+        <argsstring></argsstring>
+        <name>Ca</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="69" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_properties_1acc98f4501f46a30ada5010aa7c25f71d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_gm" kindref="compound">Gm</ref></type>
+        <definition>Gm _4_BlockChainP2P.Properties.Gm</definition>
+        <argsstring></argsstring>
+        <name>Gm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="70" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="70" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="66" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="65" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_properties_1a6c55bc54800a3ceed342f2cbdc423685" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Properties</scope><name>Agv</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_properties_1a31eeb1456a8511239b8fc46f0e11a681" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Properties</scope><name>Ca</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_properties_1acc98f4501f46a30ada5010aa7c25f71d" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Properties</scope><name>Gm</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_properties_1aa39ae05e5682619452ebdbf69d398681" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Properties</scope><name>Professor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

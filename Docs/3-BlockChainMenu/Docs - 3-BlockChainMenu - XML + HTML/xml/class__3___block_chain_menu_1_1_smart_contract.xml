@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_smart_contract" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::SmartContract</compoundname>
+    <innerclass refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause" prot="public">_3_BlockChainMenu::SmartContract::Clause</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json" prot="public">_3_BlockChainMenu::SmartContract::ContrattoJson</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties" prot="public">_3_BlockChainMenu::SmartContract::Properties</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision" prot="public">_3_BlockChainMenu::SmartContract::Revision</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata" prot="public">_3_BlockChainMenu::SmartContract::Validationdata</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_smart_contract_1a77de71cd27120fabb7cd3d8aa04d02f0" prot="private" static="yes" mutable="no">
+        <type>readonly <ref refid="class__3___block_chain_menu_1_1_block_chain" kindref="compound">BlockChain</ref></type>
+        <definition>readonly BlockChain _3_BlockChainMenu.SmartContract.UniMolCoin</definition>
+        <argsstring></argsstring>
+        <name>UniMolCoin</name>
+        <initializer>= Menu.UniMolCoin</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="62" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_smart_contract_1aa4e018f7c72afb54c9c42e819667b68a" prot="private" static="yes" mutable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json" kindref="compound">ContrattoJson</ref></type>
+        <definition>ContrattoJson _3_BlockChainMenu.SmartContract._contratto</definition>
+        <argsstring></argsstring>
+        <name>_contratto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="64" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a29b84860b728816fc013878d6d86e0d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.SmartContract.Inizializza</definition>
+        <argsstring>()</argsstring>
+        <name>Inizializza</name>
+        <briefdescription>
+<para>Inizializza l&apos;oggetto SmartContract a partire dal file JSON locale in base alla piattaforma d&apos;esecuzione </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="76" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="76" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a1a808e0f08d8958c88c994a99122668b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.SmartContract.MostraContratto</definition>
+        <argsstring>()</argsstring>
+        <name>MostraContratto</name>
+        <briefdescription>
+<para>Mostra i dati presenti all&apos;interno del contratto: titolo, versione, data di ultima modifica e clausole </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="95" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="95" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a16911833f54451e758c84604bb053cda" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _3_BlockChainMenu.SmartContract.VerificaSaldo</definition>
+        <argsstring>(string nomeMittente, string nomeDestinatario, int importoTransazione)</argsstring>
+        <name>VerificaSaldo</name>
+        <param>
+          <type>string</type>
+          <declname>nomeMittente</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>nomeDestinatario</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>importoTransazione</declname>
+        </param>
+        <briefdescription>
+<para>Valida la transazione verificando se il saldo dell&apos;utente è necessario a coprire l&apos;importo che si vole spendere. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeMittente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome di colui che vuole fare la transazione.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomeDestinatario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome del beneficiario della transazione</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>importoTransazione</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Importo della transazione.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Il saldo è sufficiente (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="115" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="115" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a817f60d37eccd4cd81f65e9989fb9e8e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _3_BlockChainMenu.SmartContract.ValidaBlockchain</definition>
+        <argsstring>()</argsstring>
+        <name>ValidaBlockchain</name>
+        <briefdescription>
+<para>Verifica lo stato di validità dei blocchi presenti all&apos;interno della blockchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>La blockchain è valida (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="139" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="139" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a9c0a3ce6ee5dbd5d509d75c7e630e1db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _3_BlockChainMenu.SmartContract.VerificaOmonimie</definition>
+        <argsstring>(Utente utente)</argsstring>
+        <name>VerificaOmonimie</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>utente</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se l&apos;utente che si vuole inserire esiste già all&apos;interno degli utenti inseriti nella blockain </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utente</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UtenteNonPresente (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="187" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="187" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a84cd196d1124595094c1492d19e0d6ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.SmartContract.RicompensaMiner</definition>
+        <argsstring>(Utente miner)</argsstring>
+        <name>RicompensaMiner</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>miner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="258" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="258" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a5c9efdafee7a98c85af893ccf3b05295" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.SmartContract.TrasferisciMoneta</definition>
+        <argsstring>(int numMonete, Utente mittente, Utente ricevente)</argsstring>
+        <name>TrasferisciMoneta</name>
+        <param>
+          <type>int</type>
+          <declname>numMonete</declname>
+        </param>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>mittente</declname>
+        </param>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>ricevente</declname>
+        </param>
+        <briefdescription>
+<para>Trasferisce l&apos;importo che si vuole spendere dal mittente al beneficiario. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numMonete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Numero di monete che si vogliono spendere</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mittente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Committente della transazione</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ricevente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beneficiario della transazione</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="285" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="285" bodyend="293"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1a102b359bdd1c8975202d874f1d52073b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.SmartContract.AutenticaUtente</definition>
+        <argsstring>(Utente utente)</argsstring>
+        <name>AutenticaUtente</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>utente</declname>
+        </param>
+        <briefdescription>
+<para>Assegna un ID univoco agli utenti della lista (hash code) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Singolo utente da autenticare.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="223" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_smart_contract_1abfd615c89612c7a1b99940ab202f14ce" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _3_BlockChainMenu.SmartContract.VerificaMonete</definition>
+        <argsstring>(Utente mittente, Utente ricevente)</argsstring>
+        <name>VerificaMonete</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>mittente</declname>
+        </param>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>ricevente</declname>
+        </param>
+        <briefdescription>
+<para>Verificano che non vi siano nè nel portafogli del mittente, nè nel destinario monete con lo stesso ID, al fine di evitare il double spending. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mittente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Committente della transazione</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ricevente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beneficiario della transazione</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>False se non è presente un caso di doubleSpending, in caso contrario true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="238" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="238" bodyend="255"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="12" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="11" bodyend="295"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1aa4e018f7c72afb54c9c42e819667b68a" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>_contratto</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a102b359bdd1c8975202d874f1d52073b" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>AutenticaUtente</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a29b84860b728816fc013878d6d86e0d5" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>Inizializza</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a1a808e0f08d8958c88c994a99122668b" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>MostraContratto</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a84cd196d1124595094c1492d19e0d6ab" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>RicompensaMiner</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a5c9efdafee7a98c85af893ccf3b05295" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>TrasferisciMoneta</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a77de71cd27120fabb7cd3d8aa04d02f0" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>UniMolCoin</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a817f60d37eccd4cd81f65e9989fb9e8e" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>ValidaBlockchain</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1abfd615c89612c7a1b99940ab202f14ce" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>VerificaMonete</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a9c0a3ce6ee5dbd5d509d75c7e630e1db" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>VerificaOmonimie</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1a16911833f54451e758c84604bb053cda" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract</scope><name>VerificaSaldo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

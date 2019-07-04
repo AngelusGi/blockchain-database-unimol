@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_menu" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Menu</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_menu_1a6f81cd1776ccd79ad20bcaa37d4ab56f" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_block_chain" kindref="compound">BlockChain</ref></type>
+        <definition>BlockChain _4_BlockChainP2P.Menu.UniMolCoin</definition>
+        <argsstring></argsstring>
+        <name>UniMolCoin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="24" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_menu_1a9a0c96e0201e6b26e4188345a55fe356" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Menu.Porta</definition>
+        <argsstring></argsstring>
+        <name>Porta</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="26" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_menu_1af2c5e5cc9a2e759d63a10fdb2a1636f2" prot="public" static="yes" mutable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_p2_p_server" kindref="compound">P2PServer</ref></type>
+        <definition>P2PServer _4_BlockChainP2P.Menu.Server</definition>
+        <argsstring></argsstring>
+        <name>Server</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="27" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_menu_1ab1fc236eabacf2c8cd14e347687d59c7" prot="public" static="yes" mutable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_p2_p_client" kindref="compound">P2PClient</ref></type>
+        <definition>P2PClient _4_BlockChainP2P.Menu.Client</definition>
+        <argsstring></argsstring>
+        <name>Client</name>
+        <initializer>= new <ref refid="class__4___block_chain_p2_p_1_1_p2_p_client" kindref="compound">P2PClient</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="28" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_menu_1aacf3f6e2e747f63249a9387decfea5b2" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Menu._risposta</definition>
+        <argsstring></argsstring>
+        <name>_risposta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="30" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_menu_1af10ab9364e4a0fde98ec91f9cd853f57" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Menu._numUtentiTest</definition>
+        <argsstring></argsstring>
+        <name>_numUtentiTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="31" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a7317eda5a4df4be1b726a419f15e8e54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_4_BlockChainP2P.Menu.Menu</definition>
+        <argsstring>()</argsstring>
+        <name>Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="38" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="38" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a8dbdf18ef47d3b8bb3e0663683269db7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.Benvenuto</definition>
+        <argsstring>()</argsstring>
+        <name>Benvenuto</name>
+        <briefdescription>
+<para>Produce l&apos;instestazione iniziale della console e le informazioni circa i realizzatori del progetto. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="55" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a7565a36392815265bfb05f329e848541" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Menu.CreaUtenteTest</definition>
+        <argsstring>(ref int num)</argsstring>
+        <name>CreaUtenteTest</name>
+        <param>
+          <type>ref int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="66" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a5f575bcb345b0f54e7649b0f917c28f6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.GestioneUtenti</definition>
+        <argsstring>()</argsstring>
+        <name>GestioneUtenti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="75" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="75" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1ad6f26f247997ea3fc454d23358f250fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.GestioneMenu</definition>
+        <argsstring>()</argsstring>
+        <name>GestioneMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="147" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="147" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a674fcdb7840e0bda9747d820f513d6bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.AvviaMenu</definition>
+        <argsstring>()</argsstring>
+        <name>AvviaMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="377" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="377" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a5c9d81c86afb63bc5e5252725f0faa37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.NormalizzaNome</definition>
+        <argsstring>(ref string nome)</argsstring>
+        <name>NormalizzaNome</name>
+        <param>
+          <type>ref string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="399" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="399" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1aea0d5e07421eca57073ac2a1c987c26e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.ColoreAvvisi</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreAvvisi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="405" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="405" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1a2c7c277e491ebca021abe9657f93629c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.ColoreRecap</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreRecap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="410" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="410" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1aa9bc08af6ec6e8751c521731ea520c40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.ColoreTitoli</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreTitoli</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="415" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="415" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_menu_1ad4b79b95e2a230c23fcae9ee10da7ec2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Menu.ColoreNormale</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreNormale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="420" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="420" bodyend="431"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="22">
+        <label>_4_BlockChainP2P.P2PClient</label>
+        <link refid="class__4___block_chain_p2_p_1_1_p2_p_client"/>
+      </node>
+      <node id="19">
+        <label>_4_BlockChainP2P.Menu</label>
+        <link refid="class__4___block_chain_p2_p_1_1_menu"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>Server</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>Client</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>WebSocketBehavior</label>
+      </node>
+      <node id="20">
+        <label>_4_BlockChainP2P.P2PServer</label>
+        <link refid="class__4___block_chain_p2_p_1_1_p2_p_server"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="21" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="20" bodyend="435"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1af10ab9364e4a0fde98ec91f9cd853f57" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>_numUtentiTest</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1aacf3f6e2e747f63249a9387decfea5b2" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>_risposta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a674fcdb7840e0bda9747d820f513d6bc" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>AvviaMenu</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a8dbdf18ef47d3b8bb3e0663683269db7" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>Benvenuto</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1ab1fc236eabacf2c8cd14e347687d59c7" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>Client</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1aea0d5e07421eca57073ac2a1c987c26e" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>ColoreAvvisi</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1ad4b79b95e2a230c23fcae9ee10da7ec2" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>ColoreNormale</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a2c7c277e491ebca021abe9657f93629c" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>ColoreRecap</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1aa9bc08af6ec6e8751c521731ea520c40" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>ColoreTitoli</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a7565a36392815265bfb05f329e848541" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>CreaUtenteTest</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1ad6f26f247997ea3fc454d23358f250fe" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>GestioneMenu</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a5f575bcb345b0f54e7649b0f917c28f6" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>GestioneUtenti</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a7317eda5a4df4be1b726a419f15e8e54" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>Menu</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a5c9d81c86afb63bc5e5252725f0faa37" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>NormalizzaNome</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a9a0c96e0201e6b26e4188345a55fe356" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>Porta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1af2c5e5cc9a2e759d63a10fdb2a1636f2" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>Server</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_menu_1a6f81cd1776ccd79ad20bcaa37d4ab56f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Menu</scope><name>UniMolCoin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

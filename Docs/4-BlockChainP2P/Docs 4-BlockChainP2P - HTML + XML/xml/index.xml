@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
+  <compound refid="class__4___block_chain_p2_p_1_1_agv" kind="class"><name>_4_BlockChainP2P::Agv</name>
+    <member refid="class__4___block_chain_p2_p_1_1_agv_1ae673b2cd706baebd0865d299152494c7" kind="property"><name>Name</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_agv_1a23bc2bcd94a061e4df65da78586211b4" kind="property"><name>Matricola</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_blocco" kind="class"><name>_4_BlockChainP2P::Blocco</name>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1adcfbaf555377cf48b11862ed968c4202" kind="property"><name>Indice</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1ade1af497f2e034914005ac91706fd475" kind="property"><name>DataOra</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1a95b4b0447ec9cc5259998fdb202790af" kind="property"><name>HashPrecedente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1a40d62dd757a998424a3a7624d1ed9adf" kind="property"><name>HashBloccoCorrente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1ae5b3546cfcae9b5cf424286a33c8c685" kind="property"><name>Transazioni</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1aebe7f0c519b3a8a95f8133cdba7c8a81" kind="property"><name>Nonce</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1aa6ae39d80fda607b08d3333754125878" kind="function"><name>Blocco</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1a7d28642fd82aa844b5a678c5c5cd8958" kind="function"><name>CalcolaHash</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_blocco_1a1893c7982804f983a7d68967af6db3f2" kind="function"><name>Mina</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_block_chain" kind="class"><name>_4_BlockChainP2P::BlockChain</name>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a6155eff074641d1c32284f6c50f0f26f" kind="property"><name>Utenti</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1aa3ba54aea8aa86a08df5c41bfe3fe892" kind="property"><name>Catena</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a04f46b57c5a7d066562eef4f92cef8dc" kind="property"><name>Difficoltà</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a9bf15ec9223c0e4d2da39cccea213230" kind="variable"><name>TransazioniInAttesa</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1adec20ceead9755cb5060488e67163015" kind="variable"><name>Ricompensa</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1ab7750e9dcf732bb5c0b306b3c76f563c" kind="function"><name>BlockChain</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1aea2627b70277e5f42679e779c8ed3117" kind="function"><name>InizializzaCatena</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a71478e3c391aafb2450c494128afc51b" kind="function"><name>AggiungiBloccoIniziale</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a84a07340caf4099d99be690d74d25cb2" kind="function"><name>CreaBloccoIniziale</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a95435965b742444658525c1757314a30" kind="function"><name>GetUltimoBlocco</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a49f1a778cd99d70158258280a1f39ffa" kind="function"><name>AggiungiBlocco</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1ae1a7a8559ee87b769cb872af81519685" kind="function"><name>RicercaUtente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a5efedcc461f0c012165d6d67c2b8db7f" kind="function"><name>RicercaUtente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a63e9badc3c7c162d088c21fde333ea56" kind="function"><name>VerificaUtente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1ae1a3e3f0f9a27a5ff76958c7e7844f8f" kind="function"><name>AggiornaSaldoUtenti</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a36abd523a418b542e7a9ecdbb56d11d7" kind="function"><name>CreaTransazione</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a7af1d26e9b426e45fe4aac22e42c5156" kind="function"><name>MinaTransazioni</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a72609fae1e32e0cf6b3eb0c92b035a77" kind="function"><name>IsValido</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a5c416106e3eec6195b659844f7fe2432" kind="function"><name>AggiornaBilancio</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_ca" kind="class"><name>_4_BlockChainP2P::Ca</name>
+    <member refid="class__4___block_chain_p2_p_1_1_ca_1ac8366aee7af102a57e083112977e41a4" kind="property"><name>Name</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_ca_1aa9f710848fa21ad24fd8525109a6fbe2" kind="property"><name>Matricola</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_candidati" kind="class"><name>_4_BlockChainP2P::Candidati</name>
+    <member refid="class__4___block_chain_p2_p_1_1_candidati_1a1a92b0724b2041273a5e789ad616c36d" kind="variable"><name>_candidati</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_candidati_1a6ce4727d8e3641247aac79729380b51d" kind="function"><name>Inizializza</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_candidati_1a4847eec6d56ffd4577a7108609180372" kind="function"><name>MostraCanidati</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_candidati_json" kind="class"><name>_4_BlockChainP2P::CandidatiJson</name>
+    <member refid="class__4___block_chain_p2_p_1_1_candidati_json_1a30e6b022da8485bdff6cc02bfa69bcd0" kind="property"><name>Properties</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause" kind="class"><name>_4_BlockChainP2P::SmartContract::Clause</name>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a9e8a66cec33ebd748f88ac00a2fd093f" kind="property"><name>Description</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a9af95fb85d20ce714af7c754ba63a43b" kind="property"><name>IdContract</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1ac974a4aa60c608f562fe5737b20d070f" kind="property"><name>TransactionContract</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a6fc597d271d0470f2981d97cf9ee2ad6" kind="property"><name>DoubleSpendingContract</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a2f6466071f84be01878b7a3615adaa99" kind="property"><name>BalanceCheck</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_contratto_json" kind="class"><name>_4_BlockChainP2P::SmartContract::ContrattoJson</name>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_contratto_json_1abfdd86e35b8234777449528246ef2014" kind="property"><name>Title</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_contratto_json_1a02be5bf08e2dc2f0463331acc450fd87" kind="property"><name>Type</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_contratto_json_1a33ca22d29cb5fc84b9726480b3052439" kind="property"><name>Properties</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_gm" kind="class"><name>_4_BlockChainP2P::Gm</name>
+    <member refid="class__4___block_chain_p2_p_1_1_gm_1ace333137ddd077468d90a3dad2dd904f" kind="property"><name>Name</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_gm_1a82fb9b0f004b86d820b68e39957a05bc" kind="property"><name>Matricola</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_menu" kind="class"><name>_4_BlockChainP2P::Menu</name>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a6f81cd1776ccd79ad20bcaa37d4ab56f" kind="property"><name>UniMolCoin</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a9a0c96e0201e6b26e4188345a55fe356" kind="variable"><name>Porta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1af2c5e5cc9a2e759d63a10fdb2a1636f2" kind="variable"><name>Server</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1ab1fc236eabacf2c8cd14e347687d59c7" kind="variable"><name>Client</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1aacf3f6e2e747f63249a9387decfea5b2" kind="variable"><name>_risposta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1af10ab9364e4a0fde98ec91f9cd853f57" kind="variable"><name>_numUtentiTest</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a7317eda5a4df4be1b726a419f15e8e54" kind="function"><name>Menu</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a8dbdf18ef47d3b8bb3e0663683269db7" kind="function"><name>Benvenuto</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a7565a36392815265bfb05f329e848541" kind="function"><name>CreaUtenteTest</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a5f575bcb345b0f54e7649b0f917c28f6" kind="function"><name>GestioneUtenti</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1ad6f26f247997ea3fc454d23358f250fe" kind="function"><name>GestioneMenu</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a674fcdb7840e0bda9747d820f513d6bc" kind="function"><name>AvviaMenu</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a5c9d81c86afb63bc5e5252725f0faa37" kind="function"><name>NormalizzaNome</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1aea0d5e07421eca57073ac2a1c987c26e" kind="function"><name>ColoreAvvisi</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a2c7c277e491ebca021abe9657f93629c" kind="function"><name>ColoreRecap</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1aa9bc08af6ec6e8751c521731ea520c40" kind="function"><name>ColoreTitoli</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1ad4b79b95e2a230c23fcae9ee10da7ec2" kind="function"><name>ColoreNormale</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_moneta" kind="class"><name>_4_BlockChainP2P::Moneta</name>
+    <member refid="class__4___block_chain_p2_p_1_1_moneta_1a49cd9bce84da3651838045f3a2e26029" kind="variable"><name>Valore</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_moneta_1a9855afae13c4bcad6db88afeca329011" kind="property"><name>IdVecchioProprietario</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_moneta_1a23ebcc32e2702624d15692e2b1ec8c7f" kind="property"><name>IdAttualeProprietario</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_moneta_1a6c462774dac32a2630914db86b8bac76" kind="property"><name>IdMoneta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_moneta_1a5febd0833fc0a72aed9c24cb3bd4f0b8" kind="function"><name>Moneta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_moneta_1aec13c2c8cf5615b3c2e331cd9ff07c71" kind="function"><name>TrasferisciMoneta</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_p2_p_client" kind="class"><name>_4_BlockChainP2P::P2PClient</name>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1adbbc8d899cf7931ed9e14d8eaef04c61" kind="variable"><name>_webSocketDictionary</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1abec46b2daede186097ca8fe6be33df12" kind="variable"><name>MinPorta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1a4950e164ebdf9469f42f2e2a6887eec1" kind="variable"><name>MaxPorta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1a1700ead3f229eddc55e4c6913319aaf1" kind="property"><name>Porta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1aa1c20c29100e0cb53c03881f80c7c083" kind="function"><name>Connetti</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1a05aeb8a6a0d6a9feecd694436752c3bb" kind="function"><name>Send</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1a042b49c215facef3cdabeacea97afb1b" kind="function"><name>Broadcast</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1a2398b73b3a0644140876e1bb5763f025" kind="function"><name>GetServers</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1a8b5122e62793d443141e892f25a3a5f8" kind="function"><name>Close</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_client_1aadb99fd0a040f0b747b6ca4f563d5fe4" kind="function"><name>SelezionaPorta</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_p2_p_server" kind="class"><name>_4_BlockChainP2P::P2PServer</name>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a4355afd4d551e4e140e40435937868b7" kind="variable"><name>MinPorta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a02833d620963bdbb696161d5f0c477f1" kind="variable"><name>MaxPorta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a1b0856c3c0438e6cf161f0a0a56828c6" kind="variable"><name>_bloccoSincronizzato</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1add660ff1e5c097736a6d71fb9e903988" kind="variable"><name>_webSocketServer</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a4e30d98fd69703c6dd7864614fe9725e" kind="function"><name>Start</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1ac161b969d1290dc06b83e637f3bffa2f" kind="function"><name>SelezionaPorta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a05f0bdb345472b6ed3363b5d088b0450" kind="function"><name>OnMessage</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_professor" kind="class"><name>_4_BlockChainP2P::Professor</name>
+    <member refid="class__4___block_chain_p2_p_1_1_professor_1ab285ce937f5d26e85d37d87fc3b00474" kind="property"><name>Name</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_program" kind="class"><name>_4_BlockChainP2P::Program</name>
+    <member refid="class__4___block_chain_p2_p_1_1_program_1a6812ed5aceb70ded3e05270af4292353" kind="function"><name>TemaChiaro</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_program_1a2ca07081c954bcc064f99d1cee6ca964" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties" kind="class"><name>_4_BlockChainP2P::SmartContract::Properties</name>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a49efc4ae262c38c9d34db015de055252" kind="property"><name>ValidationData</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a14695ca4d5ba8dffacee88cce1d556b6" kind="property"><name>Clause</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a170f78231f111f23f847dad48c1f0f53" kind="property"><name>Revision</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_properties" kind="class"><name>_4_BlockChainP2P::Properties</name>
+    <member refid="class__4___block_chain_p2_p_1_1_properties_1aa39ae05e5682619452ebdbf69d398681" kind="property"><name>Professor</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_properties_1a6c55bc54800a3ceed342f2cbdc423685" kind="property"><name>Agv</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_properties_1a31eeb1456a8511239b8fc46f0e11a681" kind="property"><name>Ca</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_properties_1acc98f4501f46a30ada5010aa7c25f71d" kind="property"><name>Gm</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_revision" kind="class"><name>_4_BlockChainP2P::SmartContract::Revision</name>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_revision_1ab4444ef0fcce2c56778dd578582a9c9b" kind="property"><name>Description</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_revision_1ac1e6d62feb8c31ec652cafe6d21b4f00" kind="property"><name>NumVersion</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_smart_contract" kind="class"><name>_4_BlockChainP2P::SmartContract</name>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a26fd88cdf9c7cfa32a63183e5bdcce6e" kind="variable"><name>UniMolCoin</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a1da700573cb1471f065a3b75bc9d25f2" kind="variable"><name>_contratto</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1af422882b98f60eb711d277105ee8bb80" kind="function"><name>Inizializza</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1ab18d5e3f144fafe59d99ba6eda185e8e" kind="function"><name>MostraContratto</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a8e4b3a63dc3cc32bd6969f329804532e" kind="function"><name>VerificaSaldo</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1ab395a1a3f5dee4f2a9a3323af26aac3e" kind="function"><name>ValidaBlockchain</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a58c1245fb48e3575e26451d848860e1c" kind="function"><name>VerificaOmonimie</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a5dee29e81c462f63ccc76c1d07a6c286" kind="function"><name>RicompensaMiner</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1aa82d6663cb8a0b6c4e6415075927bd1c" kind="function"><name>TrasferisciMoneta</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1afaa8425f1bc81e73d2be05aec23f2339" kind="function"><name>AutenticaUtente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1ad776d4b11d736d4d02057b8c85d91118" kind="function"><name>VerificaMonete</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_transazione" kind="class"><name>_4_BlockChainP2P::Transazione</name>
+    <member refid="class__4___block_chain_p2_p_1_1_transazione_1a2c12bab8ae954170808fcabcb1bc6a99" kind="property"><name>IdMittente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_transazione_1a0a1402926b6361881c93f2fa3dacd877" kind="property"><name>IdDestinatario</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_transazione_1af1c3c934520f566437ae21faaf956fee" kind="property"><name>Valore</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_transazione_1a455534fc9ba779e085f602fa9f7acc1b" kind="property"><name>Contabilizzata</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_transazione_1a431ff9d61a3f22380ce3a42e918667bc" kind="function"><name>Transazione</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_utente" kind="class"><name>_4_BlockChainP2P::Utente</name>
+    <member refid="class__4___block_chain_p2_p_1_1_utente_1ad364e173ae0e330a59210c6b8f84c039" kind="property"><name>Nome</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_utente_1af6154193a2e4986751aeb2ffa498fddb" kind="property"><name>Saldo</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_utente_1a7b128019f9605a0dd9339a8a2bd21dcf" kind="property"><name>IdUnivoco</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_utente_1a3f893dec5b22396f8043ad6a854cc4eb" kind="variable"><name>NumMoneteIniziale</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_utente_1a1f06d6fb1355d056bc2ef7a7d024ed10" kind="function"><name>Utente</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_utente_1a3ec9de5a0a3c160865871c12e1db37c8" kind="function"><name>CreaPortafogli</name></member>
+  </compound>
+  <compound refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data" kind="class"><name>_4_BlockChainP2P::SmartContract::ValidationData</name>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data_1a08d072e47df40a97e29d6d9b4c804c4b" kind="property"><name>Description</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data_1aaebb2a408ac751842d913c388f9f6b16" kind="property"><name>Datetime</name></member>
+  </compound>
+  <compound refid="namespace__4___block_chain_p2_p" kind="namespace"><name>_4_BlockChainP2P</name>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3" kind="enum"><name>OpzioniMenu</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a160009a89ee5a2603a26c2bcd824de7a" kind="enumvalue"><name>Annulla</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3aa64b2bbed24e7683baa0b1c3f2fe635b" kind="enumvalue"><name>AggiungiTransazione</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3aeb078e0e0fee88afdc353d8a470fba5c" kind="enumvalue"><name>MostraBlockChain</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a775bd6c343ce9adcd2fa7f52cabd9cf3" kind="enumvalue"><name>MostraSmartContract</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a77020af286a16fe986d2aa70c595f8ab" kind="enumvalue"><name>VerificaSaldo</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3aae0865158c41961a4508dfb2d48b9a52" kind="enumvalue"><name>UrlServer</name></member>
+    <member refid="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a6a2a91cd42d084828911c60ea51a26e6" kind="enumvalue"><name>Esci</name></member>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_web_socket_sharp" kind="namespace"><name>WebSocketSharp</name>
+  </compound>
+  <compound refid="namespace_web_socket_sharp_1_1_server" kind="namespace"><name>WebSocketSharp::Server</name>
+  </compound>
+  <compound refid="_blocco_8cs" kind="file"><name>Blocco.cs</name>
+  </compound>
+  <compound refid="_block_chain_8cs" kind="file"><name>BlockChain.cs</name>
+  </compound>
+  <compound refid="_candidati_8cs" kind="file"><name>Candidati.cs</name>
+  </compound>
+  <compound refid="_menu_8cs" kind="file"><name>Menu.cs</name>
+  </compound>
+  <compound refid="_moneta_8cs" kind="file"><name>Moneta.cs</name>
+  </compound>
+  <compound refid="_p2_p___client_8cs" kind="file"><name>P2P_Client.cs</name>
+  </compound>
+  <compound refid="_p2_p___server_8cs" kind="file"><name>P2P_Server.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_smart_contract_8cs" kind="file"><name>SmartContract.cs</name>
+  </compound>
+  <compound refid="_transazione_8cs" kind="file"><name>Transazione.cs</name>
+  </compound>
+  <compound refid="_utente_8cs" kind="file"><name>Utente.cs</name>
+  </compound>
+  <compound refid="dir_258dc8288764456cf01fbb08f9915202" kind="dir"><name>blockchain-database-unimol/4-BlockChainP2P</name>
+  </compound>
+  <compound refid="dir_0864704149d7441d2e7c869c70243548" kind="dir"><name>blockchain-database-unimol</name>
+  </compound>
+</doxygenindex>

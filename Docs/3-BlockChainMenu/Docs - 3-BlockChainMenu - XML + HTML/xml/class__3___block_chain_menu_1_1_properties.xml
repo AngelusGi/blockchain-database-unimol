@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_properties" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::Properties</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_properties_1a7effc5ed68e7f48a8b9d8a4987f1c3b4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_professor" kindref="compound">Professor</ref></type>
+        <definition>Professor _3_BlockChainMenu.Properties.Professor</definition>
+        <argsstring></argsstring>
+        <name>Professor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="67" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_properties_1a583dd51f10784d6073d420df4898463d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_agv" kindref="compound">Agv</ref></type>
+        <definition>Agv _3_BlockChainMenu.Properties.Agv</definition>
+        <argsstring></argsstring>
+        <name>Agv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="68" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_properties_1a9cb5950b98d860d66f828da2cadc85b9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_ca" kindref="compound">Ca</ref></type>
+        <definition>Ca _3_BlockChainMenu.Properties.Ca</definition>
+        <argsstring></argsstring>
+        <name>Ca</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="69" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_properties_1a05ce3467f71fd8c0c008579e45a68350" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_gm" kindref="compound">Gm</ref></type>
+        <definition>Gm _3_BlockChainMenu.Properties.Gm</definition>
+        <argsstring></argsstring>
+        <name>Gm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="70" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="70" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="66" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="65" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_properties_1a583dd51f10784d6073d420df4898463d" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Properties</scope><name>Agv</name></member>
+      <member refid="class__3___block_chain_menu_1_1_properties_1a9cb5950b98d860d66f828da2cadc85b9" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Properties</scope><name>Ca</name></member>
+      <member refid="class__3___block_chain_menu_1_1_properties_1a05ce3467f71fd8c0c008579e45a68350" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Properties</scope><name>Gm</name></member>
+      <member refid="class__3___block_chain_menu_1_1_properties_1a7effc5ed68e7f48a8b9d8a4987f1c3b4" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Properties</scope><name>Professor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

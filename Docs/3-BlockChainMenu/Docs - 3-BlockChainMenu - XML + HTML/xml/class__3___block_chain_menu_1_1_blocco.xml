@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_blocco" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::Blocco</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_blocco_1ad00aa9549d4ad8b15c7f407df46274d8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int _3_BlockChainMenu.Blocco.Indice</definition>
+        <argsstring></argsstring>
+        <name>Indice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID del blocco della catena</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="27" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_blocco_1af9a8e0a3243b69f0268bb5e200d6d69d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime _3_BlockChainMenu.Blocco.DataOra</definition>
+        <argsstring></argsstring>
+        <name>DataOra</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets or sets the data ora di creazione del blocco con precisione fino a ms</para>
+<para>The data ora.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="35" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_blocco_1a01606c3d4a1d1917c2879f5d0aa17afc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Blocco.HashPrecedente</definition>
+        <argsstring></argsstring>
+        <name>HashPrecedente</name>
+        <briefdescription>
+<para>Chiave di cifratura del blocco precedente. Gets or sets the hash precedente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash precedente.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="40" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_blocco_1ad025dc2b3a9130e4cd50a7ff10d5c585" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Blocco.HashBloccoCorrente</definition>
+        <argsstring></argsstring>
+        <name>HashBloccoCorrente</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>chiave di cifratura del blocco precedente. Gets or sets the hash blocco corrente. </para>
+<para>The hash blocco corrente.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="49" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_blocco_1af6b6d03c5f1773c8f4a02a9692096e81" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class__3___block_chain_menu_1_1_transazione" kindref="compound">Transazione</ref> &gt;</type>
+        <definition>IList&lt;Transazione&gt; _3_BlockChainMenu.Blocco.Transazioni</definition>
+        <argsstring></argsstring>
+        <name>Transazioni</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="51" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_blocco_1ad3232138a530977bc030e4f4ec2d1267" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int _3_BlockChainMenu.Blocco.Nonce</definition>
+        <argsstring></argsstring>
+        <name>Nonce</name>
+        <briefdescription>
+<para>Assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography <ulink url="https://it.wikipedia.org/wiki/Nonce">https://it.wikipedia.org/wiki/Nonce</ulink> . Gets or sets the nonce. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The nonce.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="58" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_blocco_1a100e96cfddd905770bb67b9cdc13b6ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_3_BlockChainMenu.Blocco.Blocco</definition>
+        <argsstring>(DateTime dataOra, string hashPrecedente, IList&lt; Transazione &gt; transazioni)</argsstring>
+        <name>Blocco</name>
+        <param>
+          <type>DateTime</type>
+          <declname>dataOra</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hashPrecedente</declname>
+        </param>
+        <param>
+          <type>IList&lt; <ref refid="class__3___block_chain_menu_1_1_transazione" kindref="compound">Transazione</ref> &gt;</type>
+          <declname>transazioni</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="65" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_blocco_1a24967358a856213c4c74e0ec27685a0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Blocco.CalcolaHash</definition>
+        <argsstring>()</argsstring>
+        <name>CalcolaHash</name>
+        <briefdescription>
+<para>Calcola l&apos;hash del blocco basandosi su SHA512 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Impronta digitale del blocco</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="80" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_blocco_1ab40348816acbbe4b2e7197eab6c700f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.Blocco.Mina</definition>
+        <argsstring>(int difficoltà)</argsstring>
+        <name>Mina</name>
+        <param>
+          <type>int</type>
+          <declname>difficoltà</declname>
+        </param>
+        <briefdescription>
+<para>Calcola l&apos;hash per veificare la validità di un blocco </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>difficoltà</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Difficoltà dei calcoli necessari per validare la blockchain.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="97" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="97" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe che si occupa di gestire il singolo blocco della catena </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="20" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" bodystart="19" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1a100e96cfddd905770bb67b9cdc13b6ad" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>Blocco</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1a24967358a856213c4c74e0ec27685a0e" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>CalcolaHash</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1af9a8e0a3243b69f0268bb5e200d6d69d" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>DataOra</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1ad025dc2b3a9130e4cd50a7ff10d5c585" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>HashBloccoCorrente</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1a01606c3d4a1d1917c2879f5d0aa17afc" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>HashPrecedente</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1ad00aa9549d4ad8b15c7f407df46274d8" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>Indice</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1ab40348816acbbe4b2e7197eab6c700f4" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>Mina</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1ad3232138a530977bc030e4f4ec2d1267" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>Nonce</name></member>
+      <member refid="class__3___block_chain_menu_1_1_blocco_1af6b6d03c5f1773c8f4a02a9692096e81" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Blocco</scope><name>Transazioni</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace__3___block_chain_menu" kind="namespace" language="C#">
+    <compoundname>_3_BlockChainMenu</compoundname>
+    <innerclass refid="class__3___block_chain_menu_1_1_agv" prot="public">_3_BlockChainMenu::Agv</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_blocco" prot="public">_3_BlockChainMenu::Blocco</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_block_chain" prot="public">_3_BlockChainMenu::BlockChain</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_ca" prot="public">_3_BlockChainMenu::Ca</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_candidati" prot="public">_3_BlockChainMenu::Candidati</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_candidati_json" prot="public">_3_BlockChainMenu::CandidatiJson</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_gm" prot="public">_3_BlockChainMenu::Gm</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_menu" prot="public">_3_BlockChainMenu::Menu</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_moneta" prot="public">_3_BlockChainMenu::Moneta</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_professor" prot="public">_3_BlockChainMenu::Professor</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_program" prot="public">_3_BlockChainMenu::Program</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_properties" prot="public">_3_BlockChainMenu::Properties</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_smart_contract" prot="public">_3_BlockChainMenu::SmartContract</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_transazione" prot="public">_3_BlockChainMenu::Transazione</innerclass>
+    <innerclass refid="class__3___block_chain_menu_1_1_utente" prot="public">_3_BlockChainMenu::Utente</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89bee" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OpzioniMenu</name>
+        <enumvalue id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea160009a89ee5a2603a26c2bcd824de7a" prot="public">
+          <name>Annulla</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beeaa64b2bbed24e7683baa0b1c3f2fe635b" prot="public">
+          <name>AggiungiTransazione</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beeaeb078e0e0fee88afdc353d8a470fba5c" prot="public">
+          <name>MostraBlockChain</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea775bd6c343ce9adcd2fa7f52cabd9cf3" prot="public">
+          <name>MostraSmartContract</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea77020af286a16fe986d2aa70c595f8ab" prot="public">
+          <name>VerificaSaldo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea6a2a91cd42d084828911c60ea51a26e6" prot="public">
+          <name>Esci</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Gestione Opzioni Menù </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="9" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="8" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Blocco.cs" line="17" column="1"/>
+  </compounddef>
+</doxygen>

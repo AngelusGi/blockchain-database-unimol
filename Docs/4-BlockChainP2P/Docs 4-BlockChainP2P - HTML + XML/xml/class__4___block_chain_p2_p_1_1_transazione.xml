@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_transazione" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Transazione</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_transazione_1a2c12bab8ae954170808fcabcb1bc6a99" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? _4_BlockChainP2P.Transazione.IdMittente</definition>
+        <argsstring></argsstring>
+        <name>IdMittente</name>
+        <briefdescription>
+<para>Indirizzo di chi effettua (<emphasis>fa partire</emphasis>) la transazione </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Indirizzo mittente.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" line="14" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_transazione_1a0a1402926b6361881c93f2fa3dacd877" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Transazione.IdDestinatario</definition>
+        <argsstring></argsstring>
+        <name>IdDestinatario</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indirizzo del destinatario della transazione</para>
+<para>Indirizzo destinatario.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" line="20" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_transazione_1af1c3c934520f566437ae21faaf956fee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Transazione.Valore</definition>
+        <argsstring></argsstring>
+        <name>Valore</name>
+        <briefdescription>
+<para>Valore della transazione. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Valore.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" line="25" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_transazione_1a455534fc9ba779e085f602fa9f7acc1b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool _4_BlockChainP2P.Transazione.Contabilizzata</definition>
+        <argsstring></argsstring>
+        <name>Contabilizzata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" line="27" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_transazione_1a431ff9d61a3f22380ce3a42e918667bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_4_BlockChainP2P.Transazione.Transazione</definition>
+        <argsstring>(Utente mittente, Utente destinatario, int valore)</argsstring>
+        <name>Transazione</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>mittente</declname>
+        </param>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>destinatario</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" line="32" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" bodystart="32" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Gestione della transazione associata ad un blocco della catena </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" line="6" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Transazione.cs" bodystart="5" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_transazione_1a455534fc9ba779e085f602fa9f7acc1b" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Transazione</scope><name>Contabilizzata</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_transazione_1a0a1402926b6361881c93f2fa3dacd877" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Transazione</scope><name>IdDestinatario</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_transazione_1a2c12bab8ae954170808fcabcb1bc6a99" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Transazione</scope><name>IdMittente</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_transazione_1a431ff9d61a3f22380ce3a42e918667bc" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Transazione</scope><name>Transazione</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_transazione_1af1c3c934520f566437ae21faaf956fee" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Transazione</scope><name>Valore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
+  <compound refid="class__3___block_chain_menu_1_1_agv" kind="class"><name>_3_BlockChainMenu::Agv</name>
+    <member refid="class__3___block_chain_menu_1_1_agv_1a0aff9865822964db0eb87ae8713788ce" kind="property"><name>Name</name></member>
+    <member refid="class__3___block_chain_menu_1_1_agv_1a08f54da957d3bd8643a60bc18f16e992" kind="property"><name>Matricola</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_blocco" kind="class"><name>_3_BlockChainMenu::Blocco</name>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1ad00aa9549d4ad8b15c7f407df46274d8" kind="property"><name>Indice</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1af9a8e0a3243b69f0268bb5e200d6d69d" kind="property"><name>DataOra</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1a01606c3d4a1d1917c2879f5d0aa17afc" kind="property"><name>HashPrecedente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1ad025dc2b3a9130e4cd50a7ff10d5c585" kind="property"><name>HashBloccoCorrente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1af6b6d03c5f1773c8f4a02a9692096e81" kind="property"><name>Transazioni</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1ad3232138a530977bc030e4f4ec2d1267" kind="property"><name>Nonce</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1a100e96cfddd905770bb67b9cdc13b6ad" kind="function"><name>Blocco</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1a24967358a856213c4c74e0ec27685a0e" kind="function"><name>CalcolaHash</name></member>
+    <member refid="class__3___block_chain_menu_1_1_blocco_1ab40348816acbbe4b2e7197eab6c700f4" kind="function"><name>Mina</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_block_chain" kind="class"><name>_3_BlockChainMenu::BlockChain</name>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a84803ca4c06905dc9b784a730d2d59eb" kind="property"><name>Utenti</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a3c223f669021fb102be6fb6e76fc757f" kind="property"><name>Catena</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a31303b2253c8ce939d40048d6f656478" kind="property"><name>Difficoltà</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a404fd655b21a03a3d17221804d3aaa2a" kind="variable"><name>TransazioniInAttesa</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1af55e8e38b2d55aebed576fb7f655011b" kind="variable"><name>Ricompensa</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a8adc51cfb9f2f983e73964cc88a962cf" kind="function"><name>BlockChain</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a460beaced8b88080b309a8016e9f93ec" kind="function"><name>InizializzaCatena</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a86b9fdcb101bec19084738c185852486" kind="function"><name>AggiungiBloccoIniziale</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a35f9e42dd9d6bd0198abf89b7b737acf" kind="function"><name>CreaBloccoIniziale</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a1d038c3edb56d32ae3cbc13ed5bfc483" kind="function"><name>GetUltimoBlocco</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1aa1d5f7faa5dee540c3be1529383725c4" kind="function"><name>AggiungiBlocco</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a52865fda6c6a80bd96e11aa568c43b21" kind="function"><name>RicercaUtente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1ac08bea4dc3b79e5e64a6119a993541cd" kind="function"><name>RicercaUtente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1aee283a97a5024b2e60bca190ccfc3426" kind="function"><name>VerificaUtente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a3f65a6234ebbd1ce41107a825eaa807a" kind="function"><name>AggiornaSaldoUtenti</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1ae67adbf0a4872de6aebf28df6d1b5395" kind="function"><name>CreaTransazione</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a4c6ad6b4f911a2e7bbd4323b2384b8c0" kind="function"><name>MinaTransazioni</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1afea654e85bd242c1d8a38596a66ca4da" kind="function"><name>IsValido</name></member>
+    <member refid="class__3___block_chain_menu_1_1_block_chain_1a6ddd80019bdc8d23e648753ffd78a1c9" kind="function"><name>AggiornaBilancio</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_ca" kind="class"><name>_3_BlockChainMenu::Ca</name>
+    <member refid="class__3___block_chain_menu_1_1_ca_1a8352835cdac2dac99ddcafaeaf7498bf" kind="property"><name>Name</name></member>
+    <member refid="class__3___block_chain_menu_1_1_ca_1a316fea5da551f62cdbaa7073a98427c0" kind="property"><name>Matricola</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_candidati" kind="class"><name>_3_BlockChainMenu::Candidati</name>
+    <member refid="class__3___block_chain_menu_1_1_candidati_1a9761b0dd5fbcd78ee309a1e62223ca66" kind="variable"><name>_candidati</name></member>
+    <member refid="class__3___block_chain_menu_1_1_candidati_1ad141b3330f2cc5edf039e80463d8168c" kind="function"><name>Inizializza</name></member>
+    <member refid="class__3___block_chain_menu_1_1_candidati_1aab258794157e8c2ed866469bb96a0a4d" kind="function"><name>MostraCanidati</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_candidati_json" kind="class"><name>_3_BlockChainMenu::CandidatiJson</name>
+    <member refid="class__3___block_chain_menu_1_1_candidati_json_1afe5643da2dd306fa029461e1489b313c" kind="property"><name>Properties</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause" kind="class"><name>_3_BlockChainMenu::SmartContract::Clause</name>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause_1a63564c0ff9e9a839b35ecf9e7ca03963" kind="property"><name>Type</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause_1a963e269ecbe4b2c2802f64522a558db6" kind="property"><name>Description</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause_1acd61b824ed0ff8a5bc98ffc772cb40cd" kind="property"><name>IdContract</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause_1a4237ce35df40ce82ee049ed753ed888d" kind="property"><name>TransactionContract</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause_1afc8fe969710f19d46c5f687a28f0fa82" kind="property"><name>DoubleSpendingContract</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause_1ae110609b086fa12f310d226f7acb2803" kind="property"><name>BalanceCheck</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json" kind="class"><name>_3_BlockChainMenu::SmartContract::ContrattoJson</name>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1ad506d3ca31f1e2ad9c61925851b0450f" kind="property"><name>Schema</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1ab8e0ec76318b39bbc2ca616cdec70e40" kind="property"><name>Title</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1a72547c7a6b9d52ef889f6e9c33872df0" kind="property"><name>Type</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1af4639dcc0a2e1dffde16f8e845032ac9" kind="property"><name>Properties</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_gm" kind="class"><name>_3_BlockChainMenu::Gm</name>
+    <member refid="class__3___block_chain_menu_1_1_gm_1a2a569bcf8e0767e9b6fb9509fab9a484" kind="property"><name>Name</name></member>
+    <member refid="class__3___block_chain_menu_1_1_gm_1ad81dba755e3c36d8b8ede599c88d0fcf" kind="property"><name>Matricola</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_menu" kind="class"><name>_3_BlockChainMenu::Menu</name>
+    <member refid="class__3___block_chain_menu_1_1_menu_1acd52cb8209c96cb5ad236dd6dc918b92" kind="property"><name>UniMolCoin</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1acd4487cc6fa18aad731f7b644a47677f" kind="variable"><name>_risposta</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a7a9f6846bdb2eb3f8bd39a6971a3642d" kind="variable"><name>_numUtentiTest</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1aaf3b2b9e78c67525d05ddfff91fc9743" kind="function"><name>Menu</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a7827129230c8679a7c51a8af6a0d96ab" kind="function"><name>Benvenuto</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1ae69eac0104fb7214a3790bcf9ea4d46f" kind="function"><name>CreaUtenteTest</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a27025a69e682ebb3e5b3e67c3e135ff7" kind="function"><name>GestioneUtenti</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a3647414746865b4a515417690ce348d2" kind="function"><name>GestioneMenu</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a922b8e3c895bbfa0b4e6d7d1b271c4fb" kind="function"><name>AvviaMenu</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a9545b42d8393fd0d36dfdc06ee7f19ea" kind="function"><name>NormalizzaNome</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a61268262d414e8f83401977ba6e5468f" kind="function"><name>ColoreAvvisi</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1aa47218314949b1a44ed4778c8941468b" kind="function"><name>ColoreRecap</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a964efd2e62be34b7096e067111086dd0" kind="function"><name>ColoreTitoli</name></member>
+    <member refid="class__3___block_chain_menu_1_1_menu_1a6bb7b0651b113d7151ce8a917792f1a9" kind="function"><name>ColoreNormale</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_moneta" kind="class"><name>_3_BlockChainMenu::Moneta</name>
+    <member refid="class__3___block_chain_menu_1_1_moneta_1aa0cf8d87e7ae140beae6d7c04998bb1b" kind="variable"><name>Valore</name></member>
+    <member refid="class__3___block_chain_menu_1_1_moneta_1a8f564569ab0827f0b9f163f490528ca8" kind="property"><name>IdVecchioProprietario</name></member>
+    <member refid="class__3___block_chain_menu_1_1_moneta_1a47618594b97866246b03a92999e2ba8f" kind="property"><name>IdAttualeProprietario</name></member>
+    <member refid="class__3___block_chain_menu_1_1_moneta_1a7f16c915c288cf12c0cc9ad599b7979e" kind="property"><name>IdMoneta</name></member>
+    <member refid="class__3___block_chain_menu_1_1_moneta_1a5fdd7ebe40d727746a590d351f534207" kind="function"><name>Moneta</name></member>
+    <member refid="class__3___block_chain_menu_1_1_moneta_1a4f7b5335eca94f3af1c24dd2f6a98385" kind="function"><name>TrasferisciMoneta</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_professor" kind="class"><name>_3_BlockChainMenu::Professor</name>
+    <member refid="class__3___block_chain_menu_1_1_professor_1afbdfb544fb4c9ae907ab09b561c1de41" kind="property"><name>Name</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_program" kind="class"><name>_3_BlockChainMenu::Program</name>
+    <member refid="class__3___block_chain_menu_1_1_program_1a2305cc39ad6a4f1b016fa3b818d72685" kind="function"><name>TemaChiaro</name></member>
+    <member refid="class__3___block_chain_menu_1_1_program_1acd835018a08e23dc74dcf97129104c78" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_properties" kind="class"><name>_3_BlockChainMenu::Properties</name>
+    <member refid="class__3___block_chain_menu_1_1_properties_1a7effc5ed68e7f48a8b9d8a4987f1c3b4" kind="property"><name>Professor</name></member>
+    <member refid="class__3___block_chain_menu_1_1_properties_1a583dd51f10784d6073d420df4898463d" kind="property"><name>Agv</name></member>
+    <member refid="class__3___block_chain_menu_1_1_properties_1a9cb5950b98d860d66f828da2cadc85b9" kind="property"><name>Ca</name></member>
+    <member refid="class__3___block_chain_menu_1_1_properties_1a05ce3467f71fd8c0c008579e45a68350" kind="property"><name>Gm</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties" kind="class"><name>_3_BlockChainMenu::SmartContract::Properties</name>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1ab27c465e348a272ee61b54467f96f76d" kind="property"><name>ValidationData</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1ad5c64c8d750115e1f257f4fe4f91c5bf" kind="property"><name>Clause</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1a44029fe9db886cb04f63d615938b423c" kind="property"><name>Revision</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision" kind="class"><name>_3_BlockChainMenu::SmartContract::Revision</name>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1a12761e25cf5896ceed5f7aa0569e3b7d" kind="property"><name>Type</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1ad39eba94d7d0922217cb4b5fcf520361" kind="property"><name>Description</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1a1c8ae50dff0d2f059b420b69ddbebd7f" kind="property"><name>NumVersion</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_smart_contract" kind="class"><name>_3_BlockChainMenu::SmartContract</name>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a77de71cd27120fabb7cd3d8aa04d02f0" kind="variable"><name>UniMolCoin</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1aa4e018f7c72afb54c9c42e819667b68a" kind="variable"><name>_contratto</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a29b84860b728816fc013878d6d86e0d5" kind="function"><name>Inizializza</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a1a808e0f08d8958c88c994a99122668b" kind="function"><name>MostraContratto</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a16911833f54451e758c84604bb053cda" kind="function"><name>VerificaSaldo</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a817f60d37eccd4cd81f65e9989fb9e8e" kind="function"><name>ValidaBlockchain</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a9c0a3ce6ee5dbd5d509d75c7e630e1db" kind="function"><name>VerificaOmonimie</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a84cd196d1124595094c1492d19e0d6ab" kind="function"><name>RicompensaMiner</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a5c9efdafee7a98c85af893ccf3b05295" kind="function"><name>TrasferisciMoneta</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1a102b359bdd1c8975202d874f1d52073b" kind="function"><name>AutenticaUtente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1abfd615c89612c7a1b99940ab202f14ce" kind="function"><name>VerificaMonete</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_transazione" kind="class"><name>_3_BlockChainMenu::Transazione</name>
+    <member refid="class__3___block_chain_menu_1_1_transazione_1a5a815daa379d9dc7bba109a81dbc3a36" kind="property"><name>IdMittente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_transazione_1a0d7d08a7363a550a45fba73c4c072662" kind="property"><name>IdDestinatario</name></member>
+    <member refid="class__3___block_chain_menu_1_1_transazione_1a9b2a8450d377b7387c6b57800fb1ec02" kind="property"><name>Valore</name></member>
+    <member refid="class__3___block_chain_menu_1_1_transazione_1a63b54d8ef080dbdc561ba2602a6afbf8" kind="property"><name>Contabilizzata</name></member>
+    <member refid="class__3___block_chain_menu_1_1_transazione_1af3f0abdb34474f12a3f5bb2ba40fc539" kind="function"><name>Transazione</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_utente" kind="class"><name>_3_BlockChainMenu::Utente</name>
+    <member refid="class__3___block_chain_menu_1_1_utente_1abe0b3897d9b76130aadf2bd97ca805e8" kind="property"><name>Nome</name></member>
+    <member refid="class__3___block_chain_menu_1_1_utente_1a1745f1432a9c76c1ba43117c95c74f7e" kind="property"><name>Saldo</name></member>
+    <member refid="class__3___block_chain_menu_1_1_utente_1a1e174bcf6728e7df4fd06b41f21574f8" kind="property"><name>IdUnivoco</name></member>
+    <member refid="class__3___block_chain_menu_1_1_utente_1a73f330c7c2724ea206709bc25ec34be6" kind="variable"><name>NumMoneteIniziale</name></member>
+    <member refid="class__3___block_chain_menu_1_1_utente_1a022f5272745c01f7d2e3e7a171f69bff" kind="function"><name>Utente</name></member>
+    <member refid="class__3___block_chain_menu_1_1_utente_1a7925b5a7ac61585d764e6fa439d932d0" kind="function"><name>CreaPortafogli</name></member>
+  </compound>
+  <compound refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata" kind="class"><name>_3_BlockChainMenu::SmartContract::Validationdata</name>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1a17c131e6e06fae32167d269b3a61cbdd" kind="property"><name>Type</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1a19e39c5ee2a644d046c9ee1d0623ab46" kind="property"><name>Description</name></member>
+    <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1ad551a6f981d5ca1000ba30228d335e1e" kind="property"><name>Datetime</name></member>
+  </compound>
+  <compound refid="namespace__3___block_chain_menu" kind="namespace"><name>_3_BlockChainMenu</name>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89bee" kind="enum"><name>OpzioniMenu</name></member>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea160009a89ee5a2603a26c2bcd824de7a" kind="enumvalue"><name>Annulla</name></member>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beeaa64b2bbed24e7683baa0b1c3f2fe635b" kind="enumvalue"><name>AggiungiTransazione</name></member>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beeaeb078e0e0fee88afdc353d8a470fba5c" kind="enumvalue"><name>MostraBlockChain</name></member>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea775bd6c343ce9adcd2fa7f52cabd9cf3" kind="enumvalue"><name>MostraSmartContract</name></member>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea77020af286a16fe986d2aa70c595f8ab" kind="enumvalue"><name>VerificaSaldo</name></member>
+    <member refid="namespace__3___block_chain_menu_1ad9fa765d62547301e90ad02fb9c89beea6a2a91cd42d084828911c60ea51a26e6" kind="enumvalue"><name>Esci</name></member>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="_blocco_8cs" kind="file"><name>Blocco.cs</name>
+  </compound>
+  <compound refid="_block_chain_8cs" kind="file"><name>BlockChain.cs</name>
+  </compound>
+  <compound refid="_candidati_8cs" kind="file"><name>Candidati.cs</name>
+  </compound>
+  <compound refid="_menu_8cs" kind="file"><name>Menu.cs</name>
+  </compound>
+  <compound refid="_moneta_8cs" kind="file"><name>Moneta.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_smart_contract_8cs" kind="file"><name>SmartContract.cs</name>
+  </compound>
+  <compound refid="_transazione_8cs" kind="file"><name>Transazione.cs</name>
+  </compound>
+  <compound refid="_utente_8cs" kind="file"><name>Utente.cs</name>
+  </compound>
+  <compound refid="dir_64f0b1778d70096bfbe398cfed6be76f" kind="dir"><name>blockchain-database-unimol/3-BlockChainMenu</name>
+  </compound>
+  <compound refid="dir_0864704149d7441d2e7c869c70243548" kind="dir"><name>blockchain-database-unimol</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_block_chain" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::BlockChain</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_block_chain_1a6155eff074641d1c32284f6c50f0f26f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref> &gt;</type>
+        <definition>IList&lt;Utente&gt; _4_BlockChainP2P.BlockChain.Utenti</definition>
+        <argsstring></argsstring>
+        <name>Utenti</name>
+        <briefdescription>
+<para>Lista di utenti partecipanti alla blockchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="17" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_block_chain_1aa3ba54aea8aa86a08df5c41bfe3fe892" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class__4___block_chain_p2_p_1_1_blocco" kindref="compound">Blocco</ref> &gt;</type>
+        <definition>IList&lt;Blocco&gt; _4_BlockChainP2P.BlockChain.Catena</definition>
+        <argsstring></argsstring>
+        <name>Catena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="23" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_block_chain_1a04f46b57c5a7d066562eef4f92cef8dc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.BlockChain.Difficoltà</definition>
+        <argsstring></argsstring>
+        <name>Difficoltà</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Sistema per aumentare la complessità dei calcoli necessari per validare la blockchain all&apos;aumentare della dimensione (Proof of Work) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The difficoltà.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="28" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_block_chain_1a9bf15ec9223c0e4d2da39cccea213230" prot="public" static="no" mutable="no">
+        <type>IList&lt; <ref refid="class__4___block_chain_p2_p_1_1_transazione" kindref="compound">Transazione</ref> &gt;</type>
+        <definition>IList&lt;Transazione&gt; _4_BlockChainP2P.BlockChain.TransazioniInAttesa</definition>
+        <argsstring></argsstring>
+        <name>TransazioniInAttesa</name>
+        <initializer>= new List&lt;<ref refid="class__4___block_chain_p2_p_1_1_transazione" kindref="compound">Transazione</ref>&gt;()</initializer>
+        <briefdescription>
+<para>gestisce le transazioni che devono ancora essere processate (minate) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="20" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_block_chain_1adec20ceead9755cb5060488e67163015" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int _4_BlockChainP2P.BlockChain.Ricompensa</definition>
+        <argsstring></argsstring>
+        <name>Ricompensa</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="32" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1ab7750e9dcf732bb5c0b306b3c76f563c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_4_BlockChainP2P.BlockChain.BlockChain</definition>
+        <argsstring>()</argsstring>
+        <name>BlockChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="42" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1aea2627b70277e5f42679e779c8ed3117" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.BlockChain.InizializzaCatena</definition>
+        <argsstring>()</argsstring>
+        <name>InizializzaCatena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="54" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="54" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a71478e3c391aafb2450c494128afc51b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.BlockChain.AggiungiBloccoIniziale</definition>
+        <argsstring>()</argsstring>
+        <name>AggiungiBloccoIniziale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="61" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a84a07340caf4099d99be690d74d25cb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_blocco" kindref="compound">Blocco</ref></type>
+        <definition>Blocco _4_BlockChainP2P.BlockChain.CreaBloccoIniziale</definition>
+        <argsstring>()</argsstring>
+        <name>CreaBloccoIniziale</name>
+        <briefdescription>
+<para>Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Il primo blocco della blockchain</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="71" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a95435965b742444658525c1757314a30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_blocco" kindref="compound">Blocco</ref></type>
+        <definition>Blocco _4_BlockChainP2P.BlockChain.GetUltimoBlocco</definition>
+        <argsstring>()</argsstring>
+        <name>GetUltimoBlocco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="80" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a49f1a778cd99d70158258280a1f39ffa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.BlockChain.AggiungiBlocco</definition>
+        <argsstring>(Blocco blocco)</argsstring>
+        <name>AggiungiBlocco</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_blocco" kindref="compound">Blocco</ref></type>
+          <declname>blocco</declname>
+        </param>
+        <briefdescription>
+<para>Si aggancia all&apos;ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blocco</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class__4___block_chain_p2_p_1_1_blocco" kindref="compound">Blocco</ref> della catena generato dal costruttore</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="90" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="90" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1ae1a7a8559ee87b769cb872af81519685" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+        <definition>Utente _4_BlockChainP2P.BlockChain.RicercaUtente</definition>
+        <argsstring>(string nome)</argsstring>
+        <name>RicercaUtente</name>
+        <param>
+          <type>string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+<para>Ricerca un utente all&apos;interno della lista degli utenti. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome utente.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Oggetto di tipo utente</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="122" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="122" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a5efedcc461f0c012165d6d67c2b8db7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+        <definition>Utente _4_BlockChainP2P.BlockChain.RicercaUtente</definition>
+        <argsstring>(int? idUtente)</argsstring>
+        <name>RicercaUtente</name>
+        <param>
+          <type>int?</type>
+          <declname>idUtente</declname>
+        </param>
+        <briefdescription>
+<para>Ricerca un utente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idUtente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID univoco dell&apos;utente.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Oggetto di tipo utentea</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="149" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="149" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a63e9badc3c7c162d088c21fde333ea56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool _4_BlockChainP2P.BlockChain.VerificaUtente</definition>
+        <argsstring>(string nome)</argsstring>
+        <name>VerificaUtente</name>
+        <param>
+          <type>string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+<para>Verifica l&apos;esistenza dell&apos;utente all&apos;interno della lista degli utenti. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome dell&apos;utente da verificare.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref> esiste (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="175" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="175" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1ae1a3e3f0f9a27a5ff76958c7e7844f8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.BlockChain.AggiornaSaldoUtenti</definition>
+        <argsstring>()</argsstring>
+        <name>AggiornaSaldoUtenti</name>
+        <briefdescription>
+<para>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="195" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="195" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a36abd523a418b542e7a9ecdbb56d11d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.BlockChain.CreaTransazione</definition>
+        <argsstring>(Transazione transazione)</argsstring>
+        <name>CreaTransazione</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_transazione" kindref="compound">Transazione</ref></type>
+          <declname>transazione</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="223" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a7af1d26e9b426e45fe4aac22e42c5156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.BlockChain.MinaTransazioni</definition>
+        <argsstring>(Utente miner)</argsstring>
+        <name>MinaTransazioni</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>miner</declname>
+        </param>
+        <briefdescription>
+<para>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>miner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prende un oggetto di tipo utente (miner)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="232" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="232" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a72609fae1e32e0cf6b3eb0c92b035a77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool _4_BlockChainP2P.BlockChain.IsValido</definition>
+        <argsstring>()</argsstring>
+        <name>IsValido</name>
+        <briefdescription>
+<para>Scorre tutta la catena e ricalcola a runtime l&apos;hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente. Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Restituisce lo stato di validità di un blocco</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="261" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_block_chain_1a5c416106e3eec6195b659844f7fe2432" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.BlockChain.AggiornaBilancio</definition>
+        <argsstring>()</argsstring>
+        <name>AggiornaBilancio</name>
+        <briefdescription>
+<para>Restituisce il numero totale di coin in circolazione </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Num monete</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="271" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="271" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" line="13" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/BlockChain.cs" bodystart="12" bodyend="285"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a5c416106e3eec6195b659844f7fe2432" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>AggiornaBilancio</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1ae1a3e3f0f9a27a5ff76958c7e7844f8f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>AggiornaSaldoUtenti</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a49f1a778cd99d70158258280a1f39ffa" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>AggiungiBlocco</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a71478e3c391aafb2450c494128afc51b" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>AggiungiBloccoIniziale</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1ab7750e9dcf732bb5c0b306b3c76f563c" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>BlockChain</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1aa3ba54aea8aa86a08df5c41bfe3fe892" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>Catena</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a84a07340caf4099d99be690d74d25cb2" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>CreaBloccoIniziale</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a36abd523a418b542e7a9ecdbb56d11d7" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>CreaTransazione</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a04f46b57c5a7d066562eef4f92cef8dc" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>Difficoltà</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a95435965b742444658525c1757314a30" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>GetUltimoBlocco</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1aea2627b70277e5f42679e779c8ed3117" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>InizializzaCatena</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a72609fae1e32e0cf6b3eb0c92b035a77" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>IsValido</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a7af1d26e9b426e45fe4aac22e42c5156" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>MinaTransazioni</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1ae1a7a8559ee87b769cb872af81519685" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>RicercaUtente</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a5efedcc461f0c012165d6d67c2b8db7f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>RicercaUtente</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1adec20ceead9755cb5060488e67163015" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>Ricompensa</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a9bf15ec9223c0e4d2da39cccea213230" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>TransazioniInAttesa</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a6155eff074641d1c32284f6c50f0f26f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>Utenti</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_block_chain_1a63e9badc3c7c162d088c21fde333ea56" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::BlockChain</scope><name>VerificaUtente</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

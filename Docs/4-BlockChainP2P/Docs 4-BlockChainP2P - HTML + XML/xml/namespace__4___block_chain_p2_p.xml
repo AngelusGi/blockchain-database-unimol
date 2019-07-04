@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace__4___block_chain_p2_p" kind="namespace" language="C#">
+    <compoundname>_4_BlockChainP2P</compoundname>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_agv" prot="public">_4_BlockChainP2P::Agv</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_blocco" prot="public">_4_BlockChainP2P::Blocco</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_block_chain" prot="public">_4_BlockChainP2P::BlockChain</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_ca" prot="public">_4_BlockChainP2P::Ca</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_candidati" prot="public">_4_BlockChainP2P::Candidati</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_candidati_json" prot="public">_4_BlockChainP2P::CandidatiJson</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_gm" prot="public">_4_BlockChainP2P::Gm</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_menu" prot="public">_4_BlockChainP2P::Menu</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_moneta" prot="public">_4_BlockChainP2P::Moneta</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_p2_p_client" prot="public">_4_BlockChainP2P::P2PClient</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_p2_p_server" prot="public">_4_BlockChainP2P::P2PServer</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_professor" prot="public">_4_BlockChainP2P::Professor</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_program" prot="public">_4_BlockChainP2P::Program</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_properties" prot="public">_4_BlockChainP2P::Properties</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_smart_contract" prot="public">_4_BlockChainP2P::SmartContract</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_transazione" prot="public">_4_BlockChainP2P::Transazione</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_utente" prot="public">_4_BlockChainP2P::Utente</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OpzioniMenu</name>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a160009a89ee5a2603a26c2bcd824de7a" prot="public">
+          <name>Annulla</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3aa64b2bbed24e7683baa0b1c3f2fe635b" prot="public">
+          <name>AggiungiTransazione</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3aeb078e0e0fee88afdc353d8a470fba5c" prot="public">
+          <name>MostraBlockChain</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a775bd6c343ce9adcd2fa7f52cabd9cf3" prot="public">
+          <name>MostraSmartContract</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a77020af286a16fe986d2aa70c595f8ab" prot="public">
+          <name>VerificaSaldo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3aae0865158c41961a4508dfb2d48b9a52" prot="public">
+          <name>UrlServer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace__4___block_chain_p2_p_1a977a96907fdd6ed2fa1ef3a1eeff94c3a6a2a91cd42d084828911c60ea51a26e6" prot="public">
+          <name>Esci</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Gestione Opzioni Menù </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" line="10" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Menu.cs" bodystart="9" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="17" column="1"/>
+  </compounddef>
+</doxygen>

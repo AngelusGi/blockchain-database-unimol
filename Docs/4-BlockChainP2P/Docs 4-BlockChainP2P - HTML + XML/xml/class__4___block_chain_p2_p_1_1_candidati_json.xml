@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_candidati_json" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::CandidatiJson</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_candidati_json_1a30e6b022da8485bdff6cc02bfa69bcd0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_properties" kindref="compound">Properties</ref></type>
+        <definition>Properties _4_BlockChainP2P.CandidatiJson.Properties</definition>
+        <argsstring></argsstring>
+        <name>Properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="62" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="61" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="60" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_candidati_json_1a30e6b022da8485bdff6cc02bfa69bcd0" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::CandidatiJson</scope><name>Properties</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

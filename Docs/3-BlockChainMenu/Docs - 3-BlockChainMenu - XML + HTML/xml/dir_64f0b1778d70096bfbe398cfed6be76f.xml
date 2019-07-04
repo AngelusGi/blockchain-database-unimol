@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_64f0b1778d70096bfbe398cfed6be76f" kind="dir">
+    <compoundname>blockchain-database-unimol/3-BlockChainMenu</compoundname>
+    <innerfile refid="_blocco_8cs">Blocco.cs</innerfile>
+    <innerfile refid="_block_chain_8cs">BlockChain.cs</innerfile>
+    <innerfile refid="_candidati_8cs">Candidati.cs</innerfile>
+    <innerfile refid="_menu_8cs">Menu.cs</innerfile>
+    <innerfile refid="_moneta_8cs">Moneta.cs</innerfile>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <innerfile refid="_smart_contract_8cs">SmartContract.cs</innerfile>
+    <innerfile refid="_transazione_8cs">Transazione.cs</innerfile>
+    <innerfile refid="_utente_8cs">Utente.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/"/>
+  </compounddef>
+</doxygen>

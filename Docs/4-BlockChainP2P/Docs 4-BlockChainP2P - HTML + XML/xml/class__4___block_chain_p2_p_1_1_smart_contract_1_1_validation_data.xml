@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::SmartContract::ValidationData</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data_1a08d072e47df40a97e29d6d9b4c804c4b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.ValidationData.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="35" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data_1aaebb2a408ac751842d913c388f9f6b16" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.ValidationData.Datetime</definition>
+        <argsstring></argsstring>
+        <name>Datetime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="36" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="34" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="33" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data_1aaebb2a408ac751842d913c388f9f6b16" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::ValidationData</scope><name>Datetime</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data_1a08d072e47df40a97e29d6d9b4c804c4b" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::ValidationData</scope><name>Description</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

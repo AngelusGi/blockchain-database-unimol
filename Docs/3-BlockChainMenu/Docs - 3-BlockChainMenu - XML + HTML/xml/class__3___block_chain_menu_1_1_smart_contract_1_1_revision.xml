@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_smart_contract_1_1_revision" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::SmartContract::Revision</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1a12761e25cf5896ceed5f7aa0569e3b7d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.Revision.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="54" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1ad39eba94d7d0922217cb4b5fcf520361" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.Revision.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="55" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1a1c8ae50dff0d2f059b420b69ddbebd7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.Revision.NumVersion</definition>
+        <argsstring></argsstring>
+        <name>NumVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="56" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="53" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="52" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1ad39eba94d7d0922217cb4b5fcf520361" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Revision</scope><name>Description</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1a1c8ae50dff0d2f059b420b69ddbebd7f" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Revision</scope><name>NumVersion</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision_1a12761e25cf5896ceed5f7aa0569e3b7d" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Revision</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

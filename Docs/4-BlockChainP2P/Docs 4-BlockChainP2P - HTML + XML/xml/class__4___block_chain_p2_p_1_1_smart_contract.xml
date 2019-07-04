@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_smart_contract" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::SmartContract</compoundname>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause" prot="public">_4_BlockChainP2P::SmartContract::Clause</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_contratto_json" prot="private">_4_BlockChainP2P::SmartContract::ContrattoJson</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties" prot="public">_4_BlockChainP2P::SmartContract::Properties</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_revision" prot="public">_4_BlockChainP2P::SmartContract::Revision</innerclass>
+    <innerclass refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data" prot="public">_4_BlockChainP2P::SmartContract::ValidationData</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_smart_contract_1a26fd88cdf9c7cfa32a63183e5bdcce6e" prot="private" static="yes" mutable="no">
+        <type>readonly <ref refid="class__4___block_chain_p2_p_1_1_block_chain" kindref="compound">BlockChain</ref></type>
+        <definition>readonly BlockChain _4_BlockChainP2P.SmartContract.UniMolCoin</definition>
+        <argsstring></argsstring>
+        <name>UniMolCoin</name>
+        <initializer>= Menu.UniMolCoin</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="57" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_smart_contract_1a1da700573cb1471f065a3b75bc9d25f2" prot="private" static="yes" mutable="no">
+        <type>ContrattoJson</type>
+        <definition>ContrattoJson _4_BlockChainP2P.SmartContract._contratto</definition>
+        <argsstring></argsstring>
+        <name>_contratto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="59" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1af422882b98f60eb711d277105ee8bb80" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.SmartContract.Inizializza</definition>
+        <argsstring>()</argsstring>
+        <name>Inizializza</name>
+        <briefdescription>
+<para>Inizializza l&apos;oggetto SmartContract a partire dal file JSON locale in base alla piattaforma d&apos;esecuzione </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="71" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="71" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1ab18d5e3f144fafe59d99ba6eda185e8e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.SmartContract.MostraContratto</definition>
+        <argsstring>()</argsstring>
+        <name>MostraContratto</name>
+        <briefdescription>
+<para>Mostra i dati presenti all&apos;interno del contratto: titolo, versione, data di ultima modifica e clausole </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="98" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="98" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1a8e4b3a63dc3cc32bd6969f329804532e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _4_BlockChainP2P.SmartContract.VerificaSaldo</definition>
+        <argsstring>(string nomeMittente, string nomeDestinatario, int importoTransazione)</argsstring>
+        <name>VerificaSaldo</name>
+        <param>
+          <type>string</type>
+          <declname>nomeMittente</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>nomeDestinatario</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>importoTransazione</declname>
+        </param>
+        <briefdescription>
+<para>Valida la transazione verificando se il saldo dell&apos;utente è necessario a coprire l&apos;importo che si vole spendere. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeMittente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome di colui che vuole fare la transazione.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomeDestinatario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome del beneficiario della transazione</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>importoTransazione</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Importo della transazione.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Il saldo è sufficiente (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="118" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="118" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1ab395a1a3f5dee4f2a9a3323af26aac3e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _4_BlockChainP2P.SmartContract.ValidaBlockchain</definition>
+        <argsstring>()</argsstring>
+        <name>ValidaBlockchain</name>
+        <briefdescription>
+<para>Verifica lo stato di validità dei blocchi presenti all&apos;interno della blockchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>La blockchain è valida (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="142" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="142" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1a58c1245fb48e3575e26451d848860e1c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _4_BlockChainP2P.SmartContract.VerificaOmonimie</definition>
+        <argsstring>(Utente utente)</argsstring>
+        <name>VerificaOmonimie</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>utente</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se l&apos;utente che si vuole inserire esiste già all&apos;interno degli utenti inseriti nella blockain </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utente</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UtenteNonPresente (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="190" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="190" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1a5dee29e81c462f63ccc76c1d07a6c286" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.SmartContract.RicompensaMiner</definition>
+        <argsstring>(Utente miner)</argsstring>
+        <name>RicompensaMiner</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>miner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="261" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1aa82d6663cb8a0b6c4e6415075927bd1c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.SmartContract.TrasferisciMoneta</definition>
+        <argsstring>(int numMonete, Utente mittente, Utente ricevente)</argsstring>
+        <name>TrasferisciMoneta</name>
+        <param>
+          <type>int</type>
+          <declname>numMonete</declname>
+        </param>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>mittente</declname>
+        </param>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>ricevente</declname>
+        </param>
+        <briefdescription>
+<para>Trasferisce l&apos;importo che si vuole spendere dal mittente al beneficiario. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numMonete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Numero di monete che si vogliono spendere</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mittente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Committente della transazione</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ricevente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beneficiario della transazione</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="277" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="277" bodyend="285"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1afaa8425f1bc81e73d2be05aec23f2339" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.SmartContract.AutenticaUtente</definition>
+        <argsstring>(Utente utente)</argsstring>
+        <name>AutenticaUtente</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>utente</declname>
+        </param>
+        <briefdescription>
+<para>Assegna un ID univoco agli utenti della lista (hash code) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Singolo utente da autenticare.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="226" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_smart_contract_1ad776d4b11d736d4d02057b8c85d91118" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool _4_BlockChainP2P.SmartContract.VerificaMonete</definition>
+        <argsstring>(Utente mittente, Utente ricevente)</argsstring>
+        <name>VerificaMonete</name>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>mittente</declname>
+        </param>
+        <param>
+          <type><ref refid="class__4___block_chain_p2_p_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>ricevente</declname>
+        </param>
+        <briefdescription>
+<para>Verificano che non vi siano nè nel portafogli del mittente, nè nel destinario monete con lo stesso ID, al fine di evitare il double spending. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mittente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Committente della transazione</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ricevente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beneficiario della transazione</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>False se non è presente un caso di doubleSpending, in caso contrario true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="241" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="241" bodyend="258"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Questa classe implementa e gestisce lo SmartContract proveniente da un JSON </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="12" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="11" bodyend="287"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a1da700573cb1471f065a3b75bc9d25f2" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>_contratto</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1afaa8425f1bc81e73d2be05aec23f2339" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>AutenticaUtente</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1af422882b98f60eb711d277105ee8bb80" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>Inizializza</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1ab18d5e3f144fafe59d99ba6eda185e8e" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>MostraContratto</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a5dee29e81c462f63ccc76c1d07a6c286" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>RicompensaMiner</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1aa82d6663cb8a0b6c4e6415075927bd1c" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>TrasferisciMoneta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a26fd88cdf9c7cfa32a63183e5bdcce6e" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>UniMolCoin</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1ab395a1a3f5dee4f2a9a3323af26aac3e" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>ValidaBlockchain</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1ad776d4b11d736d4d02057b8c85d91118" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>VerificaMonete</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a58c1245fb48e3575e26451d848860e1c" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>VerificaOmonimie</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1a8e4b3a63dc3cc32bd6969f329804532e" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract</scope><name>VerificaSaldo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_candidati" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Candidati</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_candidati_1a1a92b0724b2041273a5e789ad616c36d" prot="private" static="yes" mutable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_candidati_json" kindref="compound">CandidatiJson</ref></type>
+        <definition>CandidatiJson _4_BlockChainP2P.Candidati._candidati</definition>
+        <argsstring></argsstring>
+        <name>_candidati</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="10" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_candidati_1a6ce4727d8e3641247aac79729380b51d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.Candidati.Inizializza</definition>
+        <argsstring>()</argsstring>
+        <name>Inizializza</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="12" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="12" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_candidati_1a4847eec6d56ffd4577a7108609180372" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _4_BlockChainP2P.Candidati.MostraCanidati</definition>
+        <argsstring>()</argsstring>
+        <name>MostraCanidati</name>
+        <briefdescription>
+<para>Mostra i dati candidati all&apos;esame (nome, cognome e matricola) e nome e cognome del docente di riferimento. Inoltre richiama la funzione per il parse dei JSON </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="46" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="46" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="9" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="8" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_candidati_1a1a92b0724b2041273a5e789ad616c36d" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Candidati</scope><name>_candidati</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_candidati_1a6ce4727d8e3641247aac79729380b51d" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Candidati</scope><name>Inizializza</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_candidati_1a4847eec6d56ffd4577a7108609180372" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Candidati</scope><name>MostraCanidati</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

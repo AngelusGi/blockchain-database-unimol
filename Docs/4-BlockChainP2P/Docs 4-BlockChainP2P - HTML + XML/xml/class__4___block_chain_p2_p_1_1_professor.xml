@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_professor" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Professor</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_professor_1ab285ce937f5d26e85d37d87fc3b00474" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Professor.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="75" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="75" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="74" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="73" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_professor_1ab285ce937f5d26e85d37d87fc3b00474" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Professor</scope><name>Name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_p2_p_server" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::P2PServer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">WebSocketBehavior</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_p2_p_server_1a4355afd4d551e4e140e40435937868b7" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int _4_BlockChainP2P.P2PServer.MinPorta</definition>
+        <argsstring></argsstring>
+        <name>MinPorta</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="13" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_p2_p_server_1a02833d620963bdbb696161d5f0c477f1" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int _4_BlockChainP2P.P2PServer.MaxPorta</definition>
+        <argsstring></argsstring>
+        <name>MaxPorta</name>
+        <initializer>= 49151</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="14" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_p2_p_server_1a1b0856c3c0438e6cf161f0a0a56828c6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _4_BlockChainP2P.P2PServer._bloccoSincronizzato</definition>
+        <argsstring></argsstring>
+        <name>_bloccoSincronizzato</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="15" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_p2_p_server_1add660ff1e5c097736a6d71fb9e903988" prot="private" static="no" mutable="no">
+        <type>WebSocketServer</type>
+        <definition>WebSocketServer _4_BlockChainP2P.P2PServer._webSocketServer</definition>
+        <argsstring></argsstring>
+        <name>_webSocketServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="16" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_p2_p_server_1a4e30d98fd69703c6dd7864614fe9725e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.P2PServer.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="18" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_p2_p_server_1ac161b969d1290dc06b83e637f3bffa2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.P2PServer.SelezionaPorta</definition>
+        <argsstring>()</argsstring>
+        <name>SelezionaPorta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="29" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_p2_p_server_1a05f0bdb345472b6ed3363b5d088b0450" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void _4_BlockChainP2P.P2PServer.OnMessage</definition>
+        <argsstring>(MessageEventArgs evento)</argsstring>
+        <name>OnMessage</name>
+        <param>
+          <type>MessageEventArgs</type>
+          <declname>evento</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="36" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="36" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Gestisce la parte server della Socket </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>WebSocketSharp.Server.WebSocketBehavior</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="28">
+        <label>WebSocketBehavior</label>
+      </node>
+      <node id="27">
+        <label>_4_BlockChainP2P.P2PServer</label>
+        <link refid="class__4___block_chain_p2_p_1_1_p2_p_server"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="30">
+        <label>WebSocketBehavior</label>
+      </node>
+      <node id="29">
+        <label>_4_BlockChainP2P.P2PServer</label>
+        <link refid="class__4___block_chain_p2_p_1_1_p2_p_server"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" line="12" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/P2P_Server.cs" bodystart="11" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a1b0856c3c0438e6cf161f0a0a56828c6" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>_bloccoSincronizzato</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1add660ff1e5c097736a6d71fb9e903988" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>_webSocketServer</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a02833d620963bdbb696161d5f0c477f1" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>MaxPorta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a4355afd4d551e4e140e40435937868b7" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>MinPorta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a05f0bdb345472b6ed3363b5d088b0450" prot="protected" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>OnMessage</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1ac161b969d1290dc06b83e637f3bffa2f" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>SelezionaPorta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_p2_p_server_1a4e30d98fd69703c6dd7864614fe9725e" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::P2PServer</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

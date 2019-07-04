@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::SmartContract::ContrattoJson</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1ad506d3ca31f1e2ad9c61925851b0450f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.ContrattoJson.Schema</definition>
+        <argsstring></argsstring>
+        <name>Schema</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="22" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1ab8e0ec76318b39bbc2ca616cdec70e40" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.ContrattoJson.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="23" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1a72547c7a6b9d52ef889f6e9c33872df0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.ContrattoJson.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="24" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1af4639dcc0a2e1dffde16f8e845032ac9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties" kindref="compound">Properties</ref></type>
+        <definition>Properties _3_BlockChainMenu.SmartContract.ContrattoJson.Properties</definition>
+        <argsstring></argsstring>
+        <name>Properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="25" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="21" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="20" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1af4639dcc0a2e1dffde16f8e845032ac9" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::ContrattoJson</scope><name>Properties</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1ad506d3ca31f1e2ad9c61925851b0450f" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::ContrattoJson</scope><name>Schema</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1ab8e0ec76318b39bbc2ca616cdec70e40" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::ContrattoJson</scope><name>Title</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_contratto_json_1a72547c7a6b9d52ef889f6e9c33872df0" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::ContrattoJson</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

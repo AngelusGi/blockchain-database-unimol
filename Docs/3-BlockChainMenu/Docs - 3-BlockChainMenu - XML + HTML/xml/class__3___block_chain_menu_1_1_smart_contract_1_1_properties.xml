@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_smart_contract_1_1_properties" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::SmartContract::Properties</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1ab27c465e348a272ee61b54467f96f76d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata" kindref="compound">Validationdata</ref></type>
+        <definition>Validationdata _3_BlockChainMenu.SmartContract.Properties.ValidationData</definition>
+        <argsstring></argsstring>
+        <name>ValidationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="30" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1ad5c64c8d750115e1f257f4fe4f91c5bf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_smart_contract_1_1_clause" kindref="compound">Clause</ref></type>
+        <definition>Clause _3_BlockChainMenu.SmartContract.Properties.Clause</definition>
+        <argsstring></argsstring>
+        <name>Clause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="31" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1a44029fe9db886cb04f63d615938b423c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_smart_contract_1_1_revision" kindref="compound">Revision</ref></type>
+        <definition>Revision _3_BlockChainMenu.SmartContract.Properties.Revision</definition>
+        <argsstring></argsstring>
+        <name>Revision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="32" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="29" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="28" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1ad5c64c8d750115e1f257f4fe4f91c5bf" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Properties</scope><name>Clause</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1a44029fe9db886cb04f63d615938b423c" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Properties</scope><name>Revision</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_properties_1ab27c465e348a272ee61b54467f96f76d" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Properties</scope><name>ValidationData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

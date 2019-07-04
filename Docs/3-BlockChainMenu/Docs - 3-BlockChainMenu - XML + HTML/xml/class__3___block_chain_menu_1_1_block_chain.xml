@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_block_chain" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::BlockChain</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_block_chain_1a84803ca4c06905dc9b784a730d2d59eb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref> &gt;</type>
+        <definition>IList&lt;Utente&gt; _3_BlockChainMenu.BlockChain.Utenti</definition>
+        <argsstring></argsstring>
+        <name>Utenti</name>
+        <briefdescription>
+<para>Lista di utenti partecipanti alla blockchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="17" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_block_chain_1a3c223f669021fb102be6fb6e76fc757f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class__3___block_chain_menu_1_1_blocco" kindref="compound">Blocco</ref> &gt;</type>
+        <definition>IList&lt;Blocco&gt; _3_BlockChainMenu.BlockChain.Catena</definition>
+        <argsstring></argsstring>
+        <name>Catena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="23" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_block_chain_1a31303b2253c8ce939d40048d6f656478" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int _3_BlockChainMenu.BlockChain.Difficoltà</definition>
+        <argsstring></argsstring>
+        <name>Difficoltà</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Sistema per aumentare la complessità dei calcoli necessari per validare la blockchain all&apos;aumentare della dimensione (Proof of Work) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The difficoltà.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="28" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_block_chain_1a404fd655b21a03a3d17221804d3aaa2a" prot="public" static="no" mutable="no">
+        <type>IList&lt; <ref refid="class__3___block_chain_menu_1_1_transazione" kindref="compound">Transazione</ref> &gt;</type>
+        <definition>IList&lt;Transazione&gt; _3_BlockChainMenu.BlockChain.TransazioniInAttesa</definition>
+        <argsstring></argsstring>
+        <name>TransazioniInAttesa</name>
+        <initializer>= new List&lt;<ref refid="class__3___block_chain_menu_1_1_transazione" kindref="compound">Transazione</ref>&gt;()</initializer>
+        <briefdescription>
+<para>gestisce le transazioni che devono ancora essere processate (minate) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="20" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_block_chain_1af55e8e38b2d55aebed576fb7f655011b" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int _3_BlockChainMenu.BlockChain.Ricompensa</definition>
+        <argsstring></argsstring>
+        <name>Ricompensa</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Con le transazioni si introduce il concetto di ricompensa, 1 moneta (UniMolCoin) per il lavoro svolto </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="32" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a8adc51cfb9f2f983e73964cc88a962cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_3_BlockChainMenu.BlockChain.BlockChain</definition>
+        <argsstring>()</argsstring>
+        <name>BlockChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="42" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a460beaced8b88080b309a8016e9f93ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.BlockChain.InizializzaCatena</definition>
+        <argsstring>()</argsstring>
+        <name>InizializzaCatena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="54" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="54" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a86b9fdcb101bec19084738c185852486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.BlockChain.AggiungiBloccoIniziale</definition>
+        <argsstring>()</argsstring>
+        <name>AggiungiBloccoIniziale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="61" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a35f9e42dd9d6bd0198abf89b7b737acf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__3___block_chain_menu_1_1_blocco" kindref="compound">Blocco</ref></type>
+        <definition>Blocco _3_BlockChainMenu.BlockChain.CreaBloccoIniziale</definition>
+        <argsstring>()</argsstring>
+        <name>CreaBloccoIniziale</name>
+        <briefdescription>
+<para>Nel caso in cui la catena fosse vuota, si occupa di generare un primo blocco </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Il primo blocco della blockchain</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="71" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a1d038c3edb56d32ae3cbc13ed5bfc483" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__3___block_chain_menu_1_1_blocco" kindref="compound">Blocco</ref></type>
+        <definition>Blocco _3_BlockChainMenu.BlockChain.GetUltimoBlocco</definition>
+        <argsstring>()</argsstring>
+        <name>GetUltimoBlocco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="80" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1aa1d5f7faa5dee540c3be1529383725c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.BlockChain.AggiungiBlocco</definition>
+        <argsstring>(Blocco blocco)</argsstring>
+        <name>AggiungiBlocco</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_blocco" kindref="compound">Blocco</ref></type>
+          <declname>blocco</declname>
+        </param>
+        <briefdescription>
+<para>Si aggancia all&apos;ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blocco</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class__3___block_chain_menu_1_1_blocco" kindref="compound">Blocco</ref> della catena generato dal costruttore</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="90" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="90" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a52865fda6c6a80bd96e11aa568c43b21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+        <definition>Utente _3_BlockChainMenu.BlockChain.RicercaUtente</definition>
+        <argsstring>(string nome)</argsstring>
+        <name>RicercaUtente</name>
+        <param>
+          <type>string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+<para>Ricerca un utente all&apos;interno della lista degli utenti. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome utente.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Oggetto di tipo utente</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="122" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="122" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1ac08bea4dc3b79e5e64a6119a993541cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+        <definition>Utente _3_BlockChainMenu.BlockChain.RicercaUtente</definition>
+        <argsstring>(int? idUtente)</argsstring>
+        <name>RicercaUtente</name>
+        <param>
+          <type>int?</type>
+          <declname>idUtente</declname>
+        </param>
+        <briefdescription>
+<para>Ricerca un utente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idUtente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID univoco dell&apos;utente.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Oggetto di tipo utentea</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="149" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="149" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1aee283a97a5024b2e60bca190ccfc3426" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool _3_BlockChainMenu.BlockChain.VerificaUtente</definition>
+        <argsstring>(string nome)</argsstring>
+        <name>VerificaUtente</name>
+        <param>
+          <type>string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+<para>Verifica l&apos;esistenza dell&apos;utente all&apos;interno della lista degli utenti. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome dell&apos;utente da verificare.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref> esiste (true/false)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="175" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="175" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a3f65a6234ebbd1ce41107a825eaa807a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.BlockChain.AggiornaSaldoUtenti</definition>
+        <argsstring>()</argsstring>
+        <name>AggiornaSaldoUtenti</name>
+        <briefdescription>
+<para>Aggiorna il portafogli di tutti gli utenti appartenenti alla blockchain </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="195" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="195" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1ae67adbf0a4872de6aebf28df6d1b5395" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.BlockChain.CreaTransazione</definition>
+        <argsstring>(Transazione transazione)</argsstring>
+        <name>CreaTransazione</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_transazione" kindref="compound">Transazione</ref></type>
+          <declname>transazione</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="223" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a4c6ad6b4f911a2e7bbd4323b2384b8c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.BlockChain.MinaTransazioni</definition>
+        <argsstring>(Utente miner)</argsstring>
+        <name>MinaTransazioni</name>
+        <param>
+          <type><ref refid="class__3___block_chain_menu_1_1_utente" kindref="compound">Utente</ref></type>
+          <declname>miner</declname>
+        </param>
+        <briefdescription>
+<para>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>miner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prende un oggetto di tipo utente (miner)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="232" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="232" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1afea654e85bd242c1d8a38596a66ca4da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool _3_BlockChainMenu.BlockChain.IsValido</definition>
+        <argsstring>()</argsstring>
+        <name>IsValido</name>
+        <briefdescription>
+<para>Scorre tutta la catena e ricalcola a runtime l&apos;hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente. Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Restituisce lo stato di validità di un blocco</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="261" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_block_chain_1a6ddd80019bdc8d23e648753ffd78a1c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int _3_BlockChainMenu.BlockChain.AggiornaBilancio</definition>
+        <argsstring>()</argsstring>
+        <name>AggiornaBilancio</name>
+        <briefdescription>
+<para>Restituisce il numero totale di coin in circolazione </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Num monete</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="271" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="271" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe che, per mezzo di una lista, si occupa di emulare il funzionamento della blockchain </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" line="13" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/BlockChain.cs" bodystart="12" bodyend="285"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a6ddd80019bdc8d23e648753ffd78a1c9" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>AggiornaBilancio</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a3f65a6234ebbd1ce41107a825eaa807a" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>AggiornaSaldoUtenti</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1aa1d5f7faa5dee540c3be1529383725c4" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>AggiungiBlocco</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a86b9fdcb101bec19084738c185852486" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>AggiungiBloccoIniziale</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a8adc51cfb9f2f983e73964cc88a962cf" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>BlockChain</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a3c223f669021fb102be6fb6e76fc757f" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>Catena</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a35f9e42dd9d6bd0198abf89b7b737acf" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>CreaBloccoIniziale</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1ae67adbf0a4872de6aebf28df6d1b5395" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>CreaTransazione</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a31303b2253c8ce939d40048d6f656478" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>Difficoltà</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a1d038c3edb56d32ae3cbc13ed5bfc483" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>GetUltimoBlocco</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a460beaced8b88080b309a8016e9f93ec" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>InizializzaCatena</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1afea654e85bd242c1d8a38596a66ca4da" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>IsValido</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a4c6ad6b4f911a2e7bbd4323b2384b8c0" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>MinaTransazioni</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a52865fda6c6a80bd96e11aa568c43b21" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>RicercaUtente</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1ac08bea4dc3b79e5e64a6119a993541cd" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>RicercaUtente</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1af55e8e38b2d55aebed576fb7f655011b" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>Ricompensa</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a404fd655b21a03a3d17221804d3aaa2a" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>TransazioniInAttesa</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1a84803ca4c06905dc9b784a730d2d59eb" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>Utenti</name></member>
+      <member refid="class__3___block_chain_menu_1_1_block_chain_1aee283a97a5024b2e60bca190ccfc3426" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::BlockChain</scope><name>VerificaUtente</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::SmartContract::Clause</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a9e8a66cec33ebd748f88ac00a2fd093f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.Clause.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="41" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a9af95fb85d20ce714af7c754ba63a43b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.Clause.IdContract</definition>
+        <argsstring></argsstring>
+        <name>IdContract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="42" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1ac974a4aa60c608f562fe5737b20d070f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.Clause.TransactionContract</definition>
+        <argsstring></argsstring>
+        <name>TransactionContract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="43" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a6fc597d271d0470f2981d97cf9ee2ad6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.Clause.DoubleSpendingContract</definition>
+        <argsstring></argsstring>
+        <name>DoubleSpendingContract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="44" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a2f6466071f84be01878b7a3615adaa99" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.SmartContract.Clause.BalanceCheck</definition>
+        <argsstring></argsstring>
+        <name>BalanceCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="45" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="40" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="39" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a2f6466071f84be01878b7a3615adaa99" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Clause</scope><name>BalanceCheck</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a9e8a66cec33ebd748f88ac00a2fd093f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Clause</scope><name>Description</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a6fc597d271d0470f2981d97cf9ee2ad6" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Clause</scope><name>DoubleSpendingContract</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1a9af95fb85d20ce714af7c754ba63a43b" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Clause</scope><name>IdContract</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause_1ac974a4aa60c608f562fe5737b20d070f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Clause</scope><name>TransactionContract</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

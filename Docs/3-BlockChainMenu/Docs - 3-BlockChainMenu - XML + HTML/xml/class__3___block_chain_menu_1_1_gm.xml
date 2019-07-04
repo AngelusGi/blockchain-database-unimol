@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_gm" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::Gm</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_gm_1a2a569bcf8e0767e9b6fb9509fab9a484" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Gm.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="92" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_gm_1ad81dba755e3c36d8b8ede599c88d0fcf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Gm.Matricola</definition>
+        <argsstring></argsstring>
+        <name>Matricola</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="93" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="93" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" line="91" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Candidati.cs" bodystart="90" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_gm_1ad81dba755e3c36d8b8ede599c88d0fcf" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Gm</scope><name>Matricola</name></member>
+      <member refid="class__3___block_chain_menu_1_1_gm_1a2a569bcf8e0767e9b6fb9509fab9a484" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Gm</scope><name>Name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

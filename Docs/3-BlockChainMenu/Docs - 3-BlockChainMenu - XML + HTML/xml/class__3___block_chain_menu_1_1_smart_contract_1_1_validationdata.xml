@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::SmartContract::Validationdata</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1a17c131e6e06fae32167d269b3a61cbdd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.Validationdata.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="37" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1a19e39c5ee2a644d046c9ee1d0623ab46" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.Validationdata.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="38" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1ad551a6f981d5ca1000ba30228d335e1e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.SmartContract.Validationdata.Datetime</definition>
+        <argsstring></argsstring>
+        <name>Datetime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="39" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" line="36" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/SmartContract.cs" bodystart="35" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1ad551a6f981d5ca1000ba30228d335e1e" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Validationdata</scope><name>Datetime</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1a19e39c5ee2a644d046c9ee1d0623ab46" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Validationdata</scope><name>Description</name></member>
+      <member refid="class__3___block_chain_menu_1_1_smart_contract_1_1_validationdata_1a17c131e6e06fae32167d269b3a61cbdd" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::SmartContract::Validationdata</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

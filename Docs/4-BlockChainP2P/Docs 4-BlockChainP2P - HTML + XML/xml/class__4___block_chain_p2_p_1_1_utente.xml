@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_utente" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Utente</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_utente_1ad364e173ae0e330a59210c6b8f84c039" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Utente.Nome</definition>
+        <argsstring></argsstring>
+        <name>Nome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nome dell&apos;utente. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="19" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_utente_1af6154193a2e4986751aeb2ffa498fddb" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>internal Stack&lt; <ref refid="class__4___block_chain_p2_p_1_1_moneta" kindref="compound">Moneta</ref> &gt;</type>
+        <definition>internal Stack&lt;Moneta&gt; _4_BlockChainP2P.Utente.Saldo</definition>
+        <argsstring></argsstring>
+        <name>Saldo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saldo del portafogli dell&apos;utente. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="28" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_utente_1a7b128019f9605a0dd9339a8a2bd21dcf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? _4_BlockChainP2P.Utente.IdUnivoco</definition>
+        <argsstring></argsstring>
+        <name>IdUnivoco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Numero identificativo univoco dell&apos;utente. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="37" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_utente_1a3f893dec5b22396f8043ad6a854cc4eb" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int _4_BlockChainP2P.Utente.NumMoneteIniziale</definition>
+        <argsstring></argsstring>
+        <name>NumMoneteIniziale</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="40" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_utente_1a1f06d6fb1355d056bc2ef7a7d024ed10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_4_BlockChainP2P.Utente.Utente</definition>
+        <argsstring>(string nome)</argsstring>
+        <name>Utente</name>
+        <param>
+          <type>string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+<para>Costruttore classe utente. In fase di inizializzazione IdUnivoco è imposto a null. Il saldo iniziale per ogni utente è pari a 10 monete. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome dell&apos;utente</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="50" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_utente_1a3ec9de5a0a3c160865871c12e1db37c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Utente.CreaPortafogli</definition>
+        <argsstring>()</argsstring>
+        <name>CreaPortafogli</name>
+        <briefdescription>
+<para>Crea un portafogli iniziale pari a 10 monete. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="63" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="63" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe che gestisce gli utenti della blockchain </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" line="12" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Utente.cs" bodystart="11" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_utente_1a3ec9de5a0a3c160865871c12e1db37c8" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Utente</scope><name>CreaPortafogli</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_utente_1a7b128019f9605a0dd9339a8a2bd21dcf" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Utente</scope><name>IdUnivoco</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_utente_1ad364e173ae0e330a59210c6b8f84c039" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Utente</scope><name>Nome</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_utente_1a3f893dec5b22396f8043ad6a854cc4eb" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Utente</scope><name>NumMoneteIniziale</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_utente_1af6154193a2e4986751aeb2ffa498fddb" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Utente</scope><name>Saldo</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_utente_1a1f06d6fb1355d056bc2ef7a7d024ed10" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Utente</scope><name>Utente</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

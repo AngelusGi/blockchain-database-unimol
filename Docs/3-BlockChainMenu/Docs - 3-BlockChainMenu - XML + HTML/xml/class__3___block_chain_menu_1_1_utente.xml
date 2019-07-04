@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_utente" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::Utente</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_utente_1abe0b3897d9b76130aadf2bd97ca805e8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Utente.Nome</definition>
+        <argsstring></argsstring>
+        <name>Nome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nome dell&apos;utente. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="17" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_utente_1a1745f1432a9c76c1ba43117c95c74f7e" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>internal Stack&lt; <ref refid="class__3___block_chain_menu_1_1_moneta" kindref="compound">Moneta</ref> &gt;</type>
+        <definition>internal Stack&lt;Moneta&gt; _3_BlockChainMenu.Utente.Saldo</definition>
+        <argsstring></argsstring>
+        <name>Saldo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saldo del portafogli dell&apos;utente. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="26" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_utente_1a1e174bcf6728e7df4fd06b41f21574f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? _3_BlockChainMenu.Utente.IdUnivoco</definition>
+        <argsstring></argsstring>
+        <name>IdUnivoco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Numero identificativo univoco dell&apos;utente. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="35" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_utente_1a73f330c7c2724ea206709bc25ec34be6" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int _3_BlockChainMenu.Utente.NumMoneteIniziale</definition>
+        <argsstring></argsstring>
+        <name>NumMoneteIniziale</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="38" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_utente_1a022f5272745c01f7d2e3e7a171f69bff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_3_BlockChainMenu.Utente.Utente</definition>
+        <argsstring>(string nome)</argsstring>
+        <name>Utente</name>
+        <param>
+          <type>string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+<para>Costruttore classe utente. In fase di inizializzazione IdUnivoco è imposto a null. Il saldo iniziale per ogni utente è pari a 10 monete. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome dell&apos;utente</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="48" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_utente_1a7925b5a7ac61585d764e6fa439d932d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.Utente.CreaPortafogli</definition>
+        <argsstring>()</argsstring>
+        <name>CreaPortafogli</name>
+        <briefdescription>
+<para>Crea un portafogli iniziale pari a 10 monete. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="61" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="61" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe che gestisce gli utenti della blockchain </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" line="10" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Utente.cs" bodystart="9" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_utente_1a7925b5a7ac61585d764e6fa439d932d0" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Utente</scope><name>CreaPortafogli</name></member>
+      <member refid="class__3___block_chain_menu_1_1_utente_1a1e174bcf6728e7df4fd06b41f21574f8" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Utente</scope><name>IdUnivoco</name></member>
+      <member refid="class__3___block_chain_menu_1_1_utente_1abe0b3897d9b76130aadf2bd97ca805e8" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Utente</scope><name>Nome</name></member>
+      <member refid="class__3___block_chain_menu_1_1_utente_1a73f330c7c2724ea206709bc25ec34be6" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Utente</scope><name>NumMoneteIniziale</name></member>
+      <member refid="class__3___block_chain_menu_1_1_utente_1a1745f1432a9c76c1ba43117c95c74f7e" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Utente</scope><name>Saldo</name></member>
+      <member refid="class__3___block_chain_menu_1_1_utente_1a022f5272745c01f7d2e3e7a171f69bff" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Utente</scope><name>Utente</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

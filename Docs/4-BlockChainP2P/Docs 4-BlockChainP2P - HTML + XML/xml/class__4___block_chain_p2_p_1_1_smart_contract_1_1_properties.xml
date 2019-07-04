@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::SmartContract::Properties</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a49efc4ae262c38c9d34db015de055252" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_validation_data" kindref="compound">ValidationData</ref></type>
+        <definition>ValidationData _4_BlockChainP2P.SmartContract.Properties.ValidationData</definition>
+        <argsstring></argsstring>
+        <name>ValidationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="28" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a14695ca4d5ba8dffacee88cce1d556b6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_clause" kindref="compound">Clause</ref></type>
+        <definition>Clause _4_BlockChainP2P.SmartContract.Properties.Clause</definition>
+        <argsstring></argsstring>
+        <name>Clause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="29" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a170f78231f111f23f847dad48c1f0f53" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_revision" kindref="compound">Revision</ref></type>
+        <definition>Revision _4_BlockChainP2P.SmartContract.Properties.Revision</definition>
+        <argsstring></argsstring>
+        <name>Revision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="30" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" line="27" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/SmartContract.cs" bodystart="26" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a14695ca4d5ba8dffacee88cce1d556b6" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Properties</scope><name>Clause</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a170f78231f111f23f847dad48c1f0f53" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Properties</scope><name>Revision</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_smart_contract_1_1_properties_1a49efc4ae262c38c9d34db015de055252" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::SmartContract::Properties</scope><name>ValidationData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

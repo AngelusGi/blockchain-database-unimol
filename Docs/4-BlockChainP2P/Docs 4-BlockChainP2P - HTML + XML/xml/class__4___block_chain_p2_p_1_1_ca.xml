@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_ca" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Ca</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_ca_1ac8366aee7af102a57e083112977e41a4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Ca.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="86" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_ca_1aa9f710848fa21ad24fd8525109a6fbe2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Ca.Matricola</definition>
+        <argsstring></argsstring>
+        <name>Matricola</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="87" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" line="85" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Candidati.cs" bodystart="84" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_ca_1aa9f710848fa21ad24fd8525109a6fbe2" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Ca</scope><name>Matricola</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_ca_1ac8366aee7af102a57e083112977e41a4" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Ca</scope><name>Name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

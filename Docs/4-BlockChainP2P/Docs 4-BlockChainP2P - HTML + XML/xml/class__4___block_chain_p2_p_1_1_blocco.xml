@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_blocco" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Blocco</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_blocco_1adcfbaf555377cf48b11862ed968c4202" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Blocco.Indice</definition>
+        <argsstring></argsstring>
+        <name>Indice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID del blocco della catena</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="27" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_blocco_1ade1af497f2e034914005ac91706fd475" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime _4_BlockChainP2P.Blocco.DataOra</definition>
+        <argsstring></argsstring>
+        <name>DataOra</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets or sets the data ora di creazione del blocco con precisione fino a ms</para>
+<para>The data ora.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="35" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_blocco_1a95b4b0447ec9cc5259998fdb202790af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Blocco.HashPrecedente</definition>
+        <argsstring></argsstring>
+        <name>HashPrecedente</name>
+        <briefdescription>
+<para>Chiave di cifratura del blocco precedente. Gets or sets the hash precedente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash precedente.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="40" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_blocco_1a40d62dd757a998424a3a7624d1ed9adf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Blocco.HashBloccoCorrente</definition>
+        <argsstring></argsstring>
+        <name>HashBloccoCorrente</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>chiave di cifratura del blocco precedente. Gets or sets the hash blocco corrente. </para>
+<para>The hash blocco corrente.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="49" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_blocco_1ae5b3546cfcae9b5cf424286a33c8c685" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IList&lt; <ref refid="class__4___block_chain_p2_p_1_1_transazione" kindref="compound">Transazione</ref> &gt;</type>
+        <definition>IList&lt;Transazione&gt; _4_BlockChainP2P.Blocco.Transazioni</definition>
+        <argsstring></argsstring>
+        <name>Transazioni</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="51" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_blocco_1aebe7f0c519b3a8a95f8133cdba7c8a81" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Blocco.Nonce</definition>
+        <argsstring></argsstring>
+        <name>Nonce</name>
+        <briefdescription>
+<para>Assicura che i dati scambiati non possano alterati (cfr. Nonce Cryptography <ulink url="https://it.wikipedia.org/wiki/Nonce">https://it.wikipedia.org/wiki/Nonce</ulink> . Gets or sets the nonce. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The nonce.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="58" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_blocco_1aa6ae39d80fda607b08d3333754125878" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_4_BlockChainP2P.Blocco.Blocco</definition>
+        <argsstring>(DateTime dataOra, string hashPrecedente, IList&lt; Transazione &gt; transazioni)</argsstring>
+        <name>Blocco</name>
+        <param>
+          <type>DateTime</type>
+          <declname>dataOra</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hashPrecedente</declname>
+        </param>
+        <param>
+          <type>IList&lt; <ref refid="class__4___block_chain_p2_p_1_1_transazione" kindref="compound">Transazione</ref> &gt;</type>
+          <declname>transazioni</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="65" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_blocco_1a7d28642fd82aa844b5a678c5c5cd8958" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string _4_BlockChainP2P.Blocco.CalcolaHash</definition>
+        <argsstring>()</argsstring>
+        <name>CalcolaHash</name>
+        <briefdescription>
+<para>Calcola l&apos;hash del blocco basandosi su SHA512 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Impronta digitale del blocco</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="80" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_blocco_1a1893c7982804f983a7d68967af6db3f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _4_BlockChainP2P.Blocco.Mina</definition>
+        <argsstring>(int difficoltà)</argsstring>
+        <name>Mina</name>
+        <param>
+          <type>int</type>
+          <declname>difficoltà</declname>
+        </param>
+        <briefdescription>
+<para>Calcola l&apos;hash per veificare la validità di un blocco </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>difficoltà</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Difficoltà dei calcoli necessari per validare la blockchain.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="97" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="97" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe che si occupa di gestire il singolo blocco della catena </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" line="20" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Blocco.cs" bodystart="19" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1aa6ae39d80fda607b08d3333754125878" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>Blocco</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1a7d28642fd82aa844b5a678c5c5cd8958" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>CalcolaHash</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1ade1af497f2e034914005ac91706fd475" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>DataOra</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1a40d62dd757a998424a3a7624d1ed9adf" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>HashBloccoCorrente</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1a95b4b0447ec9cc5259998fdb202790af" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>HashPrecedente</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1adcfbaf555377cf48b11862ed968c4202" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>Indice</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1a1893c7982804f983a7d68967af6db3f2" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>Mina</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1aebe7f0c519b3a8a95f8133cdba7c8a81" prot="private" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>Nonce</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_blocco_1ae5b3546cfcae9b5cf424286a33c8c685" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Blocco</scope><name>Transazioni</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

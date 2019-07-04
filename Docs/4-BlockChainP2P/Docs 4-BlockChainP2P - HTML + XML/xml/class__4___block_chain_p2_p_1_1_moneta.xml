@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__4___block_chain_p2_p_1_1_moneta" kind="class" language="C#" prot="public">
+    <compoundname>_4_BlockChainP2P::Moneta</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class__4___block_chain_p2_p_1_1_moneta_1a49cd9bce84da3651838045f3a2e26029" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int _4_BlockChainP2P.Moneta.Valore</definition>
+        <argsstring></argsstring>
+        <name>Valore</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="12" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_moneta_1a9855afae13c4bcad6db88afeca329011" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? _4_BlockChainP2P.Moneta.IdVecchioProprietario</definition>
+        <argsstring></argsstring>
+        <name>IdVecchioProprietario</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="14" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_moneta_1a23ebcc32e2702624d15692e2b1ec8c7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Moneta.IdAttualeProprietario</definition>
+        <argsstring></argsstring>
+        <name>IdAttualeProprietario</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="16" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class__4___block_chain_p2_p_1_1_moneta_1a6c462774dac32a2630914db86b8bac76" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int _4_BlockChainP2P.Moneta.IdMoneta</definition>
+        <argsstring></argsstring>
+        <name>IdMoneta</name>
+        <briefdescription>
+<para>Codice identificativo della moneta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Codice hash della moneta (int) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="27" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_moneta_1a5febd0833fc0a72aed9c24cb3bd4f0b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_4_BlockChainP2P.Moneta.Moneta</definition>
+        <argsstring>(int idAttualeProprietario)</argsstring>
+        <name>Moneta</name>
+        <param>
+          <type>int</type>
+          <declname>idAttualeProprietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="31" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class__4___block_chain_p2_p_1_1_moneta_1aec13c2c8cf5615b3c2e331cd9ff07c71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool _4_BlockChainP2P.Moneta.TrasferisciMoneta</definition>
+        <argsstring>(int idNuovoProprietario)</argsstring>
+        <name>TrasferisciMoneta</name>
+        <param>
+          <type>int</type>
+          <declname>idNuovoProprietario</declname>
+        </param>
+        <briefdescription>
+<para>Trasferisce la moneta dal proprietario al destinatario della transazione. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idNuovoProprietario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identificativo dell&apos;utente a cui deve essere inviata.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Trasferimento effettuato con successo (bool)</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="47" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="47" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe per gestire la moneta </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" line="7" column="1" bodyfile="blockchain-database-unimol/4-BlockChainP2P/Moneta.cs" bodystart="6" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class__4___block_chain_p2_p_1_1_moneta_1a23ebcc32e2702624d15692e2b1ec8c7f" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Moneta</scope><name>IdAttualeProprietario</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_moneta_1a6c462774dac32a2630914db86b8bac76" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Moneta</scope><name>IdMoneta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_moneta_1a9855afae13c4bcad6db88afeca329011" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Moneta</scope><name>IdVecchioProprietario</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_moneta_1a5febd0833fc0a72aed9c24cb3bd4f0b8" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Moneta</scope><name>Moneta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_moneta_1aec13c2c8cf5615b3c2e331cd9ff07c71" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Moneta</scope><name>TrasferisciMoneta</name></member>
+      <member refid="class__4___block_chain_p2_p_1_1_moneta_1a49cd9bce84da3651838045f3a2e26029" prot="public" virt="non-virtual"><scope>_4_BlockChainP2P::Moneta</scope><name>Valore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
