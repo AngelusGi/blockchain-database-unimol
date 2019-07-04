@@ -4,6 +4,19 @@ using Newtonsoft.Json;
 
 namespace _4_BlockChainP2P
 {
+
+    /// <summary>Gestione Opzioni Menù</summary>
+    internal enum OpzioniMenu
+    {
+        Annulla,
+        AggiungiTransazione,
+        MostraBlockChain,
+        MostraSmartContract,
+        VerificaSaldo,
+        UrlServer,
+        Esci
+    
+}
     internal class Menu
     {
 
@@ -13,14 +26,6 @@ namespace _4_BlockChainP2P
         public static int Porta = 0;
         public static P2PServer Server = null;
         public static P2PClient Client = new P2PClient();
-
-        private const int Esci = 6;
-        private const int AggiungiTransazione = 1;
-        private const int MostraBlockchain = 2;
-        private const int MostraSmartContract = 3;
-        private const int VerificaSaldo = 4;
-        private const int UrlServer = 5;
-        private const int Annulla = 0;
 
         private string _risposta;
         private int _numUtentiTest;
@@ -109,7 +114,7 @@ namespace _4_BlockChainP2P
                 _risposta = Console.ReadLine();
                 Console.WriteLine();
 
-            } while (!Annulla.ToString().Equals(_risposta));
+            } while (!((int)OpzioniMenu.Annulla).ToString().Equals(_risposta));
 
 
             //se non ci sono almeno 3 utenti, crea il numero di utenti necessario per raggiungere la quota minima
@@ -142,7 +147,7 @@ namespace _4_BlockChainP2P
         private void GestioneMenu()
         {
 
-            int selezione = Annulla;
+            int selezione = (int) OpzioniMenu.Annulla;
 
             do
             {
@@ -151,12 +156,12 @@ namespace _4_BlockChainP2P
                 ColoreTitoli();
                 Console.WriteLine("\n\t*** MENU UNIMOL COIN ***");
                 Console.WriteLine("\t=========================");
-                Console.WriteLine($"\t{AggiungiTransazione}. Aggiungere una transazione.");
-                Console.WriteLine($"\t{MostraBlockchain}. Mostra la BlockChain.");
-                Console.WriteLine($"\t{MostraSmartContract}. Mostra lo SmartContract di UniMol Coin.");
-                Console.WriteLine($"\t{VerificaSaldo}. Verifica saldo di uno specifico utente.");
-                Console.WriteLine($"\t{UrlServer}. Connessione al server.");
-                Console.WriteLine($"\t{Esci}. Esci.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.AggiungiTransazione}. Aggiungere una transazione.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.MostraBlockChain}. Mostra la BlockChain.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.MostraSmartContract}. Mostra lo SmartContract di UniMol Coin.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.VerificaSaldo}. Verifica saldo di uno specifico utente.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.UrlServer}. Connessione al server.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.Esci}. Esci.");
                 Console.WriteLine("\t=========================");
                 ColoreNormale();
                 Console.Write("\tInserisci una scelta: ");
@@ -184,12 +189,12 @@ namespace _4_BlockChainP2P
                     switch (selezione)
                     {
 
-                        case UrlServer:
+                        case (int)OpzioniMenu.UrlServer:
                             Console.WriteLine("*** CONNESSIONE AL SERVER ***");
-                            Console.WriteLine($"Per favore, inserisci l'URL del server ({Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci l'URL del server ({(int)OpzioniMenu.Annulla} per annullare)");
                             string serverUrl = Console.ReadLine();
 
-                            if (Annulla.ToString().Equals(serverUrl))
+                            if (((int)OpzioniMenu.Annulla).ToString().Equals(serverUrl))
                             {
                                 break;
                             }
@@ -199,35 +204,35 @@ namespace _4_BlockChainP2P
                             break;
 
 
-                        case AggiungiTransazione:
+                        case (int)OpzioniMenu.AggiungiTransazione:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** REGISTRA TRANSAZIONE ***");
                             ColoreNormale();
-                            Console.WriteLine($"Per favore, inserisci il nome del mittente ( {Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci il nome del mittente ( {(int)OpzioniMenu.Annulla} per annullare)");
 
                             string nomeMittente = Console.ReadLine();
 
-                            if ((nomeMittente == Annulla.ToString()) || (string.IsNullOrEmpty(nomeMittente)))
+                            if ((nomeMittente == ((int)OpzioniMenu.Annulla).ToString()) || (string.IsNullOrEmpty(nomeMittente)))
                             {
                                 break;
                             }
 
                             NormalizzaNome(ref nomeMittente);
 
-                            Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {(int)OpzioniMenu.Annulla} per annullare)");
                             string nomeDestinatario = Console.ReadLine();
 
-                            if ((nomeDestinatario == Annulla.ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
+                            if ((nomeDestinatario == ((int)OpzioniMenu.Annulla).ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
                             {
                                 break;
                             }
 
                             NormalizzaNome(ref nomeDestinatario);
 
-                            Console.WriteLine($"Per favore, inserisci l'importo ( {Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci l'importo ( {(int)OpzioniMenu.Annulla} per annullare)");
                             string importo = Console.ReadLine();
 
-                            if (importo == Annulla.ToString())
+                            if (importo == ((int)OpzioniMenu.Annulla).ToString())
                             {
                                 break;
                             }
@@ -279,7 +284,7 @@ namespace _4_BlockChainP2P
                             break;
 
 
-                        case MostraBlockchain:
+                        case (int)OpzioniMenu.MostraBlockChain:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** MOSTRA BLOCKCHAIN ***");
                             ColoreNormale();
@@ -290,7 +295,7 @@ namespace _4_BlockChainP2P
                             break;
 
 
-                        case MostraSmartContract:
+                        case (int)OpzioniMenu.MostraSmartContract:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** MOSTRA SMART CONTRACT ***\n");
                             ColoreRecap();
@@ -299,7 +304,7 @@ namespace _4_BlockChainP2P
                             break;
 
 
-                        case VerificaSaldo:
+                        case (int)OpzioniMenu.VerificaSaldo:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** MOSTRA SALDO UTENTE ***");
                             ColoreNormale();
@@ -326,7 +331,7 @@ namespace _4_BlockChainP2P
                             break;
 
 
-                        case Esci:
+                        case (int)OpzioniMenu.Esci:
                             ColoreAvvisi();
                             Console.WriteLine("\t\n*** Arrivederci! ***");
                             ColoreNormale();
@@ -346,12 +351,12 @@ namespace _4_BlockChainP2P
                 {
                     ColoreAvvisi();
                     Console.WriteLine("*** Errore. BlockChain non valida! ***");
-                    selezione = Esci;
+                    selezione = (int)OpzioniMenu.Esci;
                 }
 
 
 
-            } while (!Esci.Equals(selezione));
+            } while (!((int)OpzioniMenu.Esci).Equals(selezione));
 
 
             if (Client != null)

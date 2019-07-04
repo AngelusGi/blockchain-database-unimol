@@ -4,6 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>_4_BlockChainP2P</RootNamespace>
+    <Version>2.0.1</Version>
+    <Authors>Angelo Gino Varrati</Authors>
+    <Company>Angelo Gino Varrati</Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

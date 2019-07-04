@@ -4,17 +4,23 @@ using Newtonsoft.Json;
 
 namespace _3_BlockChainMenu
 {
+    /// <summary>Gestione Opzioni Menù</summary>
+    internal enum OpzioniMenu
+    {
+        Annulla,
+        AggiungiTransazione,
+        MostraBlockChain,
+        MostraSmartContract,
+        VerificaSaldo,
+        Esci
+
+    }
+
+
     internal class Menu
     {
 
         public static BlockChain UniMolCoin { get; private set; }
-
-        private const int Esci = 5;
-        private const int AggiungiTransazione = 1;
-        private const int MostraBlockchain = 2;
-        private const int MostraSmartContract = 3;
-        private const int VerificaSaldo = 4;
-        private const int Annulla = 0;
 
         private string _risposta;
         private int _numUtentiTest;
@@ -90,7 +96,7 @@ namespace _3_BlockChainMenu
                 _risposta = Console.ReadLine();
                 Console.WriteLine();
 
-            } while (!Annulla.ToString().Equals(_risposta));
+            } while (!((int)OpzioniMenu.Annulla).ToString().Equals(_risposta));
 
 
             while (UniMolCoin.Utenti.Count < 3)
@@ -117,7 +123,7 @@ namespace _3_BlockChainMenu
         private void GestioneMenu()
         {
 
-            int selezione = Annulla;
+            int selezione = (int)OpzioniMenu.Annulla;
 
             do
             {
@@ -126,11 +132,11 @@ namespace _3_BlockChainMenu
                 ColoreTitoli();
                 Console.WriteLine("\n\t*** MENU UNIMOL COIN ***");
                 Console.WriteLine("\t=========================");
-                Console.WriteLine($"\t{AggiungiTransazione}. Aggiungere una transazione.");
-                Console.WriteLine($"\t{MostraBlockchain}. Mostra la BlockChain.");
-                Console.WriteLine($"\t{MostraSmartContract}. Mostra lo SmartContract di UniMol Coin.");
-                Console.WriteLine($"\t{VerificaSaldo}. Verifica saldo di uno specifico utente.");
-                Console.WriteLine($"\t{Esci}. Esci.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.AggiungiTransazione}. Aggiungere una transazione.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.MostraBlockChain}. Mostra la BlockChain.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.MostraSmartContract}. Mostra lo SmartContract di UniMol Coin.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.VerificaSaldo}. Verifica saldo di uno specifico utente.");
+                Console.WriteLine($"\t{(int)OpzioniMenu.Esci}. Esci.");
                 Console.WriteLine("\t=========================");
                 ColoreNormale();
                 Console.Write("\tInserisci una scelta: ");
@@ -155,33 +161,33 @@ namespace _3_BlockChainMenu
                     switch (selezione)
                     {
 
-                        case AggiungiTransazione:
+                        case (int)OpzioniMenu.AggiungiTransazione:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** REGISTRA TRANSAZIONE ***");
                             ColoreNormale();
-                            Console.WriteLine($"Per favore, inserisci il nome del mittente ( {Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci il nome del mittente ( {(int)OpzioniMenu.Annulla} per annullare)");
                             string nomeMittente = Console.ReadLine();
 
-                            if ((nomeMittente == Annulla.ToString()) || (string.IsNullOrEmpty(nomeMittente)))
+                            if ((nomeMittente == ((int)OpzioniMenu.Annulla).ToString()) || (string.IsNullOrEmpty(nomeMittente)))
                             {
                                 break;
                             }
 
                             NormalizzaNome(ref nomeMittente);
 
-                            Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci il nome del destinatario ( {(int)OpzioniMenu.Annulla} per annullare)");
                             string nomeDestinatario = Console.ReadLine();
-                            if ((nomeDestinatario == Annulla.ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
+                            if ((nomeDestinatario == ((int)OpzioniMenu.Annulla).ToString()) || (string.IsNullOrEmpty(nomeDestinatario)))
                             {
                                 break;
                             }
 
                             NormalizzaNome(ref nomeDestinatario);
 
-                            Console.WriteLine($"Per favore, inserisci l'importo ( {Annulla} per annullare)");
+                            Console.WriteLine($"Per favore, inserisci l'importo ( {(int)OpzioniMenu.Annulla} per annullare)");
                             string importo = Console.ReadLine();
 
-                            if (importo == Annulla.ToString())
+                            if (importo == ((int)OpzioniMenu.Annulla).ToString())
                             {
                                 break;
                             }
@@ -230,7 +236,7 @@ namespace _3_BlockChainMenu
 
                             break;
 
-                        case MostraBlockchain:
+                        case (int)OpzioniMenu.MostraBlockChain:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** MOSTRA BLOCKCHAIN ***");
                             ColoreNormale();
@@ -240,7 +246,7 @@ namespace _3_BlockChainMenu
                             ColoreNormale();
                             break;
 
-                        case MostraSmartContract:
+                        case (int)OpzioniMenu.MostraSmartContract:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** MOSTRA SMART CONTRACT ***\n");
                             ColoreRecap();
@@ -248,7 +254,7 @@ namespace _3_BlockChainMenu
                             ColoreNormale();
                             break;
 
-                        case VerificaSaldo:
+                        case (int)OpzioniMenu.VerificaSaldo:
                             ColoreTitoli();
                             Console.WriteLine("\t\n*** MOSTRA SALDO UTENTE ***");
                             ColoreNormale();
@@ -274,7 +280,7 @@ namespace _3_BlockChainMenu
                             ColoreNormale();
                             break;
 
-                        case Esci:
+                        case (int)OpzioniMenu.Esci:
                             ColoreAvvisi();
                             Console.WriteLine("\t\n*** Arrivederci! ***");
                             ColoreNormale();
@@ -293,11 +299,11 @@ namespace _3_BlockChainMenu
                 {
                     ColoreAvvisi();
                     Console.WriteLine("*** Errore. BlockChain non valida! ***");
-                    selezione = Esci;
+                    selezione = (int)OpzioniMenu.Esci;
                 }
 
 
-            } while (!Esci.Equals(selezione));
+            } while (!((int)OpzioniMenu.Esci).Equals(selezione));
         }
 
         private void AvviaMenu()

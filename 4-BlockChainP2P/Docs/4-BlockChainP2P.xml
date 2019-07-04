@@ -71,13 +71,6 @@
             <summary>Si aggancia all'ultimo blocco disponibile e genera tutto il necessario per inserire in coda il blocco che si sta creando.</summary>
             <param name="blocco">Blocco della catena generato dal costruttore</param>
         </member>
-        <member name="M:_4_BlockChainP2P.BlockChain.IsValido">
-            <summary>
-            Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
-            Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
-            </summary>
-            <returns>Restituisce lo stato di validità di un blocco</returns>
-        </member>
         <member name="M:_4_BlockChainP2P.BlockChain.RicercaUtente(System.String)">
             <summary>
             Ricerca un utente all'interno della lista degli utenti.
@@ -106,9 +99,30 @@
             <summary>Genera un nuovo blocco e lo aggiunge alla catena al fine di validare una delle transazioni che devono essere ancora minate</summary>
             <param name="miner">Prende un oggetto di tipo utente (miner)</param>
         </member>
+        <member name="M:_4_BlockChainP2P.BlockChain.IsValido">
+            <summary>
+            Scorre tutta la catena e ricalcola a runtime l'hash del blocco che sta analizzando in quel momento e lo confronta con quello del precedente.
+            Nel caso in cui uno dei due fosse alterati (quindi mancata coincidenza degli hash) allora restituisce false e invalida la catena.
+            </summary>
+            <returns>Restituisce lo stato di validità di un blocco</returns>
+        </member>
         <member name="M:_4_BlockChainP2P.BlockChain.AggiornaBilancio">
             <summary>Restituisce il numero totale di coin in circolazione</summary>
             <returns>Num monete</returns>
+        </member>
+        <member name="M:_4_BlockChainP2P.Candidati.MostraCanidati">
+            <summary>
+            Mostra i dati candidati all'esame (nome, cognome e matricola) e nome e cognome del docente di riferimento.
+            Inoltre richiama la funzione per il parse dei JSON
+            </summary>
+        </member>
+        <member name="T:_4_BlockChainP2P.OpzioniMenu">
+            <summary>Gestione Opzioni Menù</summary>
+        </member>
+        <member name="M:_4_BlockChainP2P.Menu.Benvenuto">
+            <summary>
+            Produce l'instestazione iniziale della console e le informazioni circa i realizzatori del progetto.
+            </summary>
         </member>
         <member name="T:_4_BlockChainP2P.Moneta">
             <summary>
