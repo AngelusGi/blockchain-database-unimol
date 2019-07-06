@@ -119,6 +119,12 @@
         <member name="T:_3_BlockChainMenu.OpzioniMenu">
             <summary>Gestione Opzioni Menù</summary>
         </member>
+        <member name="M:_3_BlockChainMenu.Menu.AvviaMenu">
+            <summary>
+            Avvia il menù della blockChain e istanziando anche i relativi componenti accessori.
+            Su Windows si occupa di verificare se siano attivi CapLock e NumLock.
+            </summary>
+        </member>
         <member name="T:_3_BlockChainMenu.Moneta">
             <summary>
             Classe per gestire la moneta

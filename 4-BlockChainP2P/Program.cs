@@ -6,7 +6,7 @@ namespace _4_BlockChainP2P
     {
         private static void TemaChiaro()
         {
-            //metodo usato solo per fare gli screenshot da allegare alla documentazione
+            //metodo usato solo per fare gli screenshot da allegare alla documentazione, si attiva se compilato in modalità debug
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
         }
@@ -14,9 +14,13 @@ namespace _4_BlockChainP2P
         public static void Main()
         {
 
-            //TemaChiaro();
+#if DEBUG
+            TemaChiaro();
+#endif
 
-            new Menu();
+            var menu = new Menu();
+            menu.AvviaMenu();
+
         }
     }
 }

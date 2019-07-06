@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_program_1a2305cc39ad6a4f1b016fa3b818d72685" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Program.TemaChiaro</definition>
+        <argsstring>()</argsstring>
+        <name>TemaChiaro</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Program.cs" line="7" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Program.cs" bodystart="7" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_program_1acd835018a08e23dc74dcf97129104c78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Program.cs" line="14" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Program.cs" bodystart="14" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Program.cs" line="6" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Program.cs" bodystart="5" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_program_1acd835018a08e23dc74dcf97129104c78" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Program</scope><name>Main</name></member>
+      <member refid="class__3___block_chain_menu_1_1_program_1a2305cc39ad6a4f1b016fa3b818d72685" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Program</scope><name>TemaChiaro</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

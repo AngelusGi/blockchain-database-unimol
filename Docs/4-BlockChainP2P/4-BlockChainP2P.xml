@@ -124,6 +124,12 @@
             Produce l'instestazione iniziale della console e le informazioni circa i realizzatori del progetto.
             </summary>
         </member>
+        <member name="M:_4_BlockChainP2P.Menu.AvviaMenu">
+            <summary>
+            Avvia il menù della blockChain e istanziando anche i relativi componenti accessori.
+            Su Windows si occupa di verificare se siano attivi CapLock e NumLock.
+            </summary>
+        </member>
         <member name="T:_4_BlockChainP2P.Moneta">
             <summary>
             Classe per gestire la moneta

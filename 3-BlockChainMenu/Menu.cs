@@ -306,7 +306,11 @@ namespace _3_BlockChainMenu
             } while (!((int)OpzioniMenu.Esci).Equals(selezione));
         }
 
-        private void AvviaMenu()
+        /// <summary>
+        /// Avvia il menù della blockChain e istanziando anche i relativi componenti accessori.
+        /// Su Windows si occupa di verificare se siano attivi CapLock e NumLock.
+        /// </summary>
+        internal void AvviaMenu()
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {

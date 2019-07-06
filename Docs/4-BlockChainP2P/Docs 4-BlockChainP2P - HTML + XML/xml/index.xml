@@ -76,7 +76,7 @@
     <member refid="class__4___block_chain_p2_p_1_1_menu_1a7565a36392815265bfb05f329e848541" kind="function"><name>CreaUtenteTest</name></member>
     <member refid="class__4___block_chain_p2_p_1_1_menu_1a5f575bcb345b0f54e7649b0f917c28f6" kind="function"><name>GestioneUtenti</name></member>
     <member refid="class__4___block_chain_p2_p_1_1_menu_1ad6f26f247997ea3fc454d23358f250fe" kind="function"><name>GestioneMenu</name></member>
-    <member refid="class__4___block_chain_p2_p_1_1_menu_1a674fcdb7840e0bda9747d820f513d6bc" kind="function"><name>AvviaMenu</name></member>
+    <member refid="class__4___block_chain_p2_p_1_1_menu_1a03c809bb8a4b4b0353756aa678f0baf7" kind="function"><name>AvviaMenu</name></member>
     <member refid="class__4___block_chain_p2_p_1_1_menu_1a5c9d81c86afb63bc5e5252725f0faa37" kind="function"><name>NormalizzaNome</name></member>
     <member refid="class__4___block_chain_p2_p_1_1_menu_1aea0d5e07421eca57073ac2a1c987c26e" kind="function"><name>ColoreAvvisi</name></member>
     <member refid="class__4___block_chain_p2_p_1_1_menu_1a2c7c277e491ebca021abe9657f93629c" kind="function"><name>ColoreRecap</name></member>

@@ -40,8 +40,6 @@ namespace _4_BlockChainP2P
             UniMolCoin = new BlockChain();
             _risposta = null;
             _numUtentiTest = 0;
-
-            AvviaMenu();
         }
 
         #endregion
@@ -373,8 +371,11 @@ namespace _4_BlockChainP2P
 
         }
 
-
-        private void AvviaMenu()
+        /// <summary>
+        /// Avvia il menù della blockChain e istanziando anche i relativi componenti accessori.
+        /// Su Windows si occupa di verificare se siano attivi CapLock e NumLock.
+        /// </summary>
+        internal void AvviaMenu()
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {

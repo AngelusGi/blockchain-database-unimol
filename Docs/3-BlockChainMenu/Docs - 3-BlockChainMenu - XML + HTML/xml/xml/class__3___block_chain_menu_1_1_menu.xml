@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class__3___block_chain_menu_1_1_menu" kind="class" language="C#" prot="public">
+    <compoundname>_3_BlockChainMenu::Menu</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class__3___block_chain_menu_1_1_menu_1acd52cb8209c96cb5ad236dd6dc918b92" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class__3___block_chain_menu_1_1_block_chain" kindref="compound">BlockChain</ref></type>
+        <definition>BlockChain _3_BlockChainMenu.Menu.UniMolCoin</definition>
+        <argsstring></argsstring>
+        <name>UniMolCoin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="23" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_menu_1acd4487cc6fa18aad731f7b644a47677f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Menu._risposta</definition>
+        <argsstring></argsstring>
+        <name>_risposta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="25" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class__3___block_chain_menu_1_1_menu_1a7a9f6846bdb2eb3f8bd39a6971a3642d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _3_BlockChainMenu.Menu._numUtentiTest</definition>
+        <argsstring></argsstring>
+        <name>_numUtentiTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="26" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1aaf3b2b9e78c67525d05ddfff91fc9743" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>_3_BlockChainMenu.Menu.Menu</definition>
+        <argsstring>()</argsstring>
+        <name>Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="29" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="29" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a7827129230c8679a7c51a8af6a0d96ab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.Menu.Benvenuto</definition>
+        <argsstring>()</argsstring>
+        <name>Benvenuto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="38" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1ae69eac0104fb7214a3790bcf9ea4d46f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string _3_BlockChainMenu.Menu.CreaUtenteTest</definition>
+        <argsstring>(ref int num)</argsstring>
+        <name>CreaUtenteTest</name>
+        <param>
+          <type>ref int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="48" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a27025a69e682ebb3e5b3e67c3e135ff7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.Menu.GestioneUtenti</definition>
+        <argsstring>()</argsstring>
+        <name>GestioneUtenti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="57" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="57" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a3647414746865b4a515417690ce348d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _3_BlockChainMenu.Menu.GestioneMenu</definition>
+        <argsstring>()</argsstring>
+        <name>GestioneMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="123" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="123" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1ae2855e1609d52409cd0a1fe014d240fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void _3_BlockChainMenu.Menu.AvviaMenu</definition>
+        <argsstring>()</argsstring>
+        <name>AvviaMenu</name>
+        <briefdescription>
+<para>Avvia il menù della blockChain e istanziando anche i relativi componenti accessori. Su Windows si occupa di verificare se siano attivi CapLock e NumLock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="313" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="313" bodyend="330"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a9545b42d8393fd0d36dfdc06ee7f19ea" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Menu.NormalizzaNome</definition>
+        <argsstring>(ref string nome)</argsstring>
+        <name>NormalizzaNome</name>
+        <param>
+          <type>ref string</type>
+          <declname>nome</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="333" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="333" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a61268262d414e8f83401977ba6e5468f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Menu.ColoreAvvisi</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreAvvisi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="342" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="342" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1aa47218314949b1a44ed4778c8941468b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Menu.ColoreRecap</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreRecap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="347" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="347" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a964efd2e62be34b7096e067111086dd0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Menu.ColoreTitoli</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreTitoli</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="352" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class__3___block_chain_menu_1_1_menu_1a6bb7b0651b113d7151ce8a917792f1a9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _3_BlockChainMenu.Menu.ColoreNormale</definition>
+        <argsstring>()</argsstring>
+        <name>ColoreNormale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="357" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="357" bodyend="360"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" line="21" column="1" bodyfile="blockchain-database-unimol/3-BlockChainMenu/Menu.cs" bodystart="20" bodyend="364"/>
+    <listofallmembers>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a7a9f6846bdb2eb3f8bd39a6971a3642d" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>_numUtentiTest</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1acd4487cc6fa18aad731f7b644a47677f" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>_risposta</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1ae2855e1609d52409cd0a1fe014d240fc" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>AvviaMenu</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a7827129230c8679a7c51a8af6a0d96ab" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>Benvenuto</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a61268262d414e8f83401977ba6e5468f" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>ColoreAvvisi</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a6bb7b0651b113d7151ce8a917792f1a9" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>ColoreNormale</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1aa47218314949b1a44ed4778c8941468b" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>ColoreRecap</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a964efd2e62be34b7096e067111086dd0" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>ColoreTitoli</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1ae69eac0104fb7214a3790bcf9ea4d46f" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>CreaUtenteTest</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a3647414746865b4a515417690ce348d2" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>GestioneMenu</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a27025a69e682ebb3e5b3e67c3e135ff7" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>GestioneUtenti</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1aaf3b2b9e78c67525d05ddfff91fc9743" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>Menu</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1a9545b42d8393fd0d36dfdc06ee7f19ea" prot="private" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>NormalizzaNome</name></member>
+      <member refid="class__3___block_chain_menu_1_1_menu_1acd52cb8209c96cb5ad236dd6dc918b92" prot="public" virt="non-virtual"><scope>_3_BlockChainMenu::Menu</scope><name>UniMolCoin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
