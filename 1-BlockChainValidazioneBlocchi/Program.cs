@@ -8,10 +8,10 @@ namespace _1_BlockChainValidazioneBlocchi
     {
         private static void Main()
         {
-            DateTime tempoInizio = DateTime.Now;
+            var tempoInizio = DateTime.Now;
 
             //instanzia un oggetto che rappresenta il mining della moneta
-            BlockChain unimolCoin = new BlockChain();
+            var unimolCoin = new BlockChain();
 
             //aggiunge 4 blocchi alla blochchain con un numero di monete variabile
             unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Angelo,ricevente:Giusy,ammontare:10}"));
@@ -19,7 +19,7 @@ namespace _1_BlockChainValidazioneBlocchi
             unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Carmen,ricevente:Giusy,ammontare:5}"));
             unimolCoin.AggiungiBlocco(new Blocco(DateTime.Now, null, "{mittente:Giusy,ricevente:Carmen,ammontare:10}"));
 
-            DateTime tempoFine = DateTime.Now;
+            var tempoFine = DateTime.Now;
 
             //deserializza serializza l'oggetto in formato JSON e lo stampa
             Console.WriteLine(JsonConvert.SerializeObject(unimolCoin, Formatting.Indented));

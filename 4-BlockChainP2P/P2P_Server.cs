@@ -17,7 +17,7 @@ namespace _4_BlockChainP2P
 
         public void Start()
         {
-            int portaServer = SelezionaPorta();
+            var portaServer = SelezionaPorta();
 
             _webSocketServer = new WebSocketServer($"ws://127.0.0.1:{portaServer}");
             _webSocketServer.AddWebSocketService<P2PServer>("/Blockchain");
@@ -28,7 +28,7 @@ namespace _4_BlockChainP2P
 
         private int SelezionaPorta()
         {
-            Random portaRandom = new Random();
+            var portaRandom = new Random();
             return portaRandom.Next(MinPorta, MaxPorta);
         }
 
@@ -42,7 +42,7 @@ namespace _4_BlockChainP2P
             }
             else
             {
-                BlockChain nuovaCatena = JsonConvert.DeserializeObject<BlockChain>(evento.Data);
+                var nuovaCatena = JsonConvert.DeserializeObject<BlockChain>(evento.Data);
 
                 if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Menu.UniMolCoin.Catena.Count)
                 {

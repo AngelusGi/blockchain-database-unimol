@@ -60,7 +60,7 @@ namespace _2_BlockChainPoW
 
         public Blocco CreaBloccoIniziale()
         {
-            Blocco blocco = new Blocco(DateTime.Now, null, _transazioniInAttesa);
+            var blocco = new Blocco(DateTime.Now, null, _transazioniInAttesa);
             blocco.Mina(Difficolta);
             _transazioniInAttesa = new List<Transazione>();
             return blocco;
@@ -74,7 +74,7 @@ namespace _2_BlockChainPoW
         public void AggiungiBlocco(Blocco blocco)
         {
             //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
-            Blocco ultimoBlocco = GetUltimoBlocco();
+            var ultimoBlocco = GetUltimoBlocco();
 
             //aumenta l'indice del blocco +1 rispetto a precedente
             blocco.Indice = ultimoBlocco.Indice + 1;
@@ -98,10 +98,10 @@ namespace _2_BlockChainPoW
         {
 
             //finché ci sono blocchi
-            for (int pos = 1; pos < Catena.Count; pos++)
+            for (var pos = 1; pos < Catena.Count; pos++)
             {
-                Blocco bloccoCorrente = Catena[pos];
-                Blocco bloccoPrecedente = Catena[pos - 1];
+                var bloccoCorrente = Catena[pos];
+                var bloccoPrecedente = Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
                 if (bloccoCorrente.HashBloccoCorrente != bloccoCorrente.CalcolaHash())
@@ -128,7 +128,7 @@ namespace _2_BlockChainPoW
 
         public void GesticiTransazioniInAttesa(string indirizzoMiner)
         {
-            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, _transazioniInAttesa);
+            var blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, _transazioniInAttesa);
             AggiungiBlocco(blocco);
 
             _transazioniInAttesa = new List<Transazione>();
@@ -138,11 +138,11 @@ namespace _2_BlockChainPoW
 
         public int GetBilancio(string indirizzo)
         {
-            int bilancio = 0;
+            var bilancio = 0;
 
-            foreach (Blocco blocco in Catena)
+            foreach (var blocco in Catena)
             {
-                foreach (Transazione transazione in blocco.Transazioni)
+                foreach (var transazione in blocco.Transazioni)
                 {
                     if (transazione.IndirizzoSorgente == indirizzo)
                     {

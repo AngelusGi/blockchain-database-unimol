@@ -50,12 +50,12 @@ namespace _1_BlockChainValidazioneBlocchi
 
         public string CalcolaHash()
         {
-            SHA256 cifraturaSha256 = SHA256.Create();
+            var cifraturaSha256 = SHA256.Create();
 
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
 
-            byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
-            byte[] byteOutput = cifraturaSha256.ComputeHash(byteInput);
+            var byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
+            var byteOutput = cifraturaSha256.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
@@ -63,7 +63,7 @@ namespace _1_BlockChainValidazioneBlocchi
         public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficoltà);
+            var zeroIniziali = new string('0', difficoltà);
             while (HashAttuale == null || HashAttuale.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;

@@ -13,7 +13,7 @@ namespace _3_BlockChainMenu
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
             string jsonPath;
-            StreamReader lettoreFileJson;
+            StreamReader lettoreFileJson = null;
 
             try
             {
@@ -25,9 +25,13 @@ namespace _3_BlockChainMenu
                 jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/CandidatiTest.json" : "./3 - BlockChainMenu/Resources/CandidatiTest.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
+            finally
+            {
+                lettoreFileJson.Dispose();
+            }
 
 
-            
+
 
             _candidati = JsonConvert.DeserializeObject<CandidatiJson>(lettoreFileJson.ReadToEnd());
 

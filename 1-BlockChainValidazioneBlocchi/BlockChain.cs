@@ -56,7 +56,7 @@ namespace _1_BlockChainValidazioneBlocchi
         public void AggiungiBlocco(Blocco blocco)
         {
             //prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
-            Blocco latestBlock = GetUltimoBlocco();
+            var latestBlock = GetUltimoBlocco();
 
             //aumenta l'indice del blocco +1 rispetto a precedente
             blocco.Indice = latestBlock.Indice + 1;
@@ -79,10 +79,10 @@ namespace _1_BlockChainValidazioneBlocchi
         {
 
             //finché ci sono blocchi
-            for (int pos = 1; pos < Catena.Count; pos++)
+            for (var pos = 1; pos < Catena.Count; pos++)
             {
-                Blocco bloccoCorrente = Catena[pos];
-                Blocco bloccoPrecedente = Catena[pos - 1];
+                var bloccoCorrente = Catena[pos];
+                var bloccoPrecedente = Catena[pos - 1];
 
                 //ricalcola l'hash del blocco analizzato, se è diverso da quello memorizzato ritorna false (catena non valida)
                 if (bloccoCorrente.HashAttuale != bloccoCorrente.CalcolaHash())

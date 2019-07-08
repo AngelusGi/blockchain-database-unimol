@@ -28,7 +28,7 @@ namespace _4_BlockChainP2P
 
             if (!_webSocketDictionary.ContainsKey(url))
             {
-                WebSocket webSocket = new WebSocket(url);
+                var webSocket = new WebSocket(url);
 
                 #region Spiegazione
 
@@ -45,11 +45,11 @@ namespace _4_BlockChainP2P
                     }
                     else
                     {
-                        BlockChain nuovaCatena = JsonConvert.DeserializeObject<BlockChain>(evento.Data);
+                        var nuovaCatena = JsonConvert.DeserializeObject<BlockChain>(evento.Data);
                         if (nuovaCatena.IsValido() && nuovaCatena.Catena.Count > Menu.UniMolCoin.Catena.Count)
                         {
 
-                            List<Transazione> nuoveTransazioni = new List<Transazione>();
+                            var nuoveTransazioni = new List<Transazione>();
 
                             nuoveTransazioni.AddRange(nuovaCatena.TransazioniInAttesa);
                             nuoveTransazioni.AddRange(Menu.UniMolCoin.TransazioniInAttesa);
@@ -73,14 +73,14 @@ namespace _4_BlockChainP2P
 
         private int SelezionaPorta()
         {
-            Random portaRandom = new Random();
+            var portaRandom = new Random();
             return portaRandom.Next(MinPorta, MaxPorta);
         }
 
 
         public void Send(string url, string data)
         {
-            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 if (item.Key == url)
                 {
@@ -92,7 +92,7 @@ namespace _4_BlockChainP2P
 
         public void Broadcast(string data)
         {
-            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 item.Value.Send(data);
             }
@@ -102,7 +102,7 @@ namespace _4_BlockChainP2P
         public IList<string> GetServers()
         {
             IList<string> servers = new List<string>();
-            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 servers.Add(item.Key);
             }
@@ -112,7 +112,7 @@ namespace _4_BlockChainP2P
 
         public void Close()
         {
-            foreach (KeyValuePair<string, WebSocket> item in _webSocketDictionary)
+            foreach (var item in _webSocketDictionary)
             {
                 item.Value.Close();
             }

@@ -71,7 +71,7 @@ namespace _3_BlockChainMenu
         public Blocco CreaBloccoIniziale()
         {
             TransazioniInAttesa = new List<Transazione>();
-            Blocco blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
+            var blocco = new Blocco(DateTime.Now, null, TransazioniInAttesa);
             blocco.Mina(Difficoltà);
             return blocco;
         }
@@ -90,7 +90,7 @@ namespace _3_BlockChainMenu
         public void AggiungiBlocco(Blocco blocco)
         {
             // prende i dati inerenti al blocco precedente rispetto a quello da aggiungere
-            Blocco ultimoBlocco = GetUltimoBlocco();
+            var ultimoBlocco = GetUltimoBlocco();
 
             // aumenta l'indice del blocco +1 rispetto a precedente
             blocco.Indice = ultimoBlocco.Indice + 1;
@@ -195,14 +195,14 @@ namespace _3_BlockChainMenu
         public void AggiornaSaldoUtenti()
         {
 
-            foreach (Blocco blocco in Catena)
+            foreach (var blocco in Catena)
             {
-                foreach (Transazione transazione in blocco.Transazioni)
+                foreach (var transazione in blocco.Transazioni)
                 {
                     if (!transazione.Contabilizzata)
                     {
-                        Utente mittente = RicercaUtente(transazione.IdMittente);
-                        Utente destinatario = RicercaUtente(transazione.IdDestinatario);
+                        var mittente = RicercaUtente(transazione.IdMittente);
+                        var destinatario = RicercaUtente(transazione.IdDestinatario);
 
                         if ((transazione.IdMittente != null) && (transazione.IdMittente == mittente.IdUnivoco) && (transazione.IdDestinatario == destinatario.IdUnivoco))
                         {
@@ -236,7 +236,7 @@ namespace _3_BlockChainMenu
 
             CreaTransazione(new Transazione(null, miner, Ricompensa));
 
-            Blocco blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
+            var blocco = new Blocco(DateTime.Now, GetUltimoBlocco().HashBloccoCorrente, TransazioniInAttesa);
 
             AggiungiBlocco(blocco);
 

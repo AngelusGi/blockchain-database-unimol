@@ -79,10 +79,10 @@ namespace _4_BlockChainP2P
         #endregion
         public string CalcolaHash()
         {
-            SHA512 cifraturaSha = SHA512.Create();
+            var cifraturaSha = SHA512.Create();
 
-            byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
-            byte[] byteOutput = cifraturaSha.ComputeHash(byteInput);
+            var byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
+            var byteOutput = cifraturaSha.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
@@ -97,7 +97,7 @@ namespace _4_BlockChainP2P
         public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficoltà);
+            var zeroIniziali = new string('0', difficoltà);
             while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;

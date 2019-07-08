@@ -13,20 +13,26 @@ namespace _4_BlockChainP2P
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
             string jsonPath;
-            StreamReader lettoreFileJson;
+            StreamReader lettoreFileJson = null;
 
             try
             {
-                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/Candidati.json" : "./4 - BlockChainP2P/Resources/Candidati.json";
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                    ? "../../../Resources/Candidati.json"
+                    : "./4 - BlockChainP2P/Resources/Candidati.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             catch (Exception)
             {
-                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/CandidatiTest.json" : "./4 - BlockChainP2P/Resources/CandidatiTest.json";
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                    ? "../../../Resources/CandidatiTest.json"
+                    : "./4 - BlockChainP2P/Resources/CandidatiTest.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
-
-
+            finally
+            {
+                lettoreFileJson.Dispose();
+            }
 
 
             _candidati = JsonConvert.DeserializeObject<CandidatiJson>(lettoreFileJson.ReadToEnd());

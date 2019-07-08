@@ -8,10 +8,10 @@ namespace _2_BlockChainPoW
     {
         private static void Main()
         {
-            DateTime tempoInizio = DateTime.Now;
+            var tempoInizio = DateTime.Now;
 
             //instanzia un oggetto che rappresenta il mining della moneta
-            BlockChain unimolCoin = new BlockChain();
+            var unimolCoin = new BlockChain();
 
             #region VecchiaImplementazione_ControlloValidità
 
@@ -70,7 +70,7 @@ namespace _2_BlockChainPoW
             unimolCoin.CreaTransazione(new Transazione("Giusy", "Angelo", 5));
             unimolCoin.GesticiTransazioniInAttesa("Carmen");
 
-            DateTime tempoFine = DateTime.Now;
+            var tempoFine = DateTime.Now;
 
             Console.WriteLine($"Durata: {tempoFine - tempoInizio}");
 

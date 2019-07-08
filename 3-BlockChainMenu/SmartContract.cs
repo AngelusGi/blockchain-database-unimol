@@ -76,11 +76,11 @@ namespace _3_BlockChainMenu
         public static void Inizializza()
         {
             //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            string jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./3 - BlockChainMenu/Resources/SmartContract.json";
+            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./3 - BlockChainMenu/Resources/SmartContract.json";
 
 
 
-            using StreamReader lettoreFileJson = new StreamReader(jsonPath);
+            using var lettoreFileJson = new StreamReader(jsonPath);
 
             _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
@@ -115,11 +115,11 @@ namespace _3_BlockChainMenu
         public static bool VerificaSaldo(string nomeMittente, string nomeDestinatario, int importoTransazione)
         {
 
-            Utente mittente = UniMolCoin.RicercaUtente(nomeMittente);
+            var mittente = UniMolCoin.RicercaUtente(nomeMittente);
 
             if (mittente.Saldo.Count >= importoTransazione)
             {
-                Utente destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
+                var destinatario = UniMolCoin.RicercaUtente(nomeDestinatario);
 
                 //TrasferisciMoneta(importoTransazione, mittente, destinatario);
                 return !VerificaMonete(mittente, destinatario);
@@ -139,10 +139,10 @@ namespace _3_BlockChainMenu
         public static bool ValidaBlockchain()
         {
             //finché ci sono blocchi
-            for (int pos = 1; pos < UniMolCoin.Catena.Count; pos++)
+            for (var pos = 1; pos < UniMolCoin.Catena.Count; pos++)
             {
-                Blocco bloccoCorrente = UniMolCoin.Catena[pos];
-                Blocco bloccoPrecedente = UniMolCoin.Catena[pos - 1];
+                var bloccoCorrente = UniMolCoin.Catena[pos];
+                var bloccoPrecedente = UniMolCoin.Catena[pos - 1];
 
                 #region VecchiaImplementazione
 
@@ -201,7 +201,7 @@ namespace _3_BlockChainMenu
             #endregion
 
 
-            bool utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
+            var utenteNonPresente = UniMolCoin.Utenti.All(utenteCorrente => utenteCorrente.Nome != utente.Nome);
 
 
             if (utenteNonPresente)
@@ -237,10 +237,10 @@ namespace _3_BlockChainMenu
         #endregion
         private static bool VerificaMonete(Utente mittente, Utente ricevente)
         {
-            bool doppiaSpesa = false;
-            foreach (Moneta monetaMittente in mittente.Saldo)
+            var doppiaSpesa = false;
+            foreach (var monetaMittente in mittente.Saldo)
             {
-                foreach (Moneta monetaRicevuta in ricevente.Saldo)
+                foreach (var monetaRicevuta in ricevente.Saldo)
                 {
                     if (monetaMittente.IdMoneta == monetaRicevuta.IdMoneta)
                     {
@@ -285,7 +285,7 @@ namespace _3_BlockChainMenu
         public static void TrasferisciMoneta(int numMonete, Utente mittente, Utente ricevente)
         {
 
-            for (int i = 0; i < numMonete; i++)
+            for (var i = 0; i < numMonete; i++)
             {
                 ricevente.Saldo.Push(mittente.Saldo.Pop());
             }

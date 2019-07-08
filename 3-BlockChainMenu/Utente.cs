@@ -61,7 +61,7 @@ namespace _3_BlockChainMenu
         public void CreaPortafogli()
         {
 
-            for (int i = 0; i < NumMoneteIniziale; i++)
+            for (var i = 0; i < NumMoneteIniziale; i++)
             {
                 try
                 {

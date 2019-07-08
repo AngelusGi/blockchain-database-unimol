@@ -61,15 +61,15 @@ namespace _2_BlockChainPoW
         public string CalcolaHash()
         {
             //SHA256 cifraturaSha = SHA256.Create();
-            SHA512 cifraturaSha = SHA512.Create();
+            var cifraturaSha = SHA512.Create();
 
 
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra} - {HashPrecedente ?? ""} - {DatiTransazione}");
             //byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{DatiTransazione}-{Nonce}");
 
 
-            byte[] byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
-            byte[] byteOutput = cifraturaSha.ComputeHash(byteInput);
+            var byteInput = Encoding.ASCII.GetBytes($"{DataOra}-{HashPrecedente ?? ""}-{JsonConvert.SerializeObject(Transazioni)}-{Nonce}");
+            var byteOutput = cifraturaSha.ComputeHash(byteInput);
 
             return Convert.ToBase64String(byteOutput);
         }
@@ -77,7 +77,7 @@ namespace _2_BlockChainPoW
         public void Mina(int difficoltà)
         {
 
-            string zeroIniziali = new string('0', difficoltà);
+            var zeroIniziali = new string('0', difficoltà);
             while (HashBloccoCorrente == null || HashBloccoCorrente.Substring(0, difficoltà) != zeroIniziali)
             {
                 Nonce++;
