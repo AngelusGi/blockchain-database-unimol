@@ -86,10 +86,9 @@ namespace _4_BlockChainP2P
             }
             finally
             {
+                _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
                 lettoreFileJson.Dispose();
             }
-
-            _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
 
         }
 

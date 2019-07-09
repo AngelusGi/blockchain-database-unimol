@@ -31,11 +31,11 @@ namespace _4_BlockChainP2P
             }
             finally
             {
+                _candidati = JsonConvert.DeserializeObject<CandidatiJson>(lettoreFileJson.ReadToEnd());
                 lettoreFileJson.Dispose();
             }
 
 
-            _candidati = JsonConvert.DeserializeObject<CandidatiJson>(lettoreFileJson.ReadToEnd());
 
         }
 
