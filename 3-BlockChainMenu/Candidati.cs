@@ -27,14 +27,10 @@ namespace _3_BlockChainMenu
             }
             finally
             {
+                _candidati = JsonConvert.DeserializeObject<CandidatiJson>(lettoreFileJson.ReadToEnd());
                 lettoreFileJson.Dispose();
             }
-
-
-
-
-            _candidati = JsonConvert.DeserializeObject<CandidatiJson>(lettoreFileJson.ReadToEnd());
-
+            
         }
 
 
