@@ -19,14 +19,14 @@ namespace _4_BlockChainP2P
             {
                 jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
                     ? "../../../Resources/Candidati.json"
-                    : "./4 - BlockChainP2P/Resources/Candidati.json";
+                    : "./4-BlockChainP2P/Resources/Candidati.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             catch (Exception)
             {
                 jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
                     ? "../../../Resources/CandidatiTest.json"
-                    : "./4 - BlockChainP2P/Resources/CandidatiTest.json";
+                    : "./4-BlockChainP2P/Resources/CandidatiTest.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             finally

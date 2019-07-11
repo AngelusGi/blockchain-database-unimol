@@ -17,12 +17,12 @@ namespace _3_BlockChainMenu
 
             try
             {
-                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/Candidati.json" : "./3 - BlockChainMenu/Resources/Candidati.json";
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/Candidati.json" : "./3-BlockChainMenu/Resources/Candidati.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             catch (Exception)
             {
-                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/CandidatiTest.json" : "./3 - BlockChainMenu/Resources/CandidatiTest.json";
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/CandidatiTest.json" : "./3-BlockChainMenu/Resources/CandidatiTest.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             finally

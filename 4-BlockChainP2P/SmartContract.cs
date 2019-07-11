@@ -76,12 +76,12 @@ namespace _4_BlockChainP2P
             try
             {
                 //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4-BlockChainP2P/Resources/SmartContract.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             catch (Exception)
             {
-                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4 - BlockChainP2P/Resources/SmartContract.json";
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4-BlockChainP2P/Resources/SmartContract.json";
                 lettoreFileJson = new StreamReader(jsonPath);
             }
             finally

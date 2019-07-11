@@ -75,14 +75,32 @@ namespace _3_BlockChainMenu
         #endregion
         public static void Inizializza()
         {
-            //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
-            var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./3 - BlockChainMenu/Resources/SmartContract.json";
+            // //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
+            // var jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./3 - BlockChainMenu/Resources/SmartContract.json";
+            
+            // using var lettoreFileJson = new StreamReader(jsonPath);
 
+            // _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
+            
+            string jsonPath;
+            StreamReader lettoreFileJson = null;
 
-
-            using var lettoreFileJson = new StreamReader(jsonPath);
-
-            _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
+            try
+            {
+                //verifica se sono su windows o meno e in base al sistema operativo fornisce il path corretto
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4-BlockChainP2P/Resources/SmartContract.json";
+                lettoreFileJson = new StreamReader(jsonPath);
+            }
+            catch (Exception)
+            {
+                jsonPath = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "../../../Resources/SmartContract.json" : "./4-BlockChainP2P/Resources/SmartContract.json";
+                lettoreFileJson = new StreamReader(jsonPath);
+            }
+            finally
+            {
+                _contratto = JsonConvert.DeserializeObject<ContrattoJson>(lettoreFileJson.ReadToEnd());
+                lettoreFileJson.Dispose();
+            }
 
         }
 
